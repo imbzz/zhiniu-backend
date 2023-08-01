@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.itcast.bulls.stock.finance.dao.biz.ITradeAccountSettlementDao">
+  <resultMap id="BaseResultMap" type="com.itcast.bulls.stock.entity.finance.TradeAccountSettlement">
+    <result column="id" jdbcType="BIGINT" property="id" />
+    <result column="userId" jdbcType="BIGINT" property="userId" />
+    <result column="dealId" jdbcType="VARCHAR" property="dealId" />
+    <result column="accountId" jdbcType="VARCHAR" property="accountId" />
+    <result column="tradeTime" jdbcType="TIMESTAMP" property="tradeTime" />
+    <result column="stockId" jdbcType="BIGINT" property="stockId" />
+    <result column="stockCode" jdbcType="VARCHAR" property="stockCode" />
+    <result column="currency" jdbcType="VARCHAR" property="currency" />
+    <result column="direction" jdbcType="TINYINT" property="direction" />
+    <result column="tradeAmount" jdbcType="BIGINT" property="tradeAmount" />
+    <result column="tradeVolume" jdbcType="BIGINT" property="tradeVolume" />
+    <result column="tradePrice" jdbcType="BIGINT" property="tradePrice" />
+    <result column="taxes" jdbcType="BIGINT" property="taxes" />
+    <result column="commission" jdbcType="BIGINT" property="commission" />
+    <result column="status" jdbcType="TINYINT" property="status" />
+    <result column="createTime" jdbcType="TIMESTAMP" property="createTime" />
+  </resultMap>
+
+  <insert id="insert" parameterType="com.itcast.bulls.stock.entity.finance.TradeAccountSettlement">
+    <selectKey keyProperty="id" order="AFTER" resultType="java.lang.Long">
+      SELECT LAST_INSERT_ID()
+    </selectKey>
+    insert into t_trade_account_settlement (userId, accountId, dealId, tradeTime,
+      stockId, stockCode, currency, 
+      direction, tradeAmount, tradeVolume, 
+      tradePrice, taxes, commission, 
+      status, createTime)
+    values (#{userId,jdbcType=BIGINT}, #{accountId,jdbcType=VARCHAR}, #{dealId,jdbcType=BIGINT}, #{tradeTime,jdbcType=TIMESTAMP},
+      #{stockId,jdbcType=BIGINT}, #{stockCode,jdbcType=VARCHAR}, #{currency,jdbcType=VARCHAR}, 
+      #{direction,jdbcType=TINYINT}, #{tradeAmount,jdbcType=BIGINT}, #{tradeVolume,jdbcType=BIGINT}, 
+      #{tradePrice,jdbcType=BIGINT}, #{taxes,jdbcType=BIGINT}, #{commission,jdbcType=BIGINT}, 
+      #{status,jdbcType=TINYINT},  #{createTime,jdbcType=TIMESTAMP})
+  </insert>
+
+
+    <select id="getSettlementsByTimeRange" resultMap="BaseResultMap">
+        select *
+          from t_trade_account_settlement
+         where accountId = #{accountId}
+           and createTime >= #{timeStart} and  createTime &lt;=#{timeEnd}
+
+    </select>
+
+</mapper>

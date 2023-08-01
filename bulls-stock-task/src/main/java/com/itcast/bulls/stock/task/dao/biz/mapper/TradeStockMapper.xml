@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.itcast.bulls.stock.task.dao.biz.ITradeStockDao">
+  <resultMap id="BaseResultMap" type="com.itcast.bulls.stock.entity.product.TradeStock">
+    <result column="id" jdbcType="BIGINT" property="id" />
+    <result column="name" jdbcType="VARCHAR" property="name" />
+    <result column="code" jdbcType="VARCHAR" property="code" />
+    <result column="categoryId" jdbcType="BIGINT" property="categoryId" />
+    <result column="marketNo" jdbcType="TINYINT" property="marketNo" />
+    <result column="currency" jdbcType="DOUBLE" property="currency" />
+    <result column="unit" jdbcType="INTEGER" property="unit" />
+    <result column="tag" jdbcType="TINYINT" property="tag" />
+    <result column="status" jdbcType="TINYINT" property="status" />
+    <result column="marketSource" jdbcType="VARCHAR" property="marketSource" />
+    <result column="display_order" jdbcType="INTEGER" property="display_order" />
+    <result column="updateTime" jdbcType="TIMESTAMP" property="updateTime" />
+    <result column="craeteTime" jdbcType="TIMESTAMP" property="craeteTime" />
+  </resultMap>
+    
+    
+    <select id="getById" resultMap="BaseResultMap">
+        select
+            *
+        from t_trade_stock
+        where id = #{id}
+    </select>
+
+    <select id="getAllValidStocks" resultMap="BaseResultMap">
+        select
+            *
+        from t_trade_stock
+        where status = 0
+    </select>
+    
+</mapper>

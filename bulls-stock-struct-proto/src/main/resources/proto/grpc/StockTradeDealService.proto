@@ -1,0 +1,85 @@
+syntax = "proto3";
+option java_multiple_files = true;
+option java_package = "com.itcast.bulls.stock.struct.grpc.trade";
+option java_outer_classname = "StockTradeDealServiceProto";
+
+// The stock trade deal service definition.
+service StockTradeDealService {
+
+    // 下单接口
+    rpc placeOrder (PlaceOrderRequest) returns (PlaceOrderReponse) {
+
+    }
+
+    // 获取订单详情接口
+    rpc getOrder (GetOrderRequest) returns (GetOrderReponse) {
+
+    }
+
+    // 获取所有订单详情接口
+    rpc getAllOrders (GetAllOrdersRequest) returns (GetAllOrdersReponse) {
+
+    }
+
+}
+
+// The request message
+message PlaceOrderRequest {
+    int64 accountId = 1;
+    int64 stockId = 2;
+    int32 direction = 3;
+    int32 type = 4;
+    int32 execVolume = 5;
+    int64 execPrice = 6;
+    string xid = 7;
+}
+
+// The response message
+message PlaceOrderReponse{
+    string status = 1;
+    string message = 2;
+    int64 orderId = 3;
+    int64 dealId = 4;
+    int32 execVolume = 5;
+    int64 execPrice = 6;
+
+}
+
+// 获取订单请求数据结构
+message GetOrderRequest {
+    int64 accountId = 1;
+    int64 orderId = 2;
+}
+
+// 获取订单返回数据结构
+message GetOrderReponse{
+    int64 id = 1;
+    int64 accountId = 2;
+    int64 stockId = 3;
+    int32 status = 4;
+    int32 type = 5;
+    int32 direction = 6;
+    int32 initVolume = 7;
+    int32 execVolume = 8;
+    int64 execPrice = 9;
+    int64 requestPrice = 10;
+    int64 execTime = 11;
+    string stockCode = 12;
+    string stockName = 13;
+}
+
+// 获取订单请求数据结构
+message GetAllOrdersRequest {
+    int64 accountId = 1;
+    string status = 2;
+    int64 timeStart = 3 ;
+    int64 timeEnd = 4;
+}
+
+
+// 获取所有订单详情返回集合
+message GetAllOrdersReponse{
+    string status = 1;
+    string message = 2;
+    repeated GetOrderReponse getOrderReponse = 3;
+}

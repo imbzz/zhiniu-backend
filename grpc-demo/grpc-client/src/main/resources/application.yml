@@ -1,0 +1,15 @@
+server:
+  port: 9000
+spring:
+  application:
+    name: grpc-client
+
+
+# 定义了远程Grpc服务接口信息
+grpc:
+  client:
+    grpc-server:
+      address: 'static://127.0.0.1:9999'
+      enableKeepAlive: true
+      keepAliveWithoutCalls: true
+      negotiationType: plaintext

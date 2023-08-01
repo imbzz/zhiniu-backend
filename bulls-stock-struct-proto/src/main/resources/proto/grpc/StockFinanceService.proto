@@ -1,0 +1,184 @@
+syntax = "proto3";
+option java_multiple_files = true;
+option java_package = "com.itcast.bulls.stock.struct.grpc.trade";
+option java_outer_classname = "StockFinanceServiceProto";
+
+// 资金服务的grpc接口
+service StockFinanceService {
+    // 获取账户资金总览接口
+    rpc getFinanceOverview(GetFinanceOverviewRequest) returns (GetFinanceOverviewResponse) {
+
+    }
+
+    // 修改账户资金的接口
+    rpc updateAccountBalance(UpdateBalanceRequest) returns (UpdateBalanceResponse) {
+
+    }
+
+    // 获取账户资金接口
+    rpc getAccountBalance(GetBalanceRequest) returns(GetBalanceResponse) {
+
+    }
+
+    // 获取账户交割单数据接口
+    rpc getAccountSettlement(GetAccountSettlementRequest) returns(GetAccountSettlementResponse) {
+
+    }
+}
+
+// 获取账户资金总览请求数据结构
+message GetFinanceOverviewRequest {
+    // 交易账户ID
+    int64 accountId = 1;
+}
+
+// 获取账户资金总览的返回数据结构
+message GetFinanceOverviewResponse {
+    string status = 1;
+    string message = 2;
+
+    // 总资产
+    int64 totalAssets = 3;
+    // 总市值
+    int64 totalMarketAmount = 4;
+    // 持仓盈亏
+    int64 positionProfit =5;
+    // 当日持仓盈亏
+    int64 dayProfit = 6;
+    // 账户余额
+    int64 balance = 7;
+}
+
+// 更新资金请求的数据结构
+message UpdateBalanceRequest {
+    int64 accountId = 1;
+    int64 adjustBalance = 2;
+    string xid = 3;
+}
+// 更新资金的返回数据结构
+message UpdateBalanceResponse {
+    string status = 1;
+    string message = 2;
+    int64 accountId = 3;
+    // 更新的可用资金
+    int64 balance = 4;
+}
+
+// 获取账户资金请求数据结构
+message GetBalanceRequest {
+    int64 accountId = 1;
+}
+
+
+// 获取账户资金返回数据结构
+message GetBalanceResponse {
+    string status = 1;
+    string message = 2;
+
+    int64 accountId = 3;
+    // 可用的资金
+    int64 balance = 4;
+}
+
+
+// 获取账户交易单请求数据结构
+message GetAccountSettlementRequest {
+    int64 accountId = 1;
+    int64 timeStart = 2;
+    int64 timeEnd = 3;
+}
+
+// 获取账户交易单返回数据结构
+message GetAccountSettlementSingle {
+
+    /**
+     * 主键标识
+     */
+    int64 id = 1;
+
+    /**
+     * 用户ID
+     */
+    int64 userId =2;
+
+    /**
+     * 成交记录ID
+     */
+    int64 dealId = 3;
+
+    /**
+     * 交易账号ID
+     */
+    int64 accountId = 4;
+
+    /**
+     * 交易时间
+     */
+    int64 tradeTime = 5;
+
+    /**
+     * 股票ID
+     */
+    int64 stockId = 6;
+
+    /**
+     * 股票代码
+     */
+    string stockCode = 7;
+
+    /**
+     * 币种
+     */
+    string currency = 8;
+
+    /**
+     * 买卖方向
+     */
+    int32 direction = 9;
+
+    /**
+     * 交易金额
+     */
+    int64 tradeAmount = 10;
+
+    /**
+     * 交易数量
+     */
+    int64 tradeVolume = 11;
+
+    /**
+     * 交易价格
+     */
+    int64 tradePrice = 12;
+
+    /**
+     * 税费（印花税+过户费+交易规费）
+     */
+    int64 taxes = 13;
+
+    /**
+     * 佣金
+     */
+    int64 commission = 14;
+
+    /**
+     * 状态(0:有效， 1：锁定， 2：禁用）
+     */
+    int32 status = 15;
+
+    /**
+     * 创建时间
+     */
+    int64 createTime = 16;
+
+}
+
+
+// 获取账户交割单返回数据集合
+message GetAccountSettlementResponse{
+    string status = 1;
+    string message = 2;
+
+    repeated GetAccountSettlementSingle getAccountSettlementSingle = 3;
+}
+

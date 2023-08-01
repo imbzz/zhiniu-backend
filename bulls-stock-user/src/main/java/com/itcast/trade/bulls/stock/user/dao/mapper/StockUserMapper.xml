@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.itcast.trade.bulls.stock.user.dao.IStockUserDao">
+    <resultMap id="BaseResultMap" type="com.itcast.bulls.stock.entity.user.TradeUser">
+        <result column="id" jdbcType="BIGINT" property="id" />
+        <result column="userNo" jdbcType="VARCHAR" property="userNo" />
+        <result column="name" jdbcType="VARCHAR" property="name" />
+        <result column="userPwd" jdbcType="VARCHAR" property="userPwd" />
+        <result column="phone" jdbcType="VARCHAR" property="phone" />
+        <result column="companyId" jdbcType="BIGINT" property="companyId" />
+        <result column="email" jdbcType="VARCHAR" property="email" />
+        <result column="address" jdbcType="VARCHAR" property="address" />
+        <result column="lastLoginIp" jdbcType="VARCHAR" property="lastLoginIp" />
+        <result column="lastLoginTime" jdbcType="TIMESTAMP" property="lastLoginTime" />
+        <result column="status" jdbcType="TINYINT" property="status" />
+        <result column="craeteTime" jdbcType="TIMESTAMP" property="craeteTime" />
+    </resultMap>
+
+    <select id="getByUserNo" resultMap="BaseResultMap">
+        select
+        userNo, name, userPwd,
+        phone, companyId, email,
+        address, lastLoginIp, lastLoginTime,
+        status, craeteTime
+        from t_trade_user
+        where userNo = #{userNo}
+    </select>
+
+
+    <select id="checkRegister" resultType="java.lang.Integer" >
+        select
+          1
+        from t_trade_user
+        where userNo = #{userNo} or email = #{email} or phone = #{phone}
+        limit 1
+    </select>
+
+    <select id="getCompanyVoById" resultType="com.itcast.trade.bulls.stock.user.vo.CompanyVo" >
+        select
+         u.id, u.companyName, u.institutionTypeId, u.contactUser, u.contactPhone,
+         u.adminUser, u.status, u.createUser, u.createTime, t.id as institutionId
+        from t_company u left join t_institution t on u.id = t.detailInstitutionId
+        where u.id = #{id}
+        limit 1
+    </select>
+
+    <insert id="insert" parameterType="com.itcast.bulls.stock.entity.user.TradeUser">
+        <selectKey keyProperty="id" order="AFTER" resultType="java.lang.Long">
+            SELECT LAST_INSERT_ID()
+        </selectKey>
+        insert into t_trade_user (userNo, name, userPwd,
+        phone, companyId, email,
+        address, lastLoginIp, lastLoginTime,
+        status, craeteTime, institutionTypeId, institutionId, companyName)
+        values (#{userNo,jdbcType=VARCHAR}, #{name,jdbcType=VARCHAR}, #{userPwd,jdbcType=VARCHAR},
+        #{phone,jdbcType=VARCHAR}, #{companyId,jdbcType=BIGINT}, #{email,jdbcType=VARCHAR},
+        #{address,jdbcType=VARCHAR}, #{lastLoginIp,jdbcType=VARCHAR}, #{lastLoginTime,jdbcType=TIMESTAMP},
+        #{status,jdbcType=TINYINT}, #{craeteTime,jdbcType=TIMESTAMP}, #{institutionTypeId}, #{institutionId}, #{companyName})
+    </insert>
+
+
+</mapper>

@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.itcast.bulls.stock.finance.dao.trade.ITradeDealDao">
+  <resultMap id="BaseResultMap" type="com.itcast.bulls.stock.entity.trade.TradeDeal">
+    <result column="id" jdbcType="BIGINT" property="id" />
+    <result column="tradeOrderId" jdbcType="BIGINT" property="tradeOrderId" />
+    <result column="positionId" jdbcType="BIGINT" property="positionId" />
+    <result column="accountId" jdbcType="BIGINT" property="accountId" />
+    <result column="stockId" jdbcType="BIGINT" property="stockId" />
+    <result column="stockMarket" jdbcType="TINYINT" property="stockMarket" />
+    <result column="execVolume" jdbcType="INTEGER" property="execVolume" />
+    <result column="execPrice" jdbcType="DOUBLE" property="execPrice" />
+    <result column="execTime" jdbcType="TIMESTAMP" property="execTime" />
+    <result column="direction" jdbcType="TINYINT" property="direction" />
+    <result column="profit" jdbcType="DOUBLE" property="profit" />
+    <result column="commission" jdbcType="DOUBLE" property="commission" />
+    <result column="taxes" jdbcType="DOUBLE" property="taxes" />
+    <result column="status" jdbcType="TINYINT" property="status" />
+  </resultMap>
+
+  <insert id="insert" parameterType="com.itcast.bulls.stock.entity.trade.TradeDeal">
+    <selectKey keyProperty="id" order="AFTER" resultType="java.lang.Long">
+      SELECT currval('t_trade_deal_id_seq')
+    </selectKey>
+    insert into t_trade_deal (tradeOrderId, positionId, accountId, stockId,
+      stockMarket, execVolume, execPrice, 
+      execTime, direction, profit, 
+      commission, taxes, status
+      )
+    values (#{tradeOrderId,jdbcType=BIGINT}, #{positionId,jdbcType=BIGINT},  #{accountId,jdbcType=BIGINT}, #{stockId,jdbcType=BIGINT},
+      #{stockMarket,jdbcType=TINYINT}, #{execVolume,jdbcType=INTEGER}, #{execPrice,jdbcType=DOUBLE}, 
+      #{execTime,jdbcType=TIMESTAMP}, #{direction,jdbcType=TINYINT}, #{profit,jdbcType=DOUBLE}, 
+      #{commission,jdbcType=DOUBLE}, #{taxes,jdbcType=DOUBLE}, #{status,jdbcType=TINYINT}
+      )
+  </insert>
+
+   <select id="getTradeDealByAcountAndTime" resultMap="BaseResultMap" >
+        select *
+          from t_trade_deal
+         where accountId = #{accountId}
+           and execTime>=#{beginTime}
+           and execTime &lt;=#{endTime}
+   </select>
+
+</mapper>

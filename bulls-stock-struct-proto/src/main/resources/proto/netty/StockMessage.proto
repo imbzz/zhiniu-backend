@@ -1,0 +1,370 @@
+syntax = "proto3";
+
+option java_multiple_files = true;
+
+import "StockHead.proto";
+import "StockQuote.proto";
+option java_package = "com.itcast.bulls.stock.struct.netty.trade";
+option java_outer_classname = "StockMessageProto";
+
+// 请求消息
+message StockMessage {
+
+    // 头部消息
+    StockHead stockHead = 1;
+
+    // 消息体
+    oneof StockData {
+        // 登录的请求包
+        LoginData loginData = 2;
+        // 下单的请求包体消息
+        PlaceOrderData placeOrderData = 3;
+        // 获取K线数据的请求包体消息
+        KlineData klineData = 4;
+        // 撤单接口的请求数据包
+        RecallOrderData recallOrderData = 5;
+        // 获取订单详情的请求数据包
+        GetOrderData getOrderData = 6;
+        // 获取账户交割单的请求数据包
+        GetAccountSettlementData getAccountSettlementData = 7;
+        // 账户预警通知设置接口
+        AccountWarnSettingData accountWarnSettingData = 8;
+
+    }
+
+
+}
+
+
+// 获取K线请求包
+message KlineData {
+    // 股票ID
+    int64 stockId = 1;
+    // 股票编号
+    string stockCode = 2;
+    // K线行情的时间范围（开始时间）
+    int64 timeStart = 3;
+    // K线行情的时间范围（结束时间）
+    int64 timeEnd = 4;
+}
+
+
+// 登陆请求数据包
+message LoginData {
+
+    string userNo = 1;
+    string userPwd = 2;
+
+}
+
+// 返回消息
+message ResponseMessage{
+    // 头部消息
+    StockHead stockHead = 1;
+
+    // 返回提示信息
+    string message = 2;
+
+    // 消息体
+    oneof ResponseData {
+        // 下单接口的返回数据包
+        PlaceOrderResp placeOrderResp = 3;
+        // 实时行情的返回数据包
+        QuoteRealtimeResp quoteRealtimeResp = 4;
+        // K线行情的返回数据包
+        KlineDataRespLists klineDataRespLists = 5;
+        // 获取详情的返回数据包
+        GetOrderResp getOrderResp = 6;
+        // 获取所有持仓的返回数据包
+        GetAllPositionList getAllPositionList = 7;
+        // 获取账户资金总览的数据包
+        GetFinanceOverviewResp getFinanceOverviewResp = 8;
+        // 获取账户交割单的返回数据包
+        GetAccountSettlementRespDataList getAccountSettlementRespDataList = 9;
+        // 账户预警通知设置的返回数据包
+        AccountWarnSettingResp accountWarnSettingResp = 10;
+        // 账户预警通知信息的返回数据包
+        WarnMessageDataResp warnMessageDataResp = 11;
+    }
+}
+
+
+
+// 下单请求数据包
+message PlaceOrderData {
+    // 股票产品ID
+    int64 stockId = 1;
+    // 买卖方向
+    int32 direction = 2;
+    // 挂单类型
+    int32 type = 3;
+    // 请求数量
+    int32 execVolume = 4;
+    // 请求价格
+    int64 execPrice = 5;
+}
+
+// 下单返回数据包
+message PlaceOrderResp {
+    int64 dealId = 1;
+}
+
+// 撤单请求参数的数据结构
+message RecallOrderData {
+    // 订单ID
+    int64 orderId = 1;
+    // 股票产品ID
+    int64 stockId = 2;
+}
+
+
+
+// 获取订单详情接口请求参数结构
+message GetOrderData {
+    // 订单ID
+    int64 orderId = 2;
+}
+
+// 订单详情接口返回数据结构
+message GetOrderResp{
+    // 订单ID
+    int64 id = 1;
+    // 账号ID
+    int64 accountId = 2;
+    // 股票产品ID
+    int64 stockId = 3;
+    // 订单状态(0:待成交, 1:部分成交， 2：完全成交, 3:手工撤单， 4:系统撤单)
+    int32 status = 4;
+    // 挂单类型(0:市价单， 1:限价单)
+    int32 type = 5;
+    // 买卖方向（0: 买入， 1: 卖出）
+    int32 direction = 6;
+    // 初始请求数量
+    int32 initVolume = 7;
+    // 实际成交数量
+    int32 execVolume = 8;
+    // 实际成交价格
+    int64 execPrice = 9;
+    // 请求价格
+    int64 requestPrice = 10;
+    // 执行成交时间
+    int64 execTime = 11;
+    // 股票名称
+    string stockCode = 12;
+    // 股票代码
+    string stockName = 13;
+}
+
+
+
+// 获取所有仓位返回数据
+message GetAllPositionData {
+    // 主键， 唯一标识
+    int64 id = 1;
+    // 交易订单号
+    int64 tradeOrderId = 2;
+    // 交易账号ID
+    int64 accountId = 3;
+    // 股票ID
+    int64 stockId = 4;
+    // 成本价
+    int64 costPrice = 5;
+    // 持仓数量
+    int32 volume = 6;
+    // 股票市场(0: 上交所， 1：深交所，2：港股， 3：美股）
+    int32 stockMarket = 7 ;
+    // 成交均价
+    int64 avgPrice = 8;
+    // 可卖数量(T+1制度使用, T+0不限制)
+    int32 validSellVolume = 9;
+    // 盈亏
+    int64 profit = 10 ;
+    // 成交时间
+    int64 execTime = 11;
+    // 状态(0:有效，1：无效）
+    int32 status = 12;
+    // 持仓累计利息
+    int64 interest = 13;
+    // 最新报价
+    int64 lastPrice = 14;
+    // 盈亏比例
+    int64 profitRate = 15;
+    // 股票代码
+    string stockCode = 16;
+    // 股票名称
+    string stockName = 17;
+}
+
+// 获取所有仓位返回数据集合
+message GetAllPositionList {
+    repeated GetAllPositionData getAllPositionData = 1;
+}
+
+
+// 资金总览返回数据结构
+message GetFinanceOverviewResp {
+    // 总资产
+    int64 totalAssets = 1;
+    // 总市值
+    int64 totalMarketAmount = 2;
+    // 持仓盈亏
+    int64 positionProfit = 3;
+    // 当日持仓盈亏
+    int64 dayProfit = 4;
+    // 账户余额
+    int64 balance = 5;
+}
+
+
+
+// 获取账户交割单请求数据结构
+message GetAccountSettlementData {
+    // 结束时间
+    int64 timeStart = 1;
+    // 开始时间
+    int64 timeEnd = 2;
+}
+
+
+// 获取账户交易单返回数据结构
+message GetAccountSettlementRespData {
+
+    /**
+     * 主键标识
+     */
+    int64 id = 1;
+
+    /**
+     * 用户ID
+     */
+    int64 userId =2;
+
+    /**
+     * 成交记录ID
+     */
+    int64 dealId = 3;
+
+    /**
+     * 交易账号ID
+     */
+    int64 accountId = 4;
+
+    /**
+     * 交易时间
+     */
+    int64 tradeTime = 5;
+
+    /**
+     * 股票ID
+     */
+    int64 stockId = 6;
+
+    /**
+     * 股票代码
+     */
+    string stockCode = 7;
+
+    /**
+     * 币种
+     */
+    string currency = 8;
+
+    /**
+     * 买卖方向
+     */
+    int32 direction = 9;
+
+    /**
+     * 交易金额
+     */
+    int64 tradeAmount = 10;
+
+    /**
+     * 交易数量
+     */
+    int64 tradeVolume = 11;
+
+    /**
+     * 交易价格
+     */
+    int64 tradePrice = 12;
+
+    /**
+     * 税费（印花税+过户费+交易规费）
+     */
+    int64 taxes = 13;
+
+    /**
+     * 佣金
+     */
+    int64 commission = 14;
+
+    /**
+     * 状态(0:有效， 1：锁定， 2：禁用）
+     */
+    int32 status = 15;
+
+    /**
+     * 创建时间
+     */
+    int64 createTime = 16;
+
+}
+
+// 用户交割单返回数据集合
+message GetAccountSettlementRespDataList {
+
+    repeated GetAccountSettlementRespData getAccountSettlementRespData = 1;
+}
+
+
+// 账户预警通知止盈止损设置请求数据接口
+message AccountWarnSettingData {
+    // 股票产品ID
+    int64 stockId = 1;
+    // 预警类型 (0: 止损, 1:止盈)
+    int32 warnType = 2;
+    // 止盈止损设置比例(单位：%， 例2.28 代表02.28%)
+    double stopRate = 3;
+    // 通知方式(APP:站内信，EMAIL：邮件，SMS：短信， 多个以逗号分隔)
+    string notifyType = 4;
+
+}
+
+// 账户预警通知止盈止损设置返回数据接口
+message AccountWarnSettingResp{
+
+}
+
+
+// 预警通知消息体
+message WarnMessageData {
+
+    int64 id = 1;
+    /**
+     * 用户ID
+     */
+    int64 userId = 2 ;
+
+    /**
+     * 账户ID
+     */
+    int64 accountId = 3;
+
+    /**
+     * 预警类型 (0: 止损, 1:止盈)
+     */
+    int32 warnType = 4;
+
+    /**
+     * 通知内容
+     */
+    string notifyContent = 5;
+}
+
+// 预警通知消息返回体
+message WarnMessageDataResp {
+
+    repeated WarnMessageData warnMessageDataList = 1;
+
+}

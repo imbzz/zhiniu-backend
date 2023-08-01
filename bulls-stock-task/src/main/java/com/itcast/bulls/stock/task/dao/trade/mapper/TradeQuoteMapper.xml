@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.itcast.bulls.stock.task.dao.trade.ITradeQuoteDao">
+    <resultMap id="BaseResultMap" type="com.itcast.bulls.stock.entity.quote.TradeStockQuoteLast">
+        <id column="id" jdbcType="INTEGER" property="id" />
+        <result column="stockid" jdbcType="BIGINT" property="stockid" />
+        <result column="stockcode" jdbcType="VARCHAR" property="stockcode" />
+        <result column="stockname" jdbcType="VARCHAR" property="stockname" />
+        <result column="pricebid1" jdbcType="BIGINT" property="pricebid1" />
+        <result column="pricebid2" jdbcType="BIGINT" property="pricebid2" />
+        <result column="pricebid3" jdbcType="BIGINT" property="pricebid3" />
+        <result column="pricebid4" jdbcType="BIGINT" property="pricebid4" />
+        <result column="pricebid5" jdbcType="BIGINT" property="pricebid5" />
+        <result column="volumebid1" jdbcType="BIGINT" property="volumebid1" />
+        <result column="volumebid2" jdbcType="BIGINT" property="volumebid2" />
+        <result column="volumebid3" jdbcType="BIGINT" property="volumebid3" />
+        <result column="volumebid4" jdbcType="BIGINT" property="volumebid4" />
+        <result column="volumebid5" jdbcType="BIGINT" property="volumebid5" />
+        <result column="priceask1" jdbcType="BIGINT" property="priceask1" />
+        <result column="priceask2" jdbcType="BIGINT" property="priceask2" />
+        <result column="priceask3" jdbcType="BIGINT" property="priceask3" />
+        <result column="priceask4" jdbcType="BIGINT" property="priceask4" />
+        <result column="priceask5" jdbcType="BIGINT" property="priceask5" />
+        <result column="volumeask1" jdbcType="BIGINT" property="volumeask1" />
+        <result column="volumeask2" jdbcType="BIGINT" property="volumeask2" />
+        <result column="volumeask3" jdbcType="BIGINT" property="volumeask3" />
+        <result column="volumeask4" jdbcType="BIGINT" property="volumeask4" />
+        <result column="volumeask5" jdbcType="BIGINT" property="volumeask5" />
+        <result column="lastprice" jdbcType="BIGINT" property="lastprice" />
+        <result column="volume" jdbcType="BIGINT" property="volume" />
+        <result column="amount" jdbcType="BIGINT" property="amount" />
+        <result column="time" jdbcType="BIGINT" property="time" />
+    </resultMap>
+    
+    <select id="getLastPrice" resultMap="BaseResultMap" >
+        select lastprice from t_trade_stock_quote_last
+        where time >=  #{beginTime} and time &lt;= #{endTime}
+          and stockId = #{stockId}
+        order by time desc limit 1
+    </select>
+
+    <update id="updateOrderStatusById" >
+        update t_trade_order
+           set status = #{status}
+         where id = #{id}
+    </update>
+
+
+</mapper>

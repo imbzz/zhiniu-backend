@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <parent>
+        <artifactId>bulls-stock-starter</artifactId>
+        <groupId>com.itcast.trade</groupId>
+        <version>1.0.0</version>
+    </parent>
+    <modelVersion>4.0.0</modelVersion>
+
+    <artifactId>bulls-stock-starter-sender</artifactId>
+
+
+    <dependencies>
+        <!-- 实体依赖 -->
+        <dependency>
+            <groupId>com.itcast.trade</groupId>
+            <artifactId>bulls-stock-entity</artifactId>
+            <version>${project.stock.version}</version>
+        </dependency>
+
+        <!-- 公用工具组件 -->
+        <dependency>
+            <groupId>com.itcast.trade</groupId>
+            <artifactId>bulls-stock-common-utils</artifactId>
+            <version>${project.stock.version}</version>
+        </dependency>
+
+        <!-- 阿里云通信组件依赖 -->
+        <dependency>
+            <groupId>com.aliyun</groupId>
+            <artifactId>aliyun-java-sdk-core</artifactId>
+            <version>4.1.0</version>
+        </dependency>
+        <dependency>
+            <groupId>com.aliyun</groupId>
+            <artifactId>aliyun-java-sdk-dm</artifactId>
+            <version>3.1.0</version>
+        </dependency>
+
+    </dependencies>
+
+
+</project>

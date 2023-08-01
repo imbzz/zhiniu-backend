@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <parent>
+        <artifactId>bulls-stock</artifactId>
+        <groupId>com.itcast.trade</groupId>
+        <version>1.0.0</version>
+    </parent>
+    <modelVersion>4.0.0</modelVersion>
+
+    <artifactId>bulls-stock-starter</artifactId>
+    <packaging>pom</packaging>
+    <modules>
+        <module>bulls-stock-starter-ceph</module>
+        <module>bulls-stock-starter-swagger</module>
+        <module>bulls-stock-starter-oauth2</module>
+        <module>bulls-stock-starter-grpc</module>
+        <module>bulls-stock-starter-sender</module>
+    </modules>
+
+    <dependencies>
+        <!-- Spring Boot  自定义启动器的依赖组件 -->
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-actuator-autoconfigure</artifactId>
+        </dependency>
+    </dependencies>
+
+</project>

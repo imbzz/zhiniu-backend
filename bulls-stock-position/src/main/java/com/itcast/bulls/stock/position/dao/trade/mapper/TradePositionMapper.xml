@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.itcast.bulls.stock.position.dao.trade.ITradePositionDao">
+  <resultMap id="BaseResultMap" type="com.itcast.bulls.stock.entity.trade.TradePosition">
+    <result column="id" jdbcType="BIGINT" property="id" />
+    <result column="tradeOrderId" jdbcType="BIGINT" property="tradeOrderId" />
+    <result column="accountId" jdbcType="BIGINT" property="accountId" />
+    <result column="stockId" jdbcType="BIGINT" property="stockId" />
+    <result column="stockCode" jdbcType="VARCHAR" property="stockCode" />
+    <result column="stockName" jdbcType="VARCHAR" property="stockName" />
+    <result column="costPrice" jdbcType="DOUBLE" property="costPrice" />
+    <result column="volume" jdbcType="INTEGER" property="volume" />
+    <result column="stockMarket" jdbcType="TINYINT" property="stockMarket" />
+    <result column="avgPrice" jdbcType="DOUBLE" property="avgPrice" />
+    <result column="validSellVolume" jdbcType="INTEGER" property="validSellVolume" />
+    <result column="profit" jdbcType="DOUBLE" property="profit" />
+    <result column="execTime" jdbcType="TIMESTAMP" property="execTime" />
+    <result column="status" jdbcType="TINYINT" property="status" />
+    <result column="interest" jdbcType="DOUBLE" property="interest" />
+  </resultMap>
+  <insert id="insert" parameterType="com.itcast.bulls.stock.entity.trade.TradePosition">
+    <selectKey keyProperty="id" order="AFTER" resultType="java.lang.Long">
+        SELECT currval('t_trade_position_id_seq')
+    </selectKey>
+    insert into t_trade_position (accountId, stockId,
+      costPrice, volume, stockMarket, 
+      avgPrice, validSellVolume, profit, 
+      execTime, status, interest
+      )
+    values (#{accountId,jdbcType=BIGINT}, #{stockId,jdbcType=BIGINT},
+      #{costPrice,jdbcType=DOUBLE}, #{volume,jdbcType=INTEGER}, #{stockMarket,jdbcType=TINYINT}, 
+      #{avgPrice,jdbcType=DOUBLE}, #{validSellVolume,jdbcType=INTEGER}, #{profit,jdbcType=DOUBLE}, 
+      #{execTime,jdbcType=TIMESTAMP}, #{status,jdbcType=TINYINT}, #{interest,jdbcType=DOUBLE}
+      )
+  </insert>
+
+    <select id="getByAccountIdAndStockId" resultMap="BaseResultMap" >
+        select
+          *
+        from t_trade_position
+        where accountId = #{accountId}
+        and stockId = #{stockId}
+    </select>
+
+    <select id="getAllByAccountId" resultMap="BaseResultMap">
+        select
+          *
+        from t_trade_position
+        where accountId = #{accountId}
+          and status = 0
+    </select>
+
+    <update id="update" parameterType="com.itcast.bulls.stock.entity.trade.TradePosition">
+      update t_trade_position
+        set costPrice = #{costPrice},
+        volume = #{volume},
+        avgPrice = #{avgPrice},
+        validSellVolume = #{validSellVolume},
+        execTime = #{execTime}
+      where id = #{id}
+    </update>
+
+
+</mapper>

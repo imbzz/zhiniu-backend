@@ -1,0 +1,27 @@
+syntax = "proto3";
+
+option java_multiple_files = true;
+option java_package = "com.itcast.grpc.lib";
+option java_outer_classname="StockServiceProto";
+
+service StockService {
+
+    // 定义获取股票价格接口,  入参为StockServiceRequest, 出参为StockServiceReply
+    rpc GetStockPrice(StockServiceRequest) returns (StockServiceReply) {
+
+    }
+
+}
+
+// 定义股票价格请求接口的数据包结构
+message  StockServiceRequest {
+    string name = 1;
+    string code = 2;
+}
+
+// 股票价格请求接口的返回数据包
+message StockServiceReply {
+    string message = 1;
+}
+
+

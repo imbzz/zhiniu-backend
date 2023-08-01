@@ -1,0 +1,175 @@
+server:
+  port: 10695
+spring:
+  application:
+    name: stock-deal
+  cloud:
+    nacos:
+      discovery:
+        server-addr: 127.0.0.1:8848
+      config:
+        server-addr: 127.0.0.1:8848
+
+    # RocketMq 消费端配置
+    stream:
+      bindings:
+        quote:
+          consumer:
+            concurrency: 10
+            maxAttempts: 1
+          content-type: application/json
+          destination: stock-quote
+          group: stock-deal-1
+      rocketmq:
+        binder:
+          name-server: 10.10.20.15:9876
+        bindings:
+          quote:
+            consumer:
+              orderly: true
+  # 数据源配置， 采用Druid
+  datasource:
+    tradesystem:
+      type: com.alibaba.druid.pool.DruidDataSource
+      driver-class-name: org.postgresql.Driver
+      username: office
+      password: 654321
+      url: jdbc:postgresql://192.168.19.150:5432/trade_stock
+      druid:
+        # 连接池的配置信息
+        # 初始化大小，最小，最大
+        initial-size: 5
+        min-idle: 5
+        maxActive: 20
+        # 配置获取连接等待超时的时间
+        maxWait: 60000
+        # 配置间隔多久才进行一次检测，检测需要关闭的空闲连接，单位是毫秒
+        timeBetweenEvictionRunsMillis: 60000
+        # 配置一个连接在池中最小生存的时间，单位是毫秒
+        minEvictableIdleTimeMillis: 300000
+        validationQuery: SELECT 1
+        testWhileIdle: true
+        testOnBorrow: false
+        testOnReturn: false
+        # 打开PSCache，并且指定每个连接上PSCache的大小
+        poolPreparedStatements: true
+        maxPoolPreparedStatementPerConnectionSize: 20
+        # 配置监控统计拦截的filters，去掉后监控界面sql无法统计，'wall'用于防火墙
+        filters: stat,wall,log4j
+        # 通过connectProperties属性来打开mergeSql功能；慢SQL记录
+        #connectionProperties: druid.stat.mergeSql\=true;druid.stat.slowSqlMillis\=5000
+        # 配置DruidStatFilter
+        web-stat-filter:
+          enabled: true
+          url-pattern: "/*"
+          exclusions: "*.js,*.gif,*.jpg,*.bmp,*.png,*.css,*.ico,/druid/*"
+        # 配置DruidStatViewServlet
+        stat-view-servlet:
+          url-pattern: "/druidTrade/*"
+          # IP白名单(没有配置或者为空，则允许所有访问)
+          allow:
+          # IP黑名单 (存在共同时，deny优先于allow)
+          deny:
+          #  禁用HTML页面上的“Reset All”功能
+          reset-enable: false
+          # 登录名
+          login-username: admin
+          # 登录密码
+          login-password: admin123
+          # 监控后台开关， 开启可通过后台管理查看
+          enabled: true
+
+    bizsystem:
+      type: com.alibaba.druid.pool.DruidDataSource
+      driver-class-name: com.mysql.cj.jdbc.Driver
+      username: root
+      password: 654321
+      url: jdbc:mysql://192.168.19.150:3306/trade_stock?useUnicode=true&characterEncoding=UTF-8&useSSL=false
+      druid:
+        # 连接池的配置信息
+        # 初始化大小，最小，最大
+        initial-size: 5
+        min-idle: 5
+        maxActive: 20
+        # 配置获取连接等待超时的时间
+        maxWait: 60000
+        # 配置间隔多久才进行一次检测，检测需要关闭的空闲连接，单位是毫秒
+        timeBetweenEvictionRunsMillis: 60000
+        # 配置一个连接在池中最小生存的时间，单位是毫秒
+        minEvictableIdleTimeMillis: 300000
+        validationQuery: SELECT 1
+        testWhileIdle: true
+        testOnBorrow: false
+        testOnReturn: false
+        # 打开PSCache，并且指定每个连接上PSCache的大小
+        poolPreparedStatements: true
+        maxPoolPreparedStatementPerConnectionSize: 20
+        # 配置监控统计拦截的filters，去掉后监控界面sql无法统计，'wall'用于防火墙
+        filters: stat,wall,log4j
+        # 通过connectProperties属性来打开mergeSql功能；慢SQL记录
+        #connectionProperties: druid.stat.mergeSql\=true;druid.stat.slowSqlMillis\=5000
+        # 配置DruidStatFilter
+        web-stat-filter:
+          enabled: true
+          url-pattern: "/*"
+          exclusions: "*.js,*.gif,*.jpg,*.bmp,*.png,*.css,*.ico,/druid/*"
+        # 配置DruidStatViewServlet
+        stat-view-servlet:
+          url-pattern: "/druidBiz/*"
+          # IP白名单(没有配置或者为空，则允许所有访问)
+          allow:
+          # IP黑名单 (存在共同时，deny优先于allow)
+          deny:
+          #  禁用HTML页面上的“Reset All”功能
+          reset-enable: false
+          # 登录名
+          login-username: admin
+          # 登录密码
+          login-password: admin123
+          # 监控后台开关， 开启可通过后台管理查看
+          enabled: true
+
+  # Redis 缓存配置
+  redis:
+    host: 127.0.0.1
+    password:
+    port: 6379
+
+  # Jpa功能配置
+  jpa:
+    properties:
+      hibernate:
+        temp:
+          use_jdbc_metadata_defaults: false
+    hibernate:
+      ddl-auto: none
+      naming:
+        # 实际命名， 无转换
+        physical-strategy: org.hibernate.boot.model.naming.PhysicalNamingStrategyStandardImpl
+    show-sql: true
+
+#mybatis 配置
+mybatis:
+  configuration:
+    log-impl: org.apache.ibatis.logging.stdout.StdOutImpl
+  mapper-locations:
+  - classpath:com/itcast/bulls/stock/deal/dao/mapper/*.xml
+
+# gRpc服务端配置
+grpc:
+  server:
+    port: 19998
+  # 客户端的调用配置信息
+  client:
+    # 挂单服务的配置信息
+    grpc-pending-server:
+      address: 'discovery:///stock-pending'
+      enableKeepAlive: true
+      keepAliveWithoutCalls: true
+      negotiationType: plaintext
+    # 资金服务的配置信息
+    grpc-finance-server:
+      address: 'discovery:///stock-finance'
+      enableKeepAlive: true
+      keepAliveWithoutCalls: true
+      negotiationType: plaintext

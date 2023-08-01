@@ -1,0 +1,64 @@
+syntax = "proto3";
+option java_multiple_files = true;
+option java_package = "com.itcast.bulls.stock.struct.grpc.trade";
+option java_outer_classname = "StockPositionServiceProto";
+
+service StockPositionService {
+
+    // 获取所有持仓信息接口
+    rpc getAllPositions (GetAllPositionRequest) returns (GetAllPositionReponse) {
+
+    }
+}
+
+// 获取所有持仓的请求数据结构
+message GetAllPositionRequest {
+    // 账户ID
+    int64 accountId = 1;
+}
+
+// 获取所有持仓的返回数据结构
+message GetAllPositionData{
+    // 主键， 唯一标识
+    int64 id = 1;
+    // 交易订单号
+    int64 tradeOrderId = 2;
+    // 交易账号ID
+    int64 accountId = 3;
+    // 股票ID
+    int64 stockId = 4;
+    // 成本价
+    int64 costPrice = 5;
+    // 持仓数量
+    int32 volume = 6;
+    // 股票市场(0: 上交所， 1：深交所，2：港股， 3：美股）
+    int32 stockMarket = 7 ;
+    // 成交均价
+    int32 avgPrice = 8;
+    // 可卖数量(T+1制度使用)
+    int32 validSellVolume = 9;
+    // 盈亏
+    int64 profit = 10 ;
+    // 成交时间
+    int64 execTime = 11;
+    // 状态(0:有效，1：无效）
+    int32 status = 12;
+    // 持仓累计利息
+    int64 interest = 13;
+    // 最新报价
+    int64 lastPrice = 14;
+    // 盈亏比例
+    int64 profitRate = 15;
+    // 股票代码
+    string stockCode = 16;
+    // 股票名称
+    string stockName = 17;
+}
+
+
+// 获取所有持仓数据的包装返回对象
+message GetAllPositionReponse{
+    string status = 1;
+    string message = 2;
+    repeated GetAllPositionData getAllPositionData = 3;
+}

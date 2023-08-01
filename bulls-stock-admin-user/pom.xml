@@ -1,0 +1,182 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <parent>
+        <artifactId>bulls-stock</artifactId>
+        <groupId>com.itcast.trade</groupId>
+        <version>1.0.0</version>
+    </parent>
+    <modelVersion>4.0.0</modelVersion>
+
+    <artifactId>bulls-stock-admin-user</artifactId>
+
+    <dependencies>
+        <!-- spring boot 依赖 -->
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-web</artifactId>
+        </dependency>
+        <!-- Spring data jpa 组件依赖-->
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-data-jpa</artifactId>
+        </dependency>
+        <!-- Spring Restful实现组件 -->
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-data-rest</artifactId>
+        </dependency>
+        <!-- 增加Jackson的Hibernate类型支持 -->
+        <dependency>
+            <groupId>com.fasterxml.jackson.datatype</groupId>
+            <artifactId>jackson-datatype-hibernate5</artifactId>
+            <version>2.9.8</version>
+        </dependency>
+        <!-- 增加Jackson XML支持 -->
+        <dependency>
+            <groupId>com.fasterxml.jackson.dataformat</groupId>
+            <artifactId>jackson-dataformat-xml</artifactId>
+            <version>2.9.0</version>
+        </dependency>
+
+        <!-- Apache common 工具依赖 -->
+        <dependency>
+            <groupId>org.apache.commons</groupId>
+            <artifactId>commons-lang3</artifactId>
+        </dependency>
+
+        <!-- Nacos服务注册发现依赖 -->
+        <dependency>
+            <groupId>com.alibaba.cloud</groupId>
+            <artifactId>spring-cloud-starter-alibaba-nacos-discovery</artifactId>
+        </dependency>
+
+        <!-- 公用数据层组件 -->
+        <dependency>
+            <groupId>com.itcast.trade</groupId>
+            <artifactId>bulls-stock-common-dao</artifactId>
+            <version>${project.stock.version}</version>
+        </dependency>
+
+        <!-- 实体依赖 -->
+        <dependency>
+            <groupId>com.itcast.trade</groupId>
+            <artifactId>bulls-stock-entity</artifactId>
+            <version>${project.stock.version}</version>
+        </dependency>
+
+        <!--公用WEB层组件 -->
+        <dependency>
+            <groupId>com.itcast.trade</groupId>
+            <artifactId>bulls-stock-common-web</artifactId>
+            <version>${project.stock.version}</version>
+        </dependency>
+
+        <!-- swagger 自定义启动器的依赖 -->
+        <dependency>
+            <groupId>com.itcast.trade</groupId>
+            <artifactId>bulls-stock-starter-swagger</artifactId>
+            <version>${project.stock.version}</version>
+        </dependency>
+
+        <!-- Spring Session 组件依赖 -->
+        <dependency>
+            <groupId>org.springframework.session</groupId>
+            <artifactId>spring-session-data-redis</artifactId>
+        </dependency>
+
+        <!-- 自动化缓存依赖 -->
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-cache</artifactId>
+            <version>${spring-cloud-starter.version}</version>
+        </dependency>
+
+        <!--缓存依赖-->
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-data-redis</artifactId>
+            <version>${spring-cloud-starter.version}</version>
+        </dependency>
+
+    </dependencies>
+
+
+    <profiles>
+        <profile>
+            <id>dev</id>
+            <activation>
+                <activeByDefault>true</activeByDefault>
+            </activation>
+            <properties>
+                <package.environment>dev</package.environment>
+            </properties>
+        </profile>
+        <profile>
+            <id>uat</id>
+            <properties>
+                <package.environment>uat</package.environment>
+            </properties>
+        </profile>
+        <profile>
+            <id>prd</id>
+            <properties>
+                <package.environment>prd</package.environment>
+            </properties>
+        </profile>
+    </profiles>
+
+    <build>
+        <finalName>stock-admin-user-${package.environment}</finalName>
+        <plugins>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-resources-plugin</artifactId>
+                <executions>
+                    <execution>
+                        <id>default-resources</id>
+                        <phase>validate</phase>
+                        <goals>
+                            <goal>copy-resources</goal>
+                        </goals>
+                        <configuration>
+                            <outputDirectory>target/classes</outputDirectory>
+                            <useDefaultDelimiters>false</useDefaultDelimiters>
+                            <delimiters>
+                                <delimiter>${*}</delimiter>
+                            </delimiters>
+                            <resources>
+                                <resource>
+                                    <directory>src/main/resources/</directory>
+                                    <filtering>true</filtering>
+                                </resource>
+                                <resource>
+                                    <directory>src/main/java</directory>
+                                    <includes>
+                                        <include>**/*.xml</include>
+                                    </includes>
+                                    <filtering>false</filtering>
+                                </resource>
+                            </resources>
+                        </configuration>
+                    </execution>
+                </executions>
+            </plugin>
+            <plugin>
+                <groupId>org.springframework.boot</groupId>
+                <artifactId>spring-boot-maven-plugin</artifactId>
+                <executions>
+                    <execution>
+                        <goals>
+                            <goal>repackage</goal>
+                        </goals>
+                    </execution>
+                </executions>
+            </plugin>
+        </plugins>
+
+    </build>
+
+
+</project>

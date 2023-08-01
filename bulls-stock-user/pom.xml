@@ -1,0 +1,219 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <parent>
+        <artifactId>bulls-stock</artifactId>
+        <groupId>com.itcast.trade</groupId>
+        <version>1.0.0</version>
+    </parent>
+    <modelVersion>4.0.0</modelVersion>
+
+    <artifactId>bulls-stock-user</artifactId>
+
+    <dependencies>
+        <!-- spring boot 依赖 -->
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-web</artifactId>
+        </dependency>
+        <!-- Nacos服务注册发现依赖 -->
+        <dependency>
+            <groupId>com.alibaba.cloud</groupId>
+            <artifactId>spring-cloud-starter-alibaba-nacos-discovery</artifactId>
+        </dependency>
+        <!-- Spring Boot 监控组件依赖 -->
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-actuator</artifactId>
+        </dependency>
+        <!-- 公用数据层组件 -->
+        <dependency>
+            <groupId>com.itcast.trade</groupId>
+            <artifactId>bulls-stock-common-dao</artifactId>
+            <version>${project.stock.version}</version>
+        </dependency>
+
+        <!-- 公用实体层依赖 -->
+        <dependency>
+            <groupId>com.itcast.trade</groupId>
+            <artifactId>bulls-stock-entity</artifactId>
+            <version>${project.stock.version}</version>
+        </dependency>
+        <!-- 公用WEB层依赖 -->
+        <dependency>
+            <groupId>com.itcast.trade</groupId>
+            <artifactId>bulls-stock-common-web</artifactId>
+            <version>${project.stock.version}</version>
+        </dependency>
+
+        <!-- 公用系统层依赖 -->
+        <dependency>
+            <groupId>com.itcast.trade</groupId>
+            <artifactId>bulls-stock-common-system</artifactId>
+            <version>${project.stock.version}</version>
+        </dependency>
+
+        <!-- 公用的工具依赖 -->
+        <dependency>
+            <groupId>com.itcast.trade</groupId>
+            <artifactId>bulls-stock-common-utils</artifactId>
+            <version>${project.stock.version}</version>
+        </dependency>
+
+        <!-- feign 远程调用 -->
+        <dependency>
+            <groupId>org.springframework.cloud</groupId>
+            <artifactId>spring-cloud-starter-openfeign</artifactId>
+            <version>${spring-cloud-starter.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>org.springframework.cloud</groupId>
+            <artifactId>spring-cloud-openfeign-core</artifactId>
+            <version>${spring-cloud-starter.version}</version>
+        </dependency>
+
+        <!-- OAUTH2 LoadBalance 功能相关依赖 -->
+        <dependency>
+            <groupId>com.netflix.archaius</groupId>
+            <artifactId>archaius-core</artifactId>
+            <version>0.7.6</version>
+        </dependency>
+
+        <!-- Spring Security OATUH2 鉴权相关依赖 -->
+        <dependency>
+            <groupId>org.springframework.cloud</groupId>
+            <artifactId>spring-cloud-starter-oauth2</artifactId>
+            <version>${spring-cloud-starter.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>org.springframework.cloud</groupId>
+            <artifactId>spring-cloud-starter-security</artifactId>
+            <version>${spring-cloud-starter.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>org.springframework.security.oauth.boot</groupId>
+            <artifactId>spring-security-oauth2-autoconfigure</artifactId>
+            <version>${spring-cloud-starter.version}</version>
+        </dependency>
+
+        <!-- Sentinel 限流组件 -->
+        <dependency>
+            <groupId>com.alibaba.cloud</groupId>
+            <artifactId>spring-cloud-starter-alibaba-sentinel</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>com.alibaba.cloud</groupId>
+            <artifactId>spring-cloud-alibaba-sentinel-datasource</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>com.alibaba.csp</groupId>
+            <artifactId>sentinel-datasource-nacos</artifactId>
+        </dependency>
+
+        <!-- 自动化校验 -->
+        <dependency>
+            <groupId>org.hibernate</groupId>
+            <artifactId>hibernate-validator</artifactId>
+            <version>6.0.16.Final</version>
+        </dependency>
+        <!--Ceph 自动化装配的组件依赖 -->
+        <dependency>
+            <groupId>com.itcast.trade</groupId>
+            <artifactId>bulls-stock-starter-ceph</artifactId>
+            <version>${project.stock.version}</version>
+        </dependency>
+
+        <!-- Redis 缓存依赖 -->
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-data-redis</artifactId>
+            <version>${spring-cloud-starter.version}</version>
+        </dependency>
+
+        <!--  自定义消息发送服务的依赖组件 -->
+        <dependency>
+            <groupId>com.itcast.trade</groupId>
+            <artifactId>bulls-stock-starter-sender</artifactId>
+            <version>${project.stock.version}</version>
+        </dependency>
+    </dependencies>
+
+    <!-- 多环境版本配置管理 -->
+    <profiles>
+        <profile>
+            <id>dev</id>
+            <activation>
+                <activeByDefault>true</activeByDefault>
+            </activation>
+            <properties>
+                <package.environment>dev</package.environment>
+            </properties>
+        </profile>
+        <profile>
+            <id>uat</id>
+            <properties>
+                <package.environment>uat</package.environment>
+            </properties>
+        </profile>
+        <profile>
+            <id>prd</id>
+            <properties>
+                <package.environment>prd</package.environment>
+            </properties>
+        </profile>
+    </profiles>
+
+    <!-- Spring Boot 多环境打包构建配置 -->
+    <build>
+        <finalName>stock-user-${package.environment}</finalName>
+        <plugins>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-resources-plugin</artifactId>
+                <executions>
+                    <execution>
+                        <id>default-resources</id>
+                        <phase>validate</phase>
+                        <goals>
+                            <goal>copy-resources</goal>
+                        </goals>
+                        <configuration>
+                            <outputDirectory>target/classes</outputDirectory>
+                            <useDefaultDelimiters>false</useDefaultDelimiters>
+                            <delimiters>
+                                <delimiter>${*}</delimiter>
+                            </delimiters>
+                            <resources>
+                                <resource>
+                                    <directory>src/main/resources/</directory>
+                                    <filtering>true</filtering>
+                                </resource>
+                                <resource>
+                                    <directory>src/main/java</directory>
+                                    <includes>
+                                        <include>**/*.xml</include>
+                                    </includes>
+                                    <filtering>false</filtering>
+                                </resource>
+                            </resources>
+                        </configuration>
+                    </execution>
+                </executions>
+            </plugin>
+            <plugin>
+                <groupId>org.springframework.boot</groupId>
+                <artifactId>spring-boot-maven-plugin</artifactId>
+                <executions>
+                    <execution>
+                        <goals>
+                            <goal>repackage</goal>
+                        </goals>
+                    </execution>
+                </executions>
+            </plugin>
+        </plugins>
+
+    </build>
+
+</project>

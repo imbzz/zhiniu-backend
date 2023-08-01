@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.itcast.bulls.stock.task.dao.trade.IAccountWarnNotifyMessageDao">
+  <resultMap id="BaseResultMap" type="com.itcast.bulls.stock.entity.trade.AccountWarnNotifyMessage">
+    <id column="id" jdbcType="INTEGER" property="id" />
+    <result column="userId" jdbcType="BIGINT" property="userId" />
+    <result column="userNo" jdbcType="VARCHAR" property="userNo" />
+    <result column="userName" jdbcType="VARCHAR" property="userName" />
+    <result column="accountId" jdbcType="BIGINT" property="accountId" />
+    <result column="receiver" jdbcType="VARCHAR" property="receiver" />
+    <result column="notifyType" jdbcType="VARCHAR" property="notifyType" />
+    <result column="notifyTitle" jdbcType="VARCHAR" property="notifyTitle" />
+    <result column="warnType" jdbcType="INTEGER" property="warnType" />
+    <result column="notifyContent" jdbcType="VARCHAR" property="notifyContent" />
+    <result column="sendStatus" jdbcType="VARCHAR" property="sendStatus" />
+    <result column="retryTimes" jdbcType="INTEGER" property="retryTimes" />
+    <result column="memo" jdbcType="VARCHAR" property="memo" />
+    <result column="updateTime" jdbcType="TIMESTAMP" property="updateTime" />
+  </resultMap>
+  <sql id="Base_Column_List">
+    id, userId, userNo, userName, accountId, receiver, notifyType, warnType, notifyContent, notifyTitle, sendStatus,
+    retryTimes, memo, updateTime
+  </sql>
+
+    <insert id="insert" parameterType="com.itcast.bulls.stock.entity.trade.AccountWarnNotifyMessage">
+
+        <selectKey keyProperty="id" order="AFTER" resultType="java.lang.Long">
+            SELECT currval('t_account_warn_notify_message_id_seq')
+        </selectKey>
+
+        insert into office.t_account_warn_notify_message (userId, accountId, receiver,
+        notifyType, warnType, notifyContent,
+        sendStatus, retryTimes, memo,
+        updateTime,
+        userNo, userName, notifyTitle)
+        values (#{userId,jdbcType=BIGINT}, #{accountId,jdbcType=BIGINT}, #{receiver,jdbcType=VARCHAR},
+        #{notifyType,jdbcType=VARCHAR}, #{warnType,jdbcType=INTEGER}, #{notifyContent,jdbcType=VARCHAR},
+        #{sendStatus,jdbcType=VARCHAR}, #{retryTimes,jdbcType=INTEGER}, #{memo,jdbcType=VARCHAR},
+        #{updateTime,jdbcType=TIMESTAMP},
+        #{userNo}, #{userName}, #{notifyTitle})
+    </insert>
+
+
+
+    <select id="getAllNeedNotifyData" resultMap="BaseResultMap" >
+        select
+        <include refid="Base_Column_List" />
+        from office.t_account_warn_notify_message
+        where (sendStatus !=  '200' or sendStatus is null)
+        and retryTimes &lt;= 3
+        limit 1000;
+    </select>
+
+    <update id="updateNotifyDataSendStatus"  parameterType="com.itcast.bulls.stock.starter.sender.vo.SenderResult">
+        update office.t_account_warn_notify_message
+          set sendStatus = #{sendStatus},
+              retryTimes = COALESCE(retryTimes, 0) + 1,
+              memo = #{memo},
+              updateTime = now()
+         where id = #{id}
+    </update>
+
+
+
+</mapper>

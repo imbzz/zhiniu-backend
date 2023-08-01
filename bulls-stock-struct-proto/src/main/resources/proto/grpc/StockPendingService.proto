@@ -1,0 +1,61 @@
+syntax = "proto3";
+option java_multiple_files = true;
+option java_package = "com.itcast.bulls.stock.struct.grpc.trade";
+option java_outer_classname = "StockPendingServiceProto";
+
+// 限价委托下单服务接口
+service StockPendingService {
+    // 限价委托下单接口
+    rpc limitPlaceOrder(LimitPlaceOrderRequest) returns(LimitPlaceOrderReponse) {
+
+    }
+    // 用户撤单接口
+    rpc recallOrder(RecallOrderRequest) returns (RecallOrderResponse) {
+
+    }
+
+}
+
+// 限价委托下单的请求数据结构
+message LimitPlaceOrderRequest {
+    // 交易账户ID
+    int64 accountId = 1;
+    // 股票产品ID
+    int64 stockId = 2;
+    // 买卖方向
+    int32 direction = 3;
+    // 下单类型
+    int32 type = 4;
+    // 请求数量
+    int32 execVolume = 5;
+    // 请求价格
+    int64 execPrice = 6;
+}
+
+// 限价委托的返回数据包结构
+message LimitPlaceOrderReponse {
+    // 处理状态
+    string status = 1;
+    // 返回消息
+    string message = 2;
+    // 订单ID
+    int64 orderId = 3;
+}
+
+// 撤单请求的数据结构
+message RecallOrderRequest {
+    // 账户ID
+    int64 accountId = 1;
+    // 订单ID
+    int64 orderId = 2;
+    // 股票产品ID
+    int64 stockId = 3;
+}
+
+// 撤单的响应数据结构
+message RecallOrderResponse {
+    // 处理状态
+    string status = 1;
+    // 响应消息
+    string message = 2;
+}

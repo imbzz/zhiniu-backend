@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.itcast.bulls.stock.pending.dao.biz.ITradeAccountDao">
+    <resultMap id="BaseResultMap" type="com.itcast.bulls.stock.entity.user.TradeAccount">
+        <result column="id" jdbcType="BIGINT" property="id" />
+        <result column="userId" jdbcType="VARCHAR" property="userId" />
+        <result column="accountNo" jdbcType="VARCHAR" property="accountNo" />
+        <result column="balance" jdbcType="DOUBLE" property="balance" />
+        <result column="tradeGroupId" jdbcType="BIGINT" property="tradeGroupId" />
+        <result column="activeTime" jdbcType="TIMESTAMP" property="activeTime" />
+        <result column="status" jdbcType="TINYINT" property="status" />
+    </resultMap>
+
+    <select id="getByUserId" resultMap="BaseResultMap">
+      select id, userid,
+        accountNo, balance, tradeGroupId,
+        activeTime, status
+      from t_trade_account
+      where userId = #{userId}
+      order  by id
+      limit 1
+    </select>
+
+    <insert id="insert" parameterType="com.itcast.bulls.stock.entity.user.TradeAccount">
+        <selectKey keyProperty="id" order="AFTER" resultType="java.lang.Long">
+            SELECT LAST_INSERT_ID()
+        </selectKey>
+        insert into t_trade_account (userId, accountNo, balance, tradeGroupId,
+        activeTime, status)
+        values (#{userId,jdbcType=BIGINT}, #{accountNo,jdbcType=VARCHAR}, #{balance,jdbcType=DOUBLE}, #{tradeGroupId,jdbcType=BIGINT},
+        #{activeTime,jdbcType=TIMESTAMP}, #{status,jdbcType=TINYINT})
+    </insert>
+
+    <select id="getTradeGroupByAccountId" resultType="com.itcast.bulls.stock.entity.user.TradeGroup">
+      select gp.*
+      from t_trade_account acc
+      left join  t_trade_group gp on acc.tradeGroupId = gp.id
+      where gp.id = #{accountId}
+      limit 1
+    </select>
+
+    <select id="getById" resultMap="BaseResultMap">
+      select id, userid,
+        accountNo, balance, tradeGroupId,
+        activeTime, status
+      from t_trade_account
+      where id = #{id}
+    </select>
+
+
+</mapper>

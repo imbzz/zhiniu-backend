@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <parent>
+        <artifactId>bulls-stock-common</artifactId>
+        <groupId>com.itcast.trade</groupId>
+        <version>1.0.0</version>
+    </parent>
+    <modelVersion>4.0.0</modelVersion>
+
+    <artifactId>bulls-stock-common-service</artifactId>
+
+    <dependencies>
+        <!-- spring bean 操作工具 -->
+        <dependency>
+            <groupId>org.springframework</groupId>
+            <artifactId>spring-beans</artifactId>
+        </dependency>
+        <!-- 公用工具组件依赖 -->
+        <dependency>
+            <groupId>com.itcast.trade</groupId>
+            <artifactId>bulls-stock-common-utils</artifactId>
+            <version>${project.stock.version}</version>
+        </dependency>
+
+        <!-- Redis 分布式锁依赖组件 -->
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-integration</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>org.springframework.integration</groupId>
+            <artifactId>spring-integration-redis</artifactId>
+        </dependency>
+    </dependencies>
+
+</project>

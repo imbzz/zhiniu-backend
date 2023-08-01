@@ -1,0 +1,52 @@
+syntax = "proto3";
+option java_multiple_files = true;
+option java_package = "com.itcast.bulls.stock.struct.grpc.trade";
+option java_outer_classname = "StockUserServiceProto";
+
+// 用户管理服务接口
+service StockUserService {
+    // 用户登陆
+    rpc userLogin (LoginRequest) returns (LoginReponse) {
+
+    }
+
+    // 账户预警设置接口
+    rpc accountWarnSetting(AccountWarnSettingRequest) returns(AccountWarnSettingResponse) {
+
+    }
+}
+
+// 用户登陆请求
+message LoginRequest {
+    string userNo = 1;
+    string userPwd = 2;
+}
+
+// 用户登陆返回结果
+message LoginReponse{
+    string status = 1;
+    string message = 2;
+    int64 userId = 3;
+    int64 accountId = 4;
+}
+
+// 账户预警通知止盈止损设置请求数据结构
+message AccountWarnSettingRequest {
+    // 账户ID
+    int64 accountId = 1;
+    // 股票产品ID
+    int64 stockId = 2;
+    // 预警类型 (0: 止损, 1:止盈)
+    int32 warnType = 3;
+    // 止盈止损设置比例(单位：%， 例2.28 代表02.28%)
+    double stopRate = 4;
+    // 通知方式(APP:站内信，EMAIL：邮件，SMS：短信， 多个以逗号分隔)
+    string notifyType = 5;
+}
+
+// 账户预警通知止盈止损设置返回数据结构
+message AccountWarnSettingResponse{
+    string status = 1;
+    string message = 2;
+}
+

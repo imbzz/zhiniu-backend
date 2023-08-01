@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CompilerConfiguration">
+    <annotationProcessing>
+      <profile name="Maven default annotation processors profile" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <module name="hateoas-stocks" />
+        <module name="cat-demo-gateway" />
+        <module name="bulls-stock-pending" />
+        <module name="netty-client" />
+        <module name="seata-demo" />
+        <module name="bulls-stock-position" />
+        <module name="netty-server" />
+        <module name="mybatis-generator" />
+        <module name="grpc-lib" />
+        <module name="bulls-stock-deal" />
+        <module name="grpc-client" />
+        <module name="hateoas-order" />
+        <module name="nacos-config-demo" />
+        <module name="cat-demo-stock" />
+        <module name="cat-demo-account" />
+        <module name="bulls-stock-starter-sender" />
+        <module name="bulls-stock-entity" />
+        <module name="bulls-stock-struct-proto" />
+        <module name="bulls-stock-quote" />
+        <module name="bulls-stock-common-web" />
+        <module name="bulls-stock-starter-grpc" />
+        <module name="bulls-stock-common-dao" />
+        <module name="ceph-demo" />
+        <module name="bulls-stock-starter-ceph" />
+        <module name="bulls-stock-task" />
+        <module name="nacos-discovery-server" />
+        <module name="bulls-stock-user" />
+        <module name="grpc-server" />
+        <module name="cat-demo-order" />
+        <module name="bulls-stock-admin-user" />
+        <module name="bulls-stock-starter-oauth2" />
+        <module name="bulls-trade-oauth" />
+        <module name="nacos-discovery-client" />
+        <module name="bulls-stock-common-utils" />
+        <module name="bulls-stock-starter-swagger" />
+        <module name="bulls-stock-finance" />
+        <module name="bulls-stock-common-service" />
+        <module name="bulls-stock-common-system" />
+        <module name="bulls-stock-gateway" />
+        <module name="bulls-stock-proxy" />
+      </profile>
+    </annotationProcessing>
+  </component>
+</project>

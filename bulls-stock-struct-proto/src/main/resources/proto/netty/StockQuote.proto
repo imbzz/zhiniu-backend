@@ -1,0 +1,209 @@
+syntax = "proto3";
+
+option java_package = "com.itcast.bulls.stock.struct.netty.trade";
+option java_outer_classname = "StockQuoteProto";
+
+
+// 行情实时数据包
+message QuoteRealtimeResp {
+
+    /**
+     * 产品ID
+     */
+    int64 stockId = 1;
+
+    /**
+     * 产品编号
+     */
+    string stockCode = 2;
+
+    /**
+     * 产品名称
+     */
+    string stockName = 3 ;
+
+    /**
+     * 买方报价（一档）
+     */
+    int64 priceBid1 = 4;
+
+    /**
+     * 买方报价（二档）
+     */
+    int64 priceBid2 = 5;
+
+    /**
+     * 买方报价（三档）
+     */
+    int64 priceBid3 = 6;
+
+    /**
+     * 买方报价（四档）
+     */
+    int64 priceBid4 = 7;
+
+    /**
+     * 买方报价（五档）
+     */
+    int64 priceBid5 = 8;
+
+    /**
+     * 买方数量（一档）
+     */
+    int64 volumeBid1 = 9;
+
+    /**
+     * 买方数量（二档）
+     */
+    int64 volumeBid2 = 10;
+
+    /**
+     * 买方数量（三档）
+     */
+    int64 volumeBid3 = 11;
+
+    /**
+     * 买方数量（四档）
+     */
+    int64 volumeBid4 = 12;
+
+    /**
+     * 买方数量（五档）
+     */
+    int64 volumeBid5 = 13;
+
+    /**
+     * 卖方报价（一档）
+     */
+    int64 priceAsk1 = 14;
+
+    /**
+     * 卖方报价（二档）
+     */
+    int64 priceAsk2 = 15;
+
+    /**
+     * 卖方报价（三档）
+     */
+    int64 priceAsk3 = 16;
+
+    /**
+     * 卖方报价（四档）
+     */
+    int64 priceAsk4 = 17;
+
+    /**
+     * 卖方报价（五档）
+     */
+    int64 priceAsk5 = 18;
+
+    /**
+     * 卖方数量（一档）
+     */
+    int64 volumeAsk1 = 19;
+
+    /**
+     * 卖方数量（二档）
+     */
+    int64 volumeAsk2 = 20 ;
+
+    /**
+     * 卖方数量（三档）
+     */
+    int64 volumeAsk3 = 21;
+
+    /**
+     * 卖方数量（四档）
+     */
+    int64 volumeAsk4 = 22;
+
+    /**
+     * 卖方数量（五档）
+     */
+    int64 volumeAsk5 = 23;
+
+    /**
+     * 当前价格
+     */
+    int64 lastPrice = 24;
+
+    /**
+     * 当前成交量
+     */
+    int64 volume = 25;
+
+    /**
+     * 当前成交金额
+     */
+    int64 amount = 26;
+
+    /**
+     * 报价时间
+     */
+    int64 time = 27;
+
+    /**
+     * 股票市场
+     */
+    int32 marketNo = 28;
+
+    /**
+     * 开盘价
+     */
+    int64 openPrice = 29;
+
+    /**
+     * 昨收价
+     */
+    int64 lastClosePrice = 30;
+
+    /**
+     *  涨跌幅比例(单位：%， 例2.28 代表02.28%)
+     */
+    double priceRate = 31;
+
+
+}
+
+
+// K线行情数据的响应包结构体
+message KlineDataResp{
+
+    // 产品ID
+    int64 stockId = 1;
+
+    // 产品编号
+    string stockCode = 2;
+
+    // 产品名称
+    string stockName = 3;
+
+    // 开盘价
+    int64 priceOpen = 4;
+
+    // 最高价
+    int64 priceHigh = 5;
+
+    // 最低价
+    int64 priceLow = 6;
+
+    // 收盘价
+    int64 priceClose = 7 ;
+
+    // 成交量
+    int64 volume = 8;
+
+    // 成交金额
+    int64 amount = 9;
+
+    // 报价时间
+    int64 time = 10;
+
+    // 作收价
+    int64 lastClosePrice = 11;
+}
+
+// K线行情数据响应包， 集合
+message KlineDataRespLists {
+    repeated KlineDataResp klineDataResp = 1;
+}

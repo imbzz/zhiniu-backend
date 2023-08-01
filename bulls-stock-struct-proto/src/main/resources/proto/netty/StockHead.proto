@@ -1,0 +1,49 @@
+syntax = "proto3";
+
+option java_package = "com.itcast.bulls.stock.struct.netty.trade";
+option java_outer_classname = "StockHeadProto";
+
+// 头部
+message StockHead {
+
+    ProtoVer protoVer = 1 ;
+    RequestType requestType = 2;
+    // 消息编号
+    int64 seqId =3 ;
+    // 处理状态
+    string status =4;
+}
+
+// 协议版本
+enum ProtoVer {
+    VER_1 = 0;
+    VER_2 = 1;
+}
+
+// 请求类型
+enum RequestType {
+    // 用户登陆
+    USER_LOGIN = 0;
+    // 用户下单
+    PLACE_ORDER = 1;
+    // 实时行情数据
+    QUOTE_REALTIME = 2;
+    // 获取K线数据
+    QUOTE_KLINE = 3;
+    // 用户撤单接口
+    RECALL_ORDER = 4;
+    // 获取订单详情接口
+    GET_ORDER = 5;
+    // 获取用户的持仓数据接口
+    GET_ALL_POSITIONS = 6;
+    // 资金总览的接口
+    GET_FINANCE_OVERVIEW = 7;
+    //  获取账户交割单接口
+    GET_ACCOUNT_SETTLEMENTS = 8;
+    // 账户预警通知设置接口
+    ACCOUNT_WARN_SETTING = 9;
+    // 推送预警通知信息
+    NOTIFY_WARN_MESSAGE= 10;
+
+
+}

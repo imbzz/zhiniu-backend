@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.itcast.bulls.stock.finance.dao.trade.ITradeOrderDao">
+  <resultMap id="BaseResultMap" type="com.itcast.bulls.stock.entity.trade.TradeOrder">
+    <result column="id" jdbcType="BIGINT" property="id" />
+    <result column="accountId" jdbcType="BIGINT" property="accountId" />
+    <result column="stockId" jdbcType="BIGINT" property="stockId" />
+    <result column="status" jdbcType="TINYINT" property="status" />
+    <result column="type" jdbcType="TINYINT" property="type" />
+    <result column="direction" jdbcType="TINYINT" property="direction" />
+    <result column="initVolume" jdbcType="INTEGER" property="initVolume" />
+    <result column="execVolume" jdbcType="INTEGER" property="execVolume" />
+    <result column="requestPrice" jdbcType="INTEGER" property="requestPrice" />
+    <result column="execPrice" jdbcType="DOUBLE" property="execPrice" />
+    <result column="execTime" jdbcType="TIMESTAMP" property="execTime" />
+  </resultMap>
+  <insert id="insert" parameterType="com.itcast.bulls.stock.entity.trade.TradeOrder">
+    <selectKey keyProperty="id" order="AFTER" resultType="java.lang.Long">
+      SELECT currval('t_trade_order_id_seq')
+    </selectKey>
+    insert into t_trade_order (accountId, stockId, status, 
+      type, direction, initVolume, 
+      execVolume, requestPrice, execPrice, execTime
+      )
+    values (#{accountId,jdbcType=BIGINT}, #{stockId,jdbcType=BIGINT}, #{status,jdbcType=TINYINT}, 
+      #{type,jdbcType=TINYINT}, #{direction,jdbcType=TINYINT}, #{initVolume,jdbcType=INTEGER}, 
+      #{execVolume,jdbcType=INTEGER},#{requestPrice,jdbcType=DOUBLE}, #{execPrice,jdbcType=DOUBLE}, #{execTime,jdbcType=TIMESTAMP}
+      )
+  </insert>
+
+    <select id="getById" resultMap="BaseResultMap">
+        select id, accountId, stockId, status,
+          type, direction, initVolume,
+          execVolume, requestPrice, execPrice, execTime
+          from t_trade_order
+        where id = #{id}
+    </select>
+
+    <update id="update" parameterType="com.itcast.bulls.stock.entity.trade.TradeOrder" >
+        update t_trade_order
+           set status = #{status},
+               execVolume = #{execVolume},
+               execPrice = #{execPrice},
+               execTime = #{execTime}
+         where id = #{id}
+    </update>
+
+    <update id="updateOrderStatusById" >
+        update t_trade_order
+           set status = #{status}
+         where id = #{id}
+    </update>
+
+
+</mapper>

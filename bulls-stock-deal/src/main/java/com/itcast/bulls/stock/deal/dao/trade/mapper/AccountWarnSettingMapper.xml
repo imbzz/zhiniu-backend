@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.itcast.bulls.stock.deal.dao.trade.IAccountWarnSettingDao">
+  <resultMap id="BaseResultMap" type="com.itcast.bulls.stock.entity.user.AccountWarnSetting">
+    <id column="id" jdbcType="INTEGER" property="id" />
+    <result column="accountId" jdbcType="BIGINT" property="accountId" />
+    <result column="stockId" jdbcType="BIGINT" property="stockId" />
+    <result column="warnType" jdbcType="INTEGER" property="warnType" />
+    <result column="stopRate" jdbcType="DOUBLE" property="stopRate" />
+    <result column="notifyType" jdbcType="VARCHAR" property="notifyType" />
+    <result column="createTime" jdbcType="TIMESTAMP" property="createTime" />
+    <result column="updateTime" jdbcType="TIMESTAMP" property="updateTime" />
+  </resultMap>
+  <sql id="Base_Column_List">
+    id, accountId, stockId, warnType, stopRate, notifyType, createTime, updateTime
+  </sql>
+
+  <select id="selectByPrimaryKey" parameterType="java.lang.Integer" resultMap="BaseResultMap">
+    select
+    <include refid="Base_Column_List" />
+    from office.t_account_warn_setting
+    where id = #{id,jdbcType=INTEGER}
+  </select>
+
+    <select id="getAll" parameterType="java.lang.Integer" resultMap="BaseResultMap">
+        select
+        <include refid="Base_Column_List" />
+        from office.t_account_warn_setting
+    </select>
+
+    
+  <insert id="insert" parameterType="com.itcast.bulls.stock.entity.user.AccountWarnSetting">
+
+  <selectKey keyProperty="id" order="AFTER" resultType="java.lang.Long">
+      SELECT currval('t_account_warn_setting_id_seq')
+  </selectKey>
+    insert into office.t_account_warn_setting (accountId, stockId, warnType,
+      stopRate, notifyType, createTime,
+      updateTime)
+    values (#{accountId,jdbcType=BIGINT}, #{stockId,jdbcType=BIGINT}, #{warnType,jdbcType=INTEGER}, 
+      #{stopRate,jdbcType=DOUBLE}, #{notifyType,jdbcType=VARCHAR},#{createTime,jdbcType=TIMESTAMP},
+      #{updateTime,jdbcType=TIMESTAMP})
+  </insert>
+
+    <update id="update" parameterType="com.itcast.bulls.stock.entity.user.AccountWarnSetting" >
+
+        update office.t_account_warn_setting
+           set warnType = #{warnType},
+               notifyType = #{notifyType},
+               stopRate = #{stopRate},
+               updateTime = #{updateTime}
+          where id = #{id}
+
+    </update>
+
+    <select id="getByAccountAndStock" resultMap="BaseResultMap" >
+        select
+        <include refid="Base_Column_List" />
+        from office.t_account_warn_setting
+        where accountId = #{accountId}
+          and stockId = #{stockId}
+    </select>
+
+</mapper>

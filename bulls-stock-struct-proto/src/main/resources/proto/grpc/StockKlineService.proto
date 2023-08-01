@@ -1,0 +1,64 @@
+syntax = "proto3";
+option java_multiple_files = true;
+option java_package = "com.itcast.bulls.stock.struct.grpc.quote";
+option java_outer_classname = "StockKlineServiceProto";
+
+// 股票K线行情的服务接口
+service StockKlineService {
+
+    // 获取股票K线数据的接口
+    rpc getKline(GetKlineRequest) returns (GetKlineReponse) {
+    }
+}
+
+// 获取K线数据接口， 请求数据包结构
+message GetKlineRequest {
+    int64 stockId = 1;
+    string stockCode = 2;
+    int64 timeStart = 3;
+    int64 timeEnd = 4;
+}
+
+// 获取K线数据接口， 返回的数据包结构
+message KlineData {
+
+    // 产品ID
+    int64 stockId = 1;
+
+    // 产品编号
+    string stockCode = 2;
+
+    // 产品名称
+    string stockName = 3;
+
+    // 开盘价
+    int64 priceOpen = 4;
+
+    // 最高价
+    int64 priceHigh = 5;
+
+    // 最低价
+    int64 priceLow = 6;
+
+    // 收盘价
+    int64 priceClose = 7 ;
+
+    // 成交量
+    int64 volume = 8;
+
+    // 成交金额
+    int64 amount = 9;
+
+    // 报价时间
+    int64 time = 10;
+
+    // 作日的收盘价
+    int64 lastClosePrice = 11;
+}
+
+// 获取K线数据接口, 响应包接口
+message GetKlineReponse{
+     string status = 1;
+     string message = 2;
+     repeated  KlineData klineData = 3;
+}

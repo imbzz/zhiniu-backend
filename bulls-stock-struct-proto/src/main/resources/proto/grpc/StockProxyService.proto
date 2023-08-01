@@ -1,0 +1,52 @@
+syntax = "proto3";
+option java_multiple_files = true;
+option java_package = "com.itcast.trade.stock.struct.grpc.trade";
+option java_outer_classname = "StockProxyServiceProto";
+
+// 代理服务接口
+service StockProxyService {
+    // 发送预警通知消息
+    rpc notifyWarnMessage (WarnMessageDataRequest) returns (WarnMessageResponse) {
+
+    }
+
+}
+
+// 预警通知消息请求体
+message WarnMessageDataRequest {
+
+    repeated WarnMessageData warnMessageDataList = 1;
+
+}
+// 预警通知消息体
+message WarnMessageData {
+
+    int64 id = 1;
+    /**
+     * 用户ID
+     */
+    int64 userId = 2 ;
+
+    /**
+     * 账户ID
+     */
+    int64 accountId = 3;
+
+    /**
+     * 预警类型 (0: 止损, 1:止盈)
+     */
+    int32 warnType = 4;
+
+    /**
+     * 通知内容
+     */
+    string notifyContent = 5;
+}
+
+// 预警通知消息返回体
+message WarnMessageResponse{
+    string status = 1;
+    string message = 2;
+    repeated int64 ids = 3;
+}
+

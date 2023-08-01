@@ -1,0 +1,38 @@
+server:
+  port: 10680
+# 服务的基本配置
+spring:
+  application:
+    name: stock-gateway
+  cloud:
+    nacos:
+      discovery:
+        server-addr: 127.0.0.1:8848
+        service: stock-gateway
+    gateway:
+      discovery:
+        # 允许通过服务名称进行路由转发访问， http://service-id/user
+        locator:
+          enabled: true
+      # 路由配置
+      routes:
+      # 用户服务路由转发配置
+      - id: stock-user
+        uri: lb://stock-user
+        predicates:
+          - Path=/user/**
+      # 认证服务路由转发配置
+      - id: trade-auth
+        uri: lb://trade-auth
+        predicates:
+          # - Method=GET,POST  不要开启此项
+          - Path=/oauth/**
+      # 后台管理服务的转发配置
+      - id: stock-admin-user
+        uri: lb://stock-admin-user/admin
+        predicates:
+          - Path=/admin/**
+# 日志配置
+logging:
+  level:
+    root: info

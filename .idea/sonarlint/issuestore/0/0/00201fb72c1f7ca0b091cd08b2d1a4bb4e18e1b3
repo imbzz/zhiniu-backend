@@ -1,0 +1,12 @@
+
+E
+java:S3740\"/Provide the parametrized type for this generic.(…–Ο
+\
+java:S2259\"FA "NullPointerException" could be thrown; "convert()" can return null.(…–Ο
+P
+java:S3655_"5Call "result.isPresent()" before accessing the value.(υχΗψÿÿÿÿ
+[	java:S1073"AConstructor has 9 parameters, which is greater than 7 authorized.( αθÿÿÿÿÿ
+A
+java:S1452Y"&Remove usage of generic wildcard type.(ξε¤σϋÿÿÿÿ
+A
+java:S1452Y"&Remove usage of generic wildcard type.(ξε¤σϋÿÿÿÿ

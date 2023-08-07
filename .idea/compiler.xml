@@ -2,6 +2,7 @@
 <project version="4">
   <component name="CompilerConfiguration">
     <annotationProcessing>
+      <profile default="true" name="Default" enabled="true" />
       <profile name="Maven default annotation processors profile" enabled="true">
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
@@ -43,6 +44,7 @@
         <module name="bulls-stock-starter-swagger" />
         <module name="bulls-stock-finance" />
         <module name="bulls-stock-common-service" />
+        <module name="sentinel-demo" />
         <module name="bulls-stock-common-system" />
         <module name="bulls-stock-gateway" />
         <module name="bulls-stock-proxy" />

@@ -1,0 +1,22 @@
+
+u
+java:S1488•"_Immediately return this expression instead of assigning it to the temporary variable "builder".(«‰Ÿ~
+j	java:S116v"URename this field "accountId_" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ÙÂÓ°
+i	java:S116ƒ"SRename this field "stockId_" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(Íñı¤
+p	java:S116"URename this field "direction_" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ãß¹ÿÿÿÿÿ
+f	java:S116"PRename this field "type_" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(‹Ÿ³é
+k	java:S116ª"VRename this field "execVolume_" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(Òë‚
+p	java:S116·"URename this field "execPrice_" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ÛËèùÿÿÿÿ
+
+java:S4144ß"cUpdate this method so that its implementation is not identical to "getDefaultInstance" on line 838.(Í·ûÚÿÿÿÿÿ
+]
+java:S1126Ÿ"AReplace this if-then-else statement by a single return statement.(®Èäîÿÿÿÿÿ
+k	java:S116Í"URename this field "accountId_" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ÙÂÓ°
+i	java:S116ó"SRename this field "stockId_" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(Íñı¤
+p	java:S116™"URename this field "direction_" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ãß¹ÿÿÿÿÿ
+f	java:S116¿"PRename this field "type_" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(‹Ÿ³é
+k	java:S116å"VRename this field "execVolume_" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(Òë‚
+p	java:S116‹"URename this field "execPrice_" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ÛËèùÿÿÿÿ
+?	java:S108¼")Either remove or fill this block of code.(º„ç½
+o
+java:S2975ó"SRemove this "clone" implementation; use a copy constructor or copy factory instead.(Îõ¾Òûÿÿÿÿ

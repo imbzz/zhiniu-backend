@@ -1,0 +1,22 @@
+
+o
+java:S2293>"YReplace the type specification in this constructor call with the diamond operator ("<>").(‚°Í»
+u
+java:S2293"YReplace the type specification in this constructor call with the diamond operator ("<>").(´­ÿÿÿÿÿ
+P
+java:S1141V"5Extract this nested try block into a separate method.(¡»¢üùÿÿÿÿ
+j
+java:S1104>"TMake lockKeys a static final constant or non-public and provide accessors if needed.(‚°Í»
+D
+java:S1444>".Make this "public static lockKeys" field final(‚°Í»
+\
+java:S2184‘"@Cast one of the operands of this addition operation to a "long".(éÒ›‚şÿÿÿÿ
+d
+java:S3824ƒ"NReplace this "Map.get()" and condition with a call to "Map.computeIfAbsent()".(Ë¾¶]
+3
+java:S2386>"Make this member "protected".(‚°Í»
+h
+java:S3776A"RRefactor this method to reduce its Cognitive Complexity from 31 to the 15 allowed.(ê“Ô›
+C
+java:S1602«",Remove useless curly braces around statement(ïÀê•
+T	java:S106¬"9Replace this use of System.out or System.err by a logger.(Ğø­¼øÿÿÿÿ

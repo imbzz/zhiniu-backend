@@ -1,0 +1,104 @@
+
+¼
+java:S6539º"ŸSplit this â€œMonster Classâ€ into smaller and more specialized ones to reduce its dependencies on other classes from 28 to the maximum authorized 20 or less.(ºœÓ­úÿÿÿÿ
+¶
+java:S6539"ŸSplit this â€œMonster Classâ€ into smaller and more specialized ones to reduce its dependencies on other classes from 27 to the maximum authorized 20 or less.(ÀÙ³¿
+o
+java:S2293Å	"YReplace the type specification in this constructor call with the diamond operator ("<>").(Îš
+u
+java:S2293ï
+"YReplace the type specification in this constructor call with the diamond operator ("<>").(’ºœ™ùÿÿÿÿ
+u
+java:S2293›"YReplace the type specification in this constructor call with the diamond operator ("<>").(¢­œ„ıÿÿÿÿ
+p
+java:S2293Ç"YReplace the type specification in this constructor call with the diamond operator ("<>").(¯òË
+o
+java:S2293ó"YReplace the type specification in this constructor call with the diamond operator ("<>").(†¨œz
+p
+java:S2293Ÿ"YReplace the type specification in this constructor call with the diamond operator ("<>").(ºõÂ
+u
+java:S2293Ë"YReplace the type specification in this constructor call with the diamond operator ("<>").(ºÔÀ¼üÿÿÿÿ
+u
+java:S2293÷"YReplace the type specification in this constructor call with the diamond operator ("<>").(Šãÿùÿÿÿÿ
+F
+java:S1066"/Merge this if statement with the enclosing one.(½ö‡‚
+u
+java:S1488°"_Immediately return this expression instead of assigning it to the temporary variable "builder".(«‰Ÿ~
+n	java:S116Æ"YRename this field "stockDataCase_" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(Çô¬
+p	java:S116Ç"URename this field "stockData_" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(à ñüÿÿÿÿ
+k	java:S116÷"URename this field "stockHead_" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(¾ú£…
+y
+java:S4144¶"]Update this method so that its implementation is not identical to "getLoginData" on line 297.(€ùÌ¦øÿÿÿÿ
+y
+java:S4144Ü"bUpdate this method so that its implementation is not identical to "getPlaceOrderData" on line 335.(…ˆ¡
+y
+java:S4144‚"]Update this method so that its implementation is not identical to "getKlineData" on line 373.(ºñş¦üÿÿÿÿ
+
+java:S4144¨"cUpdate this method so that its implementation is not identical to "getRecallOrderData" on line 411.(¾İŞÂûÿÿÿÿ
+w
+java:S4144Î"`Update this method so that its implementation is not identical to "getGetOrderData" on line 449.(ìÃ¶ì
+ˆ
+java:S4144ô"lUpdate this method so that its implementation is not identical to "getGetAccountSettlementData" on line 487.(Ç¼Ïÿúÿÿÿÿ
+
+java:S4144š"jUpdate this method so that its implementation is not identical to "getAccountWarnSettingData" on line 525.(Ó“Úâ
+€
+java:S4144±"dUpdate this method so that its implementation is not identical to "getDefaultInstance" on line 2456.(ÕÀ½ğÿÿÿÿÿ
+H
+java:S1948Ç",Make "stockData_" transient or serializable.(à ñüÿÿÿÿ
+m
+java:S3776%"RRefactor this method to reduce its Cognitive Complexity from 57 to the 15 allowed.(æòƒıÿÿÿÿ
+Q
+java:S1133Ú"5Do not forget to remove this deprecated code someday.(Ø¼Ø¾ùÿÿÿÿ
+C
+java:S1123Ú"'Add the missing @Deprecated annotation.(Ø¼Ø¾ùÿÿÿÿ
+8
+java:S1116î"Remove this empty statement.(ôŸìúÿÿÿÿ
+]
+java:S1126¥"AReplace this if-then-else statement by a single return statement.(®Èäîÿÿÿÿÿ
+n	java:S116¦"YRename this field "stockDataCase_" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(Çô¬
+p	java:S116§"URename this field "stockData_" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(à ñüÿÿÿÿ
+k	java:S116¶"URename this field "stockHead_" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(¾ú£…
+r	java:S116¸"\Rename this field "stockHeadBuilder_" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(Íƒ¿©
+w	java:S116Ğ	"\Rename this field "loginDataBuilder_" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(Õé˜öüÿÿÿÿ
+|	java:S116ü
+"aRename this field "placeOrderDataBuilder_" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(‰œÛøÿÿÿÿ
+r	java:S116¨"\Rename this field "klineDataBuilder_" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(»°âÙ
+}	java:S116Ô"bRename this field "recallOrderDataBuilder_" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(¦»±úÿÿÿÿ
+z	java:S116€"_Rename this field "getOrderDataBuilder_" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(‰Êîûÿÿÿÿ
+	java:S116¬"kRename this field "getAccountSettlementDataBuilder_" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(êã¥®
+	java:S116Ø"iRename this field "accountWarnSettingDataBuilder_" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(®Í’è
+?	java:S108×")Either remove or fill this block of code.(º„ç½
+n
+java:S3776ı"RRefactor this method to reduce its Cognitive Complexity from 30 to the 15 allowed.(ÊñÇğÿÿÿÿÿ
+o
+java:S2975»"SRemove this "clone" implementation; use a copy constructor or copy factory instead.(Îõ¾Òûÿÿÿÿ
+E
+java:S1940ì
+")Use the opposite operator ("!=") instead.(‹áğÎüÿÿÿÿ
+3
+java:S1116÷
+"Remove this empty statement.(‚åÍÈ
+@
+java:S1940˜")Use the opposite operator ("!=") instead.(Ø—Ø÷
+3
+java:S1116£"Remove this empty statement.(‚åÍÈ
+@
+java:S1940Ä")Use the opposite operator ("!=") instead.(• „è
+3
+java:S1116Ï"Remove this empty statement.(‚åÍÈ
+E
+java:S1940ğ")Use the opposite operator ("!=") instead.(ÈæÓûÿÿÿÿ
+3
+java:S1116û"Remove this empty statement.(‚åÍÈ
+@
+java:S1940œ")Use the opposite operator ("!=") instead.(ŞÃ•Ö
+3
+java:S1116§"Remove this empty statement.(‚åÍÈ
+@
+java:S1940È")Use the opposite operator ("!=") instead.(À“Üá
+3
+java:S1116Ó"Remove this empty statement.(‚åÍÈ
+?
+java:S1940ô")Use the opposite operator ("!=") instead.(şë»t
+3
+java:S1116ÿ"Remove this empty statement.(‚åÍÈ

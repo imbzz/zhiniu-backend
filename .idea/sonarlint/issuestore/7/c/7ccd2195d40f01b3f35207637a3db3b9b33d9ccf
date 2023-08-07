@@ -1,0 +1,22 @@
+
+u
+java:S1488å"_Immediately return this expression instead of assigning it to the temporary variable "builder".(«‰Ÿ~
+h	java:S116n"SRename this field "stockId_" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(Íñı¤
+j	java:S116w"URename this field "stockCode_" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(úğ¼Ù
+p	java:S116™"URename this field "timeStart_" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(¼ûñéûÿÿÿÿ
+h	java:S116¢"SRename this field "timeEnd_" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(¡ê
+z
+java:S4144Ó"cUpdate this method so that its implementation is not identical to "getDefaultInstance" on line 698.(¡™Å©
+B
+java:S1948w",Make "stockCode_" transient or serializable.(úğ¼Ù
+m
+java:S3077w"WUse a thread-safe type; adding "volatile" is not enough to make this field thread-safe.(úğ¼Ù
+]
+java:S1126ó"AReplace this if-then-else statement by a single return statement.(®Èäîÿÿÿÿÿ
+i	java:S116’"SRename this field "stockId_" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(Íñı¤
+p	java:S116¬"URename this field "stockCode_" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(‚®àÍüÿÿÿÿ
+p	java:S116ñ"URename this field "timeStart_" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(¼ûñéûÿÿÿÿ
+h	java:S116‹"SRename this field "timeEnd_" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(¡ê
+?	java:S108Œ")Either remove or fill this block of code.(º„ç½
+o
+java:S2975½"SRemove this "clone" implementation; use a copy constructor or copy factory instead.(Îõ¾Òûÿÿÿÿ

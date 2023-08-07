@@ -1,0 +1,9 @@
+
+|
+java:S14881"fImmediately return this expression instead of assigning it to the temporary variable "errorWebResult".(Àµ’œ
+|
+java:S1488I"fImmediately return this expression instead of assigning it to the temporary variable "errorWebResult".(Àµ’œ
+z
+java:S1149)"_Replace the synchronized class "StringBuffer" by an unsynchronized one such as "StringBuilder".(ì­ŠÜúÿÿÿÿ
+z
+java:S1149B"_Replace the synchronized class "StringBuffer" by an unsynchronized one such as "StringBuilder".(ì­ŠÜúÿÿÿÿ

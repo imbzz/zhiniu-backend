@@ -1,0 +1,28 @@
+
+u
+java:S1488°"_Immediately return this expression instead of assigning it to the temporary variable "builder".(«‰Ÿ~
+j	java:S116}"URename this field "accountId_" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ÙÂÓ°
+i	java:S116†"SRename this field "stockId_" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(Íñı¤
+p	java:S116"URename this field "direction_" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ãß¹ÿÿÿÿÿ
+f	java:S116˜"PRename this field "type_" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(‹Ÿ³é
+k	java:S116¡"VRename this field "execVolume_" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(Òë‚
+p	java:S116ª"URename this field "execPrice_" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ÛËèùÿÿÿÿ
+j	java:S116³"ORename this field "xid_" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(½½–Åÿÿÿÿÿ
+y
+java:S4144ş"cUpdate this method so that its implementation is not identical to "getDefaultInstance" on line 869.(Ñ‹¬0
+B
+java:S1948³"&Make "xid_" transient or serializable.(½½–Åÿÿÿÿÿ
+s
+java:S3077³"WUse a thread-safe type; adding "volatile" is not enough to make this field thread-safe.(½½–Åÿÿÿÿÿ
+]
+java:S1126¸"AReplace this if-then-else statement by a single return statement.(®Èäîÿÿÿÿÿ
+k	java:S116ï"URename this field "accountId_" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ÙÂÓ°
+i	java:S116‰"SRename this field "stockId_" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(Íñı¤
+p	java:S116£"URename this field "direction_" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ãß¹ÿÿÿÿÿ
+f	java:S116½"PRename this field "type_" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(‹Ÿ³é
+k	java:S116×"VRename this field "execVolume_" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(Òë‚
+p	java:S116ñ"URename this field "execPrice_" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ÛËèùÿÿÿÿ
+j	java:S116‹"ORename this field "xid_" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(á÷üšøÿÿÿÿ
+?	java:S108×")Either remove or fill this block of code.(º„ç½
+o
+java:S2975‘"SRemove this "clone" implementation; use a copy constructor or copy factory instead.(Îõ¾Òûÿÿÿÿ

@@ -1,0 +1,24 @@
+
+u
+java:S1488ø"_Immediately return this expression instead of assigning it to the temporary variable "builder".(«‰Ÿ~
+l	java:S116k"RRename this field "status_" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(×ä…öûÿÿÿÿ
+n	java:S116•"SRename this field "message_" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ÇŒÂŠúÿÿÿÿ
+n	java:S116¿"SRename this field "orderId_" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(¤òíèþÿÿÿÿ
+
+java:S4144¦"cUpdate this method so that its implementation is not identical to "getDefaultInstance" on line 781.(Ï÷Ëâúÿÿÿÿ
+D
+java:S1948k")Make "status_" transient or serializable.(×ä…öûÿÿÿÿ
+F
+java:S1948•"*Make "message_" transient or serializable.(ÇŒÂŠúÿÿÿÿ
+r
+java:S3077k"WUse a thread-safe type; adding "volatile" is not enough to make this field thread-safe.(×ä…öûÿÿÿÿ
+s
+java:S3077•"WUse a thread-safe type; adding "volatile" is not enough to make this field thread-safe.(ÇŒÂŠúÿÿÿÿ
+]
+java:S1126Š"AReplace this if-then-else statement by a single return statement.(®Èäîÿÿÿÿÿ
+g	java:S116 "RRename this field "status_" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(Ä±­R
+n	java:S116ù"SRename this field "message_" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ˆ«Ï‚úÿÿÿÿ
+n	java:S116Ò"SRename this field "orderId_" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(¤òíèþÿÿÿÿ
+?	java:S108Ÿ")Either remove or fill this block of code.(º„ç½
+o
+java:S2975Í"SRemove this "clone" implementation; use a copy constructor or copy factory instead.(Îõ¾Òûÿÿÿÿ

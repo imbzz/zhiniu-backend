@@ -148,6 +148,7 @@
             </activation>
             <properties>
                 <package.environment>dev</package.environment>
+                <package.address>8.134.48.179</package.address>
             </properties>
         </profile>
         <profile>

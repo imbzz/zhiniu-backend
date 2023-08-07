@@ -1,0 +1,33 @@
+
+o
+java:S2293;"YReplace the type specification in this constructor call with the diamond operator ("<>").(®‚±
+u
+java:S2293æ"YReplace the type specification in this constructor call with the diamond operator ("<>").(™¼â¡øÿÿÿÿ
+u
+java:S2293Ç"YReplace the type specification in this constructor call with the diamond operator ("<>").(ÿËá¢ıÿÿÿÿ
+f	java:S117."QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ß”â¢
+g	java:S117ğ"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ÆÓ¡€
+u
+java:S1488¢"_Immediately return this expression instead of assigning it to the temporary variable "builder".(«‰Ÿ~
+t	java:S116f"_Rename this field "warnMessageDataList_" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(¯ïì
+z
+java:S4144€"cUpdate this method so that its implementation is not identical to "getDefaultInstance" on line 743.(ˆ„½Û
+D
+java:S1940:")Use the opposite operator ("==") instead.(«‹¦œøÿÿÿÿ
+]
+java:S1126·"AReplace this if-then-else statement by a single return statement.(®Èäîÿÿÿÿÿ
+k	java:S116à"URename this field "bitField0_" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ö»³Ä
+z	java:S116â"_Rename this field "warnMessageDataList_" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(›Ç‰‘ÿÿÿÿÿ
+	java:S116ì"fRename this field "warnMessageDataListBuilder_" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(µØÅ°ÿÿÿÿÿ
+Z
+java:S1854ğ"CRemove this useless assignment to local variable "from_bitField0_".(ÆÓ¡€
+K
+java:S1481ğ"4Remove this unused "from_bitField0_" local variable.(ÆÓ¡€
+o
+java:S2975ÿ"SRemove this "clone" implementation; use a copy constructor or copy factory instead.(Îõ¾Òûÿÿÿÿ
+i
+java:S3776¨"RRefactor this method to reduce its Cognitive Complexity from 19 to the 15 allowed.(¿¼²
+@
+java:S1940å")Use the opposite operator ("==") instead.(¦ÁÕ“
+E
+java:S1874ï".Remove this use of "addAll"; it is deprecated.(ÀÒ‰Ş

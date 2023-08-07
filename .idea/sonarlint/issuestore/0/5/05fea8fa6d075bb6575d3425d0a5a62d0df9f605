@@ -1,0 +1,23 @@
+
+C
+java:S5411*"(Use a primitive boolean expression here.(¯ô×ıÿÿÿÿ
+m
+java:S3776""RRefactor this method to reduce its Cognitive Complexity from 16 to the 15 allowed.(êü¡ÿÿÿÿÿ
+Z
+java:S2147/"DCombine this catch with the one at line 45, which has the same body.(Å¡ß
+Z
+java:S21471"DCombine this catch with the one at line 47, which has the same body.(åşáÿ
+B
+java:S3011'",This accessibility update should be removed.(šÈ’¶
+G
+java:S3011)",This accessibility update should be removed.( ¼Ìäÿÿÿÿÿ
+9
+java:S4738+"$Use "java.util.Optional.of" instead.(”ÓÍk
+:
+java:S47385"$Use "java.util.Optional.of" instead.(Ã§˜ı
+B
+java:S47387"'Use "java.util.Optional.empty" instead.(ŠâÃ£şÿÿÿÿ
+G
+java:S47389",Use "java.util.Optional.ofNullable" instead.(©ãí£øÿÿÿÿ
+=
+java:S1872>"'Use an "instanceof" comparison instead.(Ó×çÙ

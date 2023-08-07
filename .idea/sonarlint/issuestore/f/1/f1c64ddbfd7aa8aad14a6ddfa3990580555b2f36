@@ -1,0 +1,12 @@
+
+a
+java:S13013"KReplace this "switch" statement by "if" statements to increase readability.(¹ŠÒÓ
+u
+java:S1488ä"_Immediately return this expression instead of assigning it to the temporary variable "builder".(«‰Ÿ~
+y
+java:S4144¦"cUpdate this method so that its implementation is not identical to "getDefaultInstance" on line 397.(»·ùC
+\
+java:S1126}"AReplace this if-then-else statement by a single return statement.(®Èäîÿÿÿÿÿ
+?	java:S108‹")Either remove or fill this block of code.(º„ç½
+o
+java:S2975°"SRemove this "clone" implementation; use a copy constructor or copy factory instead.(Îõ¾Òûÿÿÿÿ

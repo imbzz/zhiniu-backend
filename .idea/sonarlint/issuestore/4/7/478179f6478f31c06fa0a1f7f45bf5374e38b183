@@ -1,0 +1,38 @@
+
+>
+java:S1604M"(Make this anonymous inner class a lambda(ş‰Ÿô
+?
+java:S1604Ü"(Make this anonymous inner class a lambda(ĞòÕö
+u
+java:S1488²"_Immediately return this expression instead of assigning it to the temporary variable "builder".(«‰Ÿ~
+œ
+java:S1186"€Add a nested comment explaining why this method is empty, throw an UnsupportedOperationException or complete the implementation.(ƒ°‡ıÿÿÿÿ
+J
+java:S1172	"/Remove this unused method parameter "registry".(•óÊõÿÿÿÿÿ
+K
+java:S1133;"5Do not forget to remove this deprecated code someday.(ùÕæ
+=
+java:S1123;"'Add the missing @Deprecated annotation.(ùÕæ
+Q
+java:S1133Á"5Do not forget to remove this deprecated code someday.(ê£çïùÿÿÿÿ
+C
+java:S1123Á"'Add the missing @Deprecated annotation.(ê£çïùÿÿÿÿ
+j	java:S116£"TRename this field "protoVer_" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(³¾ï—
+r	java:S116´"WRename this field "requestType_" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(¿˜Š•üÿÿÿÿ
+l	java:S116Å"QRename this field "seqId_" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(±¹ãüÿÿÿÿ
+m	java:S116Ò"RRename this field "status_" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(×ä…öûÿÿÿÿ
+€
+java:S4144æ	"dUpdate this method so that its implementation is not identical to "getDefaultInstance" on line 1229.(ÂèÊÓúÿÿÿÿ
+E
+java:S1948Ò")Make "status_" transient or serializable.(×ä…öûÿÿÿÿ
+s
+java:S3077Ò"WUse a thread-safe type; adding "volatile" is not enough to make this field thread-safe.(×ä…öûÿÿÿÿ
+]
+java:S1126Â"AReplace this if-then-else statement by a single return statement.(®Èäîÿÿÿÿÿ
+o	java:S116ß"TRename this field "protoVer_" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(Çö¸ãúÿÿÿÿ
+m	java:S116Œ"WRename this field "requestType_" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(¬º¿â
+l	java:S116¹"QRename this field "seqId_" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(±¹ãüÿÿÿÿ
+g	java:S116ß"RRename this field "status_" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(Ä±­R
+?	java:S108Ù")Either remove or fill this block of code.(º„ç½
+o
+java:S2975Š"SRemove this "clone" implementation; use a copy constructor or copy factory instead.(Îõ¾Òûÿÿÿÿ

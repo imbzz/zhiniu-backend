@@ -1,0 +1,9 @@
+
+7
+java:S1116N"Remove this empty statement.(ôŸŽìúÿÿÿÿ
+h
+java:S3776T"RRefactor this method to reduce its Cognitive Complexity from 21 to the 15 allowed.(Ø‰ºš
+2
+java:S3626—"Remove this redundant jump.(ûÁÝ…
+]
+java:S3252¨"FUse static access with "com.alibaba.fastjson.JSON" for "toJSONString".(Ÿ‚Þ·

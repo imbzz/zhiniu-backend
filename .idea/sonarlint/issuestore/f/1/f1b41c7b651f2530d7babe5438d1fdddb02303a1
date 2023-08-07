@@ -1,0 +1,83 @@
+
+\
+java:S1192'"FDefine a constant instead of duplicating this literal "UTF-8" 4 times.(¼¿¨
+e
+java:S1192‹"IDefine a constant instead of duplicating this literal ", error=" 3 times.(¸›ˆ³şÿÿÿÿ
+q
+java:S1488A"\Immediately return this expression instead of assigning it to the temporary variable "hash".(ª®T
+q
+java:S1488Z"\Immediately return this expression instead of assigning it to the temporary variable "hash".(ª®T
+t
+java:S1488z"YImmediately return this expression instead of assigning it to the temporary variable "k".(±‡ôÓüÿÿÿÿ
+~
+java:S1488ò"bImmediately return this expression instead of assigning it to the temporary variable "b64SignStr".(Ç¾³çüÿÿÿÿ
+~
+java:S1488û"bImmediately return this expression instead of assigning it to the temporary variable "b64SignStr".(”‡¨‹ÿÿÿÿÿ
+o
+java:S1104 "YMake BASE64Encrypt a static final constant or non-public and provide accessors if needed.(ˆãìè
+I
+java:S1444 "3Make this "public static BASE64Encrypt" field final(ˆãìè
+P
+java:S1191"5Use classes from the Java API instead of Sun classes.(Ó¨Ôÿÿÿÿÿ
+U
+java:S2259f"?A "NullPointerException" could be thrown; "b" is nullable here.(»×´í
+n
+java:S3008 "XRename this field "BASE64Encrypt" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ˆãìè
+{
+java:S1845…"_Rename method "BASE64Encrypt" to prevent any misunderstanding/clash with field "BASE64Encrypt".(é…Ğ¼ıÿÿÿÿ
+u
+java:S1149e"_Replace the synchronized class "StringBuffer" by an unsynchronized one such as "StringBuilder".(Ü±÷ê
+`
+java:S1124"EReorder the modifiers to comply with the Java Language Specification.(éŒÓÄşÿÿÿÿ
+h	java:S100""NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ÂÂ¾øÿÿÿÿ
+`
+java:S1124""EReorder the modifiers to comply with the Java Language Specification.(ÂÂ¾øÿÿÿÿ
+E
+java:S1197$"*Move the array designators [] to the type.(İƒ©¼ùÿÿÿÿ
+O
+java:S4719'"9Replace charset name argument with StandardCharsets.UTF_8(¼¿¨
+?
+java:S1197."*Move the array designators [] to the type.(ÓöñL
+h	java:S100<"NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(‚¹Şıÿÿÿÿÿ
+`
+java:S1124<"EReorder the modifiers to comply with the Java Language Specification.(‚¹Şıÿÿÿÿÿ
+O
+java:S4719>"9Replace charset name argument with StandardCharsets.UTF_8(ò„É‰
+<
+java:S1168D"&Return an empty array instead of null.(¥¹ï
+c	java:S100U"NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(Ò¤¦ã
+[
+java:S1124U"EReorder the modifiers to comply with the Java Language Specification.(Ò¤¦ã
+O
+java:S4719W"9Replace charset name argument with StandardCharsets.UTF_8(ò„É‰
+<
+java:S1168]"&Return an empty array instead of null.(¥¹ï
+h	java:S100a"NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(›º«œùÿÿÿÿ
+`
+java:S1124a"EReorder the modifiers to comply with the Java Language Specification.(›º«œùÿÿÿÿ
+c	java:S100t"NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ó—Ò¶
+i	java:S100…"NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(é…Ğ¼ıÿÿÿÿ
+d	java:S100—"NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(‰¹™´
+=
+java:S1168™"&Return an empty array instead of null.(¥¹ï
+=
+java:S1168¡"&Return an empty array instead of null.(¥¹ï
+d	java:S100«"NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(®ÀÌ
+5
+java:S5542¹"Use a secure cipher mode.(Î·¾¿şÿÿÿÿ
+:
+java:S5547¹"Use a strong cipher algorithm.(Î·¾¿şÿÿÿÿ
+U
+java:S4719½"9Replace charset name argument with StandardCharsets.UTF_8(ş¯İ×üÿÿÿÿ
+o
+java:S2139Á"XEither log this exception and handle it, or rethrow it with some contextual information.(”ı¾
+i	java:S100Ñ"NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(Ëºèùÿÿÿÿ
+5
+java:S5542Ù"Use a secure cipher mode.(Î·¾¿şÿÿÿÿ
+:
+java:S5547Ù"Use a strong cipher algorithm.(Î·¾¿şÿÿÿÿ
+Q	java:S125Û"<This block of commented-out lines of code should be removed.(ÃˆŞ]
+U
+java:S4719à"9Replace charset name argument with StandardCharsets.UTF_8(Ôğ’ûÿÿÿÿ
+T	java:S106€"9Replace this use of System.out or System.err by a logger.(˜—¯êúÿÿÿÿ
+O	java:S106"9Replace this use of System.out or System.err by a logger.(ƒÜ×

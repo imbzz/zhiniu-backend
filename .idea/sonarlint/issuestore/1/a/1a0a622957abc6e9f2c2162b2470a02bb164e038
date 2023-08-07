@@ -1,0 +1,15 @@
+
+^
+java:S1192"GDefine a constant instead of duplicating this literal "Status" 3 times.(¨ĞâÇ
+a
+java:S1192é"JDefine a constant instead of duplicating this literal "Direction" 3 times.(íàç³
+_
+java:S1192×"HDefine a constant instead of duplicating this literal "StockId" 7 times.(¨ºÊú
+a
+java:S1192"JDefine a constant instead of duplicating this literal "AccountId" 4 times.(¨ĞâÇ
+a
+java:S1192×"JDefine a constant instead of duplicating this literal "StockCode" 4 times.(¨ºÊú
+œ
+java:S1186"€Add a nested comment explaining why this method is empty, throw an UnsupportedOperationException or complete the implementation.(ƒ°‡ıÿÿÿÿ
+J
+java:S1172	"/Remove this unused method parameter "registry".(•óÊõÿÿÿÿÿ

@@ -34,7 +34,7 @@ public class RemoteRunner implements ApplicationRunner {
     /**
      * 指定的是股票服务接口地址
      */
-    private static final URI ROOT_URI = URI.create("http://localhost:8080/");
+    private static final URI ROOT_URI = URI.create("http://localhost:8083/");
 
     /**
      * RestTemplate 注入， 负责http远程调用

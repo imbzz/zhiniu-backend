@@ -1,0 +1,16 @@
+
+u
+java:S1488—"_Immediately return this expression instead of assigning it to the temporary variable "builder".(«‰Ÿ~
+m	java:S116_"SRename this field "message_" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ÇŒÂŠúÿÿÿÿ
+
+java:S4144¥"cUpdate this method so that its implementation is not identical to "getDefaultInstance" on line 524.(•ı”üÿÿÿÿ
+E
+java:S1948_"*Make "message_" transient or serializable.(ÇŒÂŠúÿÿÿÿ
+r
+java:S3077_"WUse a thread-safe type; adding "volatile" is not enough to make this field thread-safe.(ÇŒÂŠúÿÿÿÿ
+]
+java:S1126®"AReplace this if-then-else statement by a single return statement.(®Èäîÿÿÿÿÿ
+n	java:S116²"SRename this field "message_" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ˆ«Ï‚úÿÿÿÿ
+?	java:S108¾")Either remove or fill this block of code.(º„ç½
+o
+java:S2975æ"SRemove this "clone" implementation; use a copy constructor or copy factory instead.(Îõ¾Òûÿÿÿÿ

@@ -1,0 +1,13 @@
+
+t
+java:S2293w"YReplace the type specification in this constructor call with the diamond operator ("<>").(àí¿±şÿÿÿÿ
+v
+java:S1149™"_Replace the synchronized class "StringBuffer" by an unsynchronized one such as "StringBuilder".(âá±‚
+B
+java:S4738k",Use "java.util.Optional.ofNullable" instead.(³¸Î™
+B
+java:S4738m"'Use "java.util.Optional.empty" instead.(ŠâÃ£şÿÿÿÿ
+H
+java:S4738ƒ",Use "java.util.Optional.ofNullable" instead.(Œ ¿şÿÿÿÿ
+C
+java:S4738…"'Use "java.util.Optional.empty" instead.(ŠâÃ£şÿÿÿÿ

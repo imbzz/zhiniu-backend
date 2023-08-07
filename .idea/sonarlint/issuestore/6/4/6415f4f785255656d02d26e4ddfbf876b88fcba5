@@ -1,0 +1,128 @@
+
+¼
+java:S6539ÿ"ŸSplit this â€œMonster Classâ€ into smaller and more specialized ones to reduce its dependencies on other classes from 34 to the maximum authorized 20 or less.(ºœÓ­úÿÿÿÿ
+»
+java:S6539"ŸSplit this â€œMonster Classâ€ into smaller and more specialized ones to reduce its dependencies on other classes from 33 to the maximum authorized 20 or less.(àÅëÿÿÿÿÿ
+o
+java:S2293§"YReplace the type specification in this constructor call with the diamond operator ("<>").(Îš
+u
+java:S2293ª"YReplace the type specification in this constructor call with the diamond operator ("<>").(Èòõ‰ùÿÿÿÿ
+p
+java:S2293Ö"YReplace the type specification in this constructor call with the diamond operator ("<>").(ÇŒıˆ
+p
+java:S2293‚"YReplace the type specification in this constructor call with the diamond operator ("<>").(ĞÜ¶
+u
+java:S2293®"YReplace the type specification in this constructor call with the diamond operator ("<>").(ÁÀ±Ãıÿÿÿÿ
+u
+java:S2293Ú"YReplace the type specification in this constructor call with the diamond operator ("<>").(“ä÷‡øÿÿÿÿ
+p
+java:S2293†"YReplace the type specification in this constructor call with the diamond operator ("<>").(É‹Šõ
+p
+java:S2293²"YReplace the type specification in this constructor call with the diamond operator ("<>").(€¯âº
+u
+java:S2293Ş"YReplace the type specification in this constructor call with the diamond operator ("<>").(Ü¤”¦ûÿÿÿÿ
+u
+java:S2293Š"YReplace the type specification in this constructor call with the diamond operator ("<>").(ø”˜ûÿÿÿÿ
+F
+java:S1066²"/Merge this if statement with the enclosing one.(½ö‡‚
+u
+java:S1488õ"_Immediately return this expression instead of assigning it to the temporary variable "builder".(«‰Ÿ~
+w	java:S116é"\Rename this field "responseDataCase_" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ï†’Õùÿÿÿÿ
+s	java:S116ê"XRename this field "responseData_" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ÃÊ·úÿÿÿÿ
+k	java:S116"URename this field "stockHead_" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(¾ú£…
+n	java:S116¿"SRename this field "message_" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ÇŒÂŠúÿÿÿÿ
+~
+java:S4144‡"bUpdate this method so that its implementation is not identical to "getPlaceOrderResp" on line 378.(ÙˆÃôúÿÿÿÿ
+
+java:S4144­"eUpdate this method so that its implementation is not identical to "getQuoteRealtimeResp" on line 416.(ÓÅˆœşÿÿÿÿ
+‚
+java:S4144Ó"fUpdate this method so that its implementation is not identical to "getKlineDataRespLists" on line 454.(’ó¾ºøÿÿÿÿ
+|
+java:S4144ù"`Update this method so that its implementation is not identical to "getGetOrderResp" on line 492.(ØÀ¾¬ûÿÿÿÿ
+}
+java:S4144Ÿ"fUpdate this method so that its implementation is not identical to "getGetAllPositionList" on line 530.(—–ÕÂ
+†
+java:S4144Å"jUpdate this method so that its implementation is not identical to "getGetFinanceOverviewResp" on line 568.(ïÃÑªúÿÿÿÿ
+‹
+java:S4144ë"tUpdate this method so that its implementation is not identical to "getGetAccountSettlementRespDataList" on line 606.(¯Àë
+
+java:S4144‘"jUpdate this method so that its implementation is not identical to "getAccountWarnSettingResp" on line 644.(®Û±Ÿ
+ƒ
+java:S4144·"gUpdate this method so that its implementation is not identical to "getWarnMessageDataResp" on line 682.(‡¼ÚÚüÿÿÿÿ
+z
+java:S4144Ä"dUpdate this method so that its implementation is not identical to "getDefaultInstance" on line 3115.(ŞñœA
+K
+java:S1948ê"/Make "responseData_" transient or serializable.(ÃÊ·úÿÿÿÿ
+F
+java:S1948¿"*Make "message_" transient or serializable.(ÇŒÂŠúÿÿÿÿ
+s
+java:S3077¿"WUse a thread-safe type; adding "volatile" is not enough to make this field thread-safe.(ÇŒÂŠúÿÿÿÿ
+g
+java:S3776&"RRefactor this method to reduce its Cognitive Complexity from 69 to the 15 allowed.(şÉ–
+L
+java:S1133ÿ"5Do not forget to remove this deprecated code someday.(ÂÄşá
+>
+java:S1123ÿ"'Add the missing @Deprecated annotation.(ÂÄşá
+8
+java:S1116•"Remove this empty statement.(ôŸìúÿÿÿÿ
+]
+java:S1126à"AReplace this if-then-else statement by a single return statement.(®Èäîÿÿÿÿÿ
+w	java:S116ˆ
+"\Rename this field "responseDataCase_" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ï†’Õùÿÿÿÿ
+s	java:S116‰
+"XRename this field "responseData_" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ÃÊ·úÿÿÿÿ
+k	java:S116˜
+"URename this field "stockHead_" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(¾ú£…
+r	java:S116š
+"\Rename this field "stockHeadBuilder_" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(Íƒ¿©
+n	java:S116±"SRename this field "message_" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ˆ«Ï‚úÿÿÿÿ
+|	java:S116‹"aRename this field "placeOrderRespBuilder_" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(®œ‘’úÿÿÿÿ
+z	java:S116·"dRename this field "quoteRealtimeRespBuilder_" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ŠÊŠÒ
+{	java:S116ã"eRename this field "klineDataRespListsBuilder_" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ÿìÚá
+z	java:S116"_Rename this field "getOrderRespBuilder_" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(´Õ‘¿ÿÿÿÿÿ
+€	java:S116»"eRename this field "getAllPositionListBuilder_" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(Šà­Éüÿÿÿÿ
+	java:S116ç"iRename this field "getFinanceOverviewRespBuilder_" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(Õ™‡ä
+‰	java:S116“"sRename this field "getAccountSettlementRespDataListBuilder_" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ÅøÆ
+~	java:S116¿"iRename this field "accountWarnSettingRespBuilder_" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ó¾§
+|	java:S116ë"fRename this field "warnMessageDataRespBuilder_" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(È¨Ş´
+?	java:S108œ")Either remove or fill this block of code.(º„ç½
+i
+java:S3776Ä"RRefactor this method to reduce its Cognitive Complexity from 38 to the 15 allowed.(ìüŸ­
+o
+java:S2975‘	"SRemove this "clone" implementation; use a copy constructor or copy factory instead.(Îõ¾Òûÿÿÿÿ
+E
+java:S1940§")Use the opposite operator ("!=") instead.(×Ùµ‹ùÿÿÿÿ
+3
+java:S1116²"Remove this empty statement.(‚åÍÈ
+E
+java:S1940Ó")Use the opposite operator ("!=") instead.(¨–‘‹ûÿÿÿÿ
+3
+java:S1116Ş"Remove this empty statement.(‚åÍÈ
+E
+java:S1940ÿ")Use the opposite operator ("!=") instead.(‘Û¡‰úÿÿÿÿ
+3
+java:S1116Š"Remove this empty statement.(‚åÍÈ
+@
+java:S1940«")Use the opposite operator ("!=") instead.(÷å³
+3
+java:S1116¶"Remove this empty statement.(‚åÍÈ
+E
+java:S1940×")Use the opposite operator ("!=") instead.(ÔÓ˜òıÿÿÿÿ
+3
+java:S1116â"Remove this empty statement.(‚åÍÈ
+@
+java:S1940ƒ")Use the opposite operator ("!=") instead.(Şù•
+3
+java:S1116"Remove this empty statement.(‚åÍÈ
+E
+java:S1940¯")Use the opposite operator ("!=") instead.(Â£úÇÿÿÿÿÿ
+3
+java:S1116º"Remove this empty statement.(‚åÍÈ
+?
+java:S1940Û")Use the opposite operator ("!=") instead.(Ó÷î/
+3
+java:S1116æ"Remove this empty statement.(‚åÍÈ
+E
+java:S1940‡")Use the opposite operator ("!=") instead.(ÙïƒÛıÿÿÿÿ
+3
+java:S1116’"Remove this empty statement.(‚åÍÈ

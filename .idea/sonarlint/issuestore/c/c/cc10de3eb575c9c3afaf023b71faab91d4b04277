@@ -1,0 +1,9 @@
+
+o
+java:S2293"YReplace the type specification in this constructor call with the diamond operator ("<>").(„–¬ª
+t
+java:S2142/"^Either re-interrupt this method or rethrow the "InterruptedException" that can be caught here.(”ı¾
+Y
+java:S1155(">Use isEmpty() to check whether the collection is empty or not.(È°™Éúÿÿÿÿ
+S	java:S106)"9Replace this use of System.out or System.err by a logger.(½¹âøÿÿÿÿ
+S	java:S106+"9Replace this use of System.out or System.err by a logger.(à–»‰ÿÿÿÿÿ

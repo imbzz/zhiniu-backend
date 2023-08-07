@@ -1,0 +1,20 @@
+
+u
+java:S1488Ë"_Immediately return this expression instead of assigning it to the temporary variable "builder".(«‰Ÿ~
+j	java:S116i"URename this field "accountId_" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ÙÂÓ°
+s	java:S116r"YRename this field "adjustBalance_" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(„àûøÿÿÿÿ
+i	java:S116{"ORename this field "xid_" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(½½–Åÿÿÿÿÿ
+
+java:S4144™"cUpdate this method so that its implementation is not identical to "getDefaultInstance" on line 640.(¶×™Õúÿÿÿÿ
+A
+java:S1948{"&Make "xid_" transient or serializable.(½½–Åÿÿÿÿÿ
+r
+java:S3077{"WUse a thread-safe type; adding "volatile" is not enough to make this field thread-safe.(½½–Åÿÿÿÿÿ
+]
+java:S1126Ü"AReplace this if-then-else statement by a single return statement.(®Èäîÿÿÿÿÿ
+k	java:S116ò"URename this field "accountId_" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ÙÂÓ°
+t	java:S116Œ"YRename this field "adjustBalance_" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(„àûøÿÿÿÿ
+j	java:S116¦"ORename this field "xid_" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(á÷üšøÿÿÿÿ
+?	java:S108ò")Either remove or fill this block of code.(º„ç½
+o
+java:S2975 "SRemove this "clone" implementation; use a copy constructor or copy factory instead.(Îõ¾Òûÿÿÿÿ

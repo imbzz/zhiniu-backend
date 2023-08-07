@@ -1,0 +1,15 @@
+
+j
+java:S1192$"ODefine a constant instead of duplicating this literal "line.separator" 3 times.(ÉÛ®šûÿÿÿÿ
+U
+java:S1161:":Add the "@Override" annotation above this method signature(²Ù¨üýÿÿÿÿ
+P
+java:S1161M":Add the "@Override" annotation above this method signature(ßÄŠÚ
+U
+java:S1161Y":Add the "@Override" annotation above this method signature(ß´Ž½øÿÿÿÿ
+`
+java:S1128"KRemove this unused import 'org.mybatis.generator.api.dom.java.JavaElement'.(·ÈÂ 
+M
+java:S1128"7Remove this unused import 'java.text.SimpleDateFormat'.(ú¡ÙÛ
+A
+java:S1128"+Remove this unused import 'java.util.Date'.(¸…¼ü

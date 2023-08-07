@@ -1,0 +1,5 @@
+
+
+java:S33051"dInject this field value directly into "tradeEntityManagerFactoryBean", the only method that uses it.(×½üÍûÿÿÿÿ
+L
+java:S1172B"1Remove this unused method parameter "dataSource".(Ë²ê„ýÿÿÿÿ

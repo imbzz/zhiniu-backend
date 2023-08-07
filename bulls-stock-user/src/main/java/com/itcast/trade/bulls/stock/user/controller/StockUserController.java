@@ -77,21 +77,22 @@ public class StockUserController extends BaseController{
      */
     @PostMapping("/uploadIdCard")
     public ApiRespResult uploadIdCard(@RequestParam("file")MultipartFile file) {
-        ApiRespResult result = null;
-        try {
-            // 1. 获取用户的ID
-            Long userId = getUserId();
-            // 2.保存用户上传的文件
-            String userFileId = stockUserFileService.uploadUserIdCard(userId, file);
-            result = ApiRespResult.success(userFileId);
-        }catch (ComponentException e) {
-            log.error(e.getMessage(),e);
-            result = ApiRespResult.error(e.getErrorCodeEnum());
-        }catch (Exception e) {
-            log.error(e.getMessage(),e);
-            result = ApiRespResult.sysError(e.getMessage());
-        }
-        return result;
+//        ApiRespResult result = null;
+//        try {
+//            // 1. 获取用户的ID
+//            Long userId = getUserId();
+//            // 2.保存用户上传的文件
+//            String userFileId = stockUserFileService.uploadUserIdCard(userId, file);
+//            result = ApiRespResult.success(userFileId);
+//        }catch (ComponentException e) {
+//            log.error(e.getMessage(),e);
+//            result = ApiRespResult.error(e.getErrorCodeEnum());
+//        }catch (Exception e) {
+//            log.error(e.getMessage(),e);
+//            result = ApiRespResult.sysError(e.getMessage());
+//        }
+//        return result;
+        return null;
     }
 
 
@@ -102,61 +103,62 @@ public class StockUserController extends BaseController{
      */
     @RequestMapping(value = "/downloadFile", method = {RequestMethod.GET, RequestMethod.POST} )
     public  ApiRespResult downloadFile(@NotBlank(message = "文件ID不能为空！") String fileId) {
-        // 文件输出流
-        OutputStream os = null;
-        // 文件缓冲数据流
-        BufferedInputStream bis = null;
-        // 统一返回对象
-        ApiRespResult result = null;
-
-        try {
-            // 1. 获取HttpServletResponse输出返回对象
-            HttpServletResponse response = ((ServletRequestAttributes) RequestContextHolder.getRequestAttributes())
-                    .getResponse();
-            // 2. 获取用户的文件信息
-            TradeUserFile tradeUserFile = stockUserFileService.getTradeUserFile(fileId);
-
-            // 3. 从Ceph服务器上去获取文件流
-            InputStream inputStream = cephSwiftOperator.retrieveObject(fileId);
-
-            // 4. 设置文件的输出类型ContentType
-            if(null == tradeUserFile.getFileType()) {
-                // 放置浏览器直接打开, 强制下载文件
-                response.setContentType("applicaton/force-download");
-            }
-            response.setContentType(tradeUserFile.getFileType());
-            // 5. 设置文件下载的名称
-            response.addHeader("Content-Dispostion", "attachment:fileName=" + tradeUserFile.getFilename());
-
-            // 6. 输出文件流, 完成下载处理
-            byte[] buffer = new byte[1024];
-            bis = new BufferedInputStream(inputStream);
-            os = response.getOutputStream();
-            int i = bis.read(buffer);
-            while( i!= -1 ) {
-                os.write(buffer, 0, i);
-                i = bis.read(buffer);
-            }
-            os.flush();
-            return null;
-
-        }catch(ComponentException e ){
-            log.error(e.getMessage(), e);
-            result = ApiRespResult.error(e.getErrorCodeEnum());
-        }catch(Exception e ){
-            log.error(e.getMessage(), e);
-            result = ApiRespResult.sysError(e.getMessage());
-        }finally {
-            // 关闭文件流
-            if(bis != null) {
-                try {
-                    bis.close();
-                } catch (IOException e) {
-                    log.error(e.getMessage(), e);
-                }
-            }
-        }
-        return result;
+//        // 文件输出流
+//        OutputStream os = null;
+//        // 文件缓冲数据流
+//        BufferedInputStream bis = null;
+//        // 统一返回对象
+//        ApiRespResult result = null;
+//
+//        try {
+//            // 1. 获取HttpServletResponse输出返回对象
+//            HttpServletResponse response = ((ServletRequestAttributes) RequestContextHolder.getRequestAttributes())
+//                    .getResponse();
+//            // 2. 获取用户的文件信息
+//            TradeUserFile tradeUserFile = stockUserFileService.getTradeUserFile(fileId);
+//
+//            // 3. 从Ceph服务器上去获取文件流
+//            InputStream inputStream = cephSwiftOperator.retrieveObject(fileId);
+//
+//            // 4. 设置文件的输出类型ContentType
+//            if(null == tradeUserFile.getFileType()) {
+//                // 放置浏览器直接打开, 强制下载文件
+//                response.setContentType("applicaton/force-download");
+//            }
+//            response.setContentType(tradeUserFile.getFileType());
+//            // 5. 设置文件下载的名称
+//            response.addHeader("Content-Dispostion", "attachment:fileName=" + tradeUserFile.getFilename());
+//
+//            // 6. 输出文件流, 完成下载处理
+//            byte[] buffer = new byte[1024];
+//            bis = new BufferedInputStream(inputStream);
+//            os = response.getOutputStream();
+//            int i = bis.read(buffer);
+//            while( i!= -1 ) {
+//                os.write(buffer, 0, i);
+//                i = bis.read(buffer);
+//            }
+//            os.flush();
+//            return null;
+//
+//        }catch(ComponentException e ){
+//            log.error(e.getMessage(), e);
+//            result = ApiRespResult.error(e.getErrorCodeEnum());
+//        }catch(Exception e ){
+//            log.error(e.getMessage(), e);
+//            result = ApiRespResult.sysError(e.getMessage());
+//        }finally {
+//            // 关闭文件流
+//            if(bis != null) {
+//                try {
+//                    bis.close();
+//                } catch (IOException e) {
+//                    log.error(e.getMessage(), e);
+//                }
+//            }
+//        }
+//        return result;
+        return null;
     }
 
 }

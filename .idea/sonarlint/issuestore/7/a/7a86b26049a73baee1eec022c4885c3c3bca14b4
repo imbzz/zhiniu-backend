@@ -1,0 +1,45 @@
+
+o
+java:S2293I"YReplace the type specification in this constructor call with the diamond operator ("<>").(Ğ«½ë
+u
+java:S2293ä"YReplace the type specification in this constructor call with the diamond operator ("<>").(ÙŒİéÿÿÿÿÿ
+u
+java:S2293Å"YReplace the type specification in this constructor call with the diamond operator ("<>").(ö’ƒúÿÿÿÿ
+f	java:S1170"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ß”â¢
+g	java:S117Ú"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ÆÓ¡€
+u
+java:S1488ˆ"_Immediately return this expression instead of assigning it to the temporary variable "builder".(«‰Ÿ~
+l	java:S116t"RRename this field "status_" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(×ä…öûÿÿÿÿ
+n	java:S116–"SRename this field "message_" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ÇŒÂŠúÿÿÿÿ
+k	java:S116¸"URename this field "klineData_" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(–¦¤ 
+z
+java:S4144ş"cUpdate this method so that its implementation is not identical to "getDefaultInstance" on line 997.(ÔÏßş
+D
+java:S1948t")Make "status_" transient or serializable.(×ä…öûÿÿÿÿ
+F
+java:S1948–"*Make "message_" transient or serializable.(ÇŒÂŠúÿÿÿÿ
+r
+java:S3077t"WUse a thread-safe type; adding "volatile" is not enough to make this field thread-safe.(×ä…öûÿÿÿÿ
+s
+java:S3077–"WUse a thread-safe type; adding "volatile" is not enough to make this field thread-safe.(ÇŒÂŠúÿÿÿÿ
+D
+java:S1940H")Use the opposite operator ("==") instead.(«‹¦œøÿÿÿÿ
+]
+java:S1126™"AReplace this if-then-else statement by a single return statement.(®Èäîÿÿÿÿÿ
+k	java:S116Ô"URename this field "bitField0_" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ö»³Ä
+g	java:S116Ö"RRename this field "status_" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(Ä±­R
+n	java:S116›"SRename this field "message_" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ˆ«Ï‚úÿÿÿÿ
+p	java:S116à"URename this field "klineData_" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ó‡‡®ıÿÿÿÿ
+r	java:S116ê"\Rename this field "klineDataBuilder_" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ä¶óÓ
+Z
+java:S1854Ú"CRemove this useless assignment to local variable "from_bitField0_".(ÆÓ¡€
+K
+java:S1481Ú"4Remove this unused "from_bitField0_" local variable.(ÆÓ¡€
+o
+java:S2975ë"SRemove this "clone" implementation; use a copy constructor or copy factory instead.(Îõ¾Òûÿÿÿÿ
+i
+java:S3776”"RRefactor this method to reduce its Cognitive Complexity from 21 to the 15 allowed.(ğª½
+@
+java:S1940ã")Use the opposite operator ("==") instead.(¦ÁÕ“
+E
+java:S1874í".Remove this use of "addAll"; it is deprecated.(ÀÒ‰Ş

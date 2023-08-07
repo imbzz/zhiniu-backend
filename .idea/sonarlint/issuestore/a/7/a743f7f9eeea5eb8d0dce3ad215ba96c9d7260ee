@@ -1,0 +1,22 @@
+
+u
+java:S1488Ê"_Immediately return this expression instead of assigning it to the temporary variable "builder".(«‰Ÿ~
+l	java:S116f"RRename this field "userNo_" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ú¶ŒÍøÿÿÿÿ
+n	java:S116ˆ"SRename this field "userPwd_" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(¥„“°øÿÿÿÿ
+
+java:S4144¤"cUpdate this method so that its implementation is not identical to "getDefaultInstance" on line 651.(‡ú­Ôùÿÿÿÿ
+D
+java:S1948f")Make "userNo_" transient or serializable.(ú¶ŒÍøÿÿÿÿ
+F
+java:S1948ˆ"*Make "userPwd_" transient or serializable.(¥„“°øÿÿÿÿ
+r
+java:S3077f"WUse a thread-safe type; adding "volatile" is not enough to make this field thread-safe.(ú¶ŒÍøÿÿÿÿ
+s
+java:S3077ˆ"WUse a thread-safe type; adding "volatile" is not enough to make this field thread-safe.(¥„“°øÿÿÿÿ
+]
+java:S1126ß"AReplace this if-then-else statement by a single return statement.(®Èäîÿÿÿÿÿ
+h	java:S116ì"RRename this field "userNo_" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(íÓ£
+n	java:S116±"SRename this field "userPwd_" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(íÌ§Çùÿÿÿÿ
+?	java:S108ñ")Either remove or fill this block of code.(º„ç½
+o
+java:S2975œ"SRemove this "clone" implementation; use a copy constructor or copy factory instead.(Îõ¾Òûÿÿÿÿ

@@ -1,0 +1,45 @@
+
+f	java:S1170"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ß”â¢
+g	java:S117ä"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ÆÓ¡€
+u
+java:S1488—"_Immediately return this expression instead of assigning it to the temporary variable "builder".(«‰Ÿ~
+I
+java:S1199…"-Extract this nested code block into a method.(ÒÌâ–øÿÿÿÿ
+m	java:S116€"RRename this field "status_" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(×ä…öûÿÿÿÿ
+n	java:S116¢"SRename this field "message_" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ÇŒÂŠúÿÿÿÿ
+e	java:S116Ä"ORename this field "ids_" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(“àã‹
+y
+java:S4144Ç"cUpdate this method so that its implementation is not identical to "getDefaultInstance" on line 814.(¹ª“V
+E
+java:S1948€")Make "status_" transient or serializable.(×ä…öûÿÿÿÿ
+F
+java:S1948¢"*Make "message_" transient or serializable.(ÇŒÂŠúÿÿÿÿ
+=
+java:S1948Ä"&Make "ids_" transient or serializable.(“àã‹
+s
+java:S3077€"WUse a thread-safe type; adding "volatile" is not enough to make this field thread-safe.(×ä…öûÿÿÿÿ
+s
+java:S3077¢"WUse a thread-safe type; adding "volatile" is not enough to make this field thread-safe.(ÇŒÂŠúÿÿÿÿ
+m
+java:S3776("RRefactor this method to reduce its Cognitive Complexity from 20 to the 15 allowed.(©õ€²ýÿÿÿÿ
+D
+java:S1940H")Use the opposite operator ("==") instead.(«‹¦œøÿÿÿÿ
+?
+java:S1940R")Use the opposite operator ("==") instead.(×„ÎÃ
+U
+java:S1155ï">Use isEmpty() to check whether the collection is empty or not.(È¸ìË
+]
+java:S1126¨"AReplace this if-then-else statement by a single return statement.(®Èäîÿÿÿÿÿ
+k	java:S116Ê"URename this field "bitField0_" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ö»³Ä
+g	java:S116Ì"RRename this field "status_" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(Ä±­R
+n	java:S116‘"SRename this field "message_" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ˆ«Ï‚úÿÿÿÿ
+e	java:S116Ö"ORename this field "ids_" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(½Ï£‚
+?	java:S108¾")Either remove or fill this block of code.(º„ç½
+Z
+java:S1854ä"CRemove this useless assignment to local variable "from_bitField0_".(ÆÓ¡€
+K
+java:S1481ä"4Remove this unused "from_bitField0_" local variable.(ÆÓ¡€
+o
+java:S2975ñ"SRemove this "clone" implementation; use a copy constructor or copy factory instead.(Îõ¾Òûÿÿÿÿ
+@
+java:S1940Ø")Use the opposite operator ("==") instead.(¦ÁÕ“

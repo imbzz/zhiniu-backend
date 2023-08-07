@@ -1,0 +1,57 @@
+
+u
+java:S1488"_Immediately return this expression instead of assigning it to the temporary variable "builder".(«‰Ÿ~
+i	java:S116¬"NRename this field "id_" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(±¹±•ûÿÿÿÿ
+h	java:S116º"RRename this field "userId_" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ª¦Äª
+h	java:S116È"RRename this field "dealId_" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(éÆ¿
+k	java:S116Ö"URename this field "accountId_" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ÙÂÓ°
+p	java:S116ä"URename this field "tradeTime_" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(àÈú ıÿÿÿÿ
+i	java:S116ò"SRename this field "stockId_" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(Íñı¤
+k	java:S116€"URename this field "stockCode_" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(úğ¼Ù
+j	java:S116¬"TRename this field "currency_" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(Õ‹Ò“
+p	java:S116Ø"URename this field "direction_" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ãß¹ÿÿÿÿÿ
+r	java:S116æ"WRename this field "tradeAmount_" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.( ºîåúÿÿÿÿ
+l	java:S116ô"WRename this field "tradeVolume_" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(Ñ†ÚN
+q	java:S116‚"VRename this field "tradePrice_" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(´’ÌŞúÿÿÿÿ
+g	java:S116"QRename this field "taxes_" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ù£ˆ™
+l	java:S116"VRename this field "commission_" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(Æ²½Œ
+h	java:S116¬"RRename this field "status_" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(äîÂş
+q	java:S116º"VRename this field "createTime_" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(´´ùùÿÿÿÿ
+€
+java:S4144¬"dUpdate this method so that its implementation is not identical to "getDefaultInstance" on line 1811.(„†ôîøÿÿÿÿ
+C
+java:S1948€",Make "stockCode_" transient or serializable.(úğ¼Ù
+B
+java:S1948¬"+Make "currency_" transient or serializable.(Õ‹Ò“
+n
+java:S3077€"WUse a thread-safe type; adding "volatile" is not enough to make this field thread-safe.(úğ¼Ù
+n
+java:S3077¬"WUse a thread-safe type; adding "volatile" is not enough to make this field thread-safe.(Õ‹Ò“
+n
+java:S3776Ó"RRefactor this method to reduce its Cognitive Complexity from 16 to the 15 allowed.(¹õˆÏùÿÿÿÿ
+i
+java:S3776‰"RRefactor this method to reduce its Cognitive Complexity from 17 to the 15 allowed.(œè“
+]
+java:S1126û"AReplace this if-then-else statement by a single return statement.(®Èäîÿÿÿÿÿ
+i	java:S116„"NRename this field "id_" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(±¹±•ûÿÿÿÿ
+h	java:S116­"RRename this field "userId_" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ª¦Äª
+h	java:S116Ö"RRename this field "dealId_" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(éÆ¿
+k	java:S116ÿ"URename this field "accountId_" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ÙÂÓ°
+p	java:S116¨	"URename this field "tradeTime_" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(àÈú ıÿÿÿÿ
+i	java:S116Ñ	"SRename this field "stockId_" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(Íñı¤
+p	java:S116ú	"URename this field "stockCode_" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(‚®àÍüÿÿÿÿ
+o	java:S116Ø
+"TRename this field "currency_" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ùŠÄ‹øÿÿÿÿ
+p	java:S116¶"URename this field "direction_" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ãß¹ÿÿÿÿÿ
+r	java:S116ß"WRename this field "tradeAmount_" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.( ºîåúÿÿÿÿ
+l	java:S116ˆ"WRename this field "tradeVolume_" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(Ñ†ÚN
+q	java:S116±"VRename this field "tradePrice_" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(´’ÌŞúÿÿÿÿ
+g	java:S116Ú"QRename this field "taxes_" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ù£ˆ™
+l	java:S116ƒ"VRename this field "commission_" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(Æ²½Œ
+h	java:S116¬"RRename this field "status_" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(äîÂş
+q	java:S116Õ"VRename this field "createTime_" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(´´ùùÿÿÿÿ
+?	java:S108µ")Either remove or fill this block of code.(º„ç½
+o
+java:S2975Š"SRemove this "clone" implementation; use a copy constructor or copy factory instead.(Îõ¾Òûÿÿÿÿ
+n
+java:S3776³"RRefactor this method to reduce its Cognitive Complexity from 17 to the 15 allowed.(ì¨©°úÿÿÿÿ

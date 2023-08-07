@@ -1,0 +1,13 @@
+
+e
+java:S1192w"JDefine a constant instead of duplicating this literal "AccountId" 7 times.(”ÛŒ‰üÿÿÿÿ
+b
+java:S1192}"GDefine a constant instead of duplicating this literal "Status" 5 times.(”àØ„ÿÿÿÿÿ
+c
+java:S1192}"HDefine a constant instead of duplicating this literal "Balance" 3 times.(”àØ„ÿÿÿÿÿ
+c
+java:S1192}"HDefine a constant instead of duplicating this literal "Message" 4 times.(”àØ„ÿÿÿÿÿ
+œ
+java:S1186"€Add a nested comment explaining why this method is empty, throw an UnsupportedOperationException or complete the implementation.(ƒ°‡ıÿÿÿÿ
+J
+java:S1172	"/Remove this unused method parameter "registry".(•óÊõÿÿÿÿÿ

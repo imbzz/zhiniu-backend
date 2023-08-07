@@ -1,0 +1,9 @@
+
+ƒ
+java:S1488ƒ"gImmediately return this expression instead of assigning it to the temporary variable "stockHeadResult".(Ο€ιηύÿÿÿÿ
+o
+java:S1104A"TMake channels a static final constant or non-public and provide accessors if needed.(―σάψÿÿÿÿ
+I
+java:S1444A".Make this "public static channels" field final(―σάψÿÿÿÿ
+8
+java:S2386A"Make this member "protected".(―σάψÿÿÿÿ

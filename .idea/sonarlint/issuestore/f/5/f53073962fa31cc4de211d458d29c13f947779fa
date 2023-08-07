@@ -1,0 +1,8 @@
+
+o	java:S115
+"ZRename this constant name to match the regular expression '^[A-Z][A-Z0-9]*(_[A-Z0-9]+)*$'.(†ƒè 
+O
+java:S5993"9Change the visibility of this constructor to "protected".(»¤ÎÚ
+K
+java:S1068
+"5Remove this unused "serialVersionUUID" private field.(†ƒè 

@@ -1,0 +1,80 @@
+
+a	java:S112à"FDefine and throw a dedicated exception instead of using a generic one.(şÚğñøÿÿÿÿ
+a	java:S112¨"FDefine and throw a dedicated exception instead of using a generic one.(£†½ÿşÿÿÿÿ
+\	java:S112"FDefine and throw a dedicated exception instead of using a generic one.(ŒÕ± 
+~
+java:S1192‚"hDefine a constant instead of duplicating this literal "HttpPoolUtil è¿œç¨‹è°ƒç”¨ è€—è´¹æ—¶é—´:" 3 times.( ñğ
+b
+java:S1192ö"FDefine a constant instead of duplicating this literal "utf-8" 3 times.(¼ŠÜµüÿÿÿÿ
+j
+java:S1192‚"TDefine a constant instead of duplicating this literal "æ¯«ç§’, URLåœ°å€: " 3 times.( ñğ
+>
+java:S1604d"(Make this anonymous inner class a lambda(©ı ±
+C
+java:S1604}"(Make this anonymous inner class a lambda(»ƒ±úÿÿÿÿ
+
+java:S1488}"fImmediately return this expression instead of assigning it to the temporary variable "myRetryHandler".(»ƒ±úÿÿÿÿ
+r
+java:S1104M"\Make defaultUserAgent a static final constant or non-public and provide accessors if needed.(¶¤ŞÓ
+L
+java:S1444M"6Make this "public static defaultUserAgent" field final(¶¤ŞÓ
+S
+java:S2629—"7Use the built-in formatting to construct this argument.(Äá¹æüÿÿÿÿ
+r
+java:S2629‚"\Invoke method(s) only conditionally. Use the built-in formatting to construct this argument.( ñğ
+r
+java:S2629Ó"\Invoke method(s) only conditionally. Use the built-in formatting to construct this argument.( ñğ
+r
+java:S2629¹"\Invoke method(s) only conditionally. Use the built-in formatting to construct this argument.( ñğ
+\
+java:S2184h"FCast one of the operands of this multiplication operation to a "long".(Æ¿Š˜
+o	java:S1159"ZRename this constant name to match the regular expression '^[A-Z][A-Z0-9]*(_[A-Z0-9]+)*$'.(âÿ•Ç
+t	java:S115>"ZRename this constant name to match the regular expression '^[A-Z][A-Z0-9]*(_[A-Z0-9]+)*$'.(­ŠùØıÿÿÿÿ
+n	java:S115C"ZRename this constant name to match the regular expression '^[A-Z][A-Z0-9]*(_[A-Z0-9]+)*$'.(ŒÀ™(
+{
+java:S1149÷"_Replace the synchronized class "StringBuffer" by an unsynchronized one such as "StringBuilder".(µŒ÷Íşÿÿÿÿ
+{
+java:S1149È"_Replace the synchronized class "StringBuffer" by an unsynchronized one such as "StringBuilder".(µŒ÷Íşÿÿÿÿ
+{
+java:S1149®"_Replace the synchronized class "StringBuffer" by an unsynchronized one such as "StringBuilder".(µŒ÷Íşÿÿÿÿ
+m
+java:S3077H"WUse a thread-safe type; adding "volatile" is not enough to make this field thread-safe.(“ÂËÌ
+[
+java:S11249"EReorder the modifiers to comply with the Java Language Specification.(âÿ•Ç
+`
+java:S1124>"EReorder the modifiers to comply with the Java Language Specification.(­ŠùØıÿÿÿÿ
+Z
+java:S1124C"EReorder the modifiers to comply with the Java Language Specification.(ŒÀ™(
+[
+java:S1124H"EReorder the modifiers to comply with the Java Language Specification.(“ÂËÌ
+]
+java:S3457—"AFormat specifiers should be used instead of string concatenation.(Äá¹æüÿÿÿÿ
+X
+java:S1126£"AReplace this if-then-else statement by a single return statement.(¨ãŒš
+U
+java:S4719ö"9Replace charset name argument with StandardCharsets.UTF_8(¼ŠÜµüÿÿÿÿ
+W
+java:S3457‚"AFormat specifiers should be used instead of string concatenation.( ñğ
+o
+java:S2139„"XEither log this exception and handle it, or rethrow it with some contextual information.(”ı¾
+F
+java:S2093ç"*Change this "try" to a try-with-resources.(¡»¢üùÿÿÿÿ
+U
+java:S4719Ç"9Replace charset name argument with StandardCharsets.UTF_8(¼ŠÜµüÿÿÿÿ
+W
+java:S3457Ó"AFormat specifiers should be used instead of string concatenation.( ñğ
+o
+java:S2139Õ"XEither log this exception and handle it, or rethrow it with some contextual information.(”ı¾
+F
+java:S2093¯"*Change this "try" to a try-with-resources.(¡»¢üùÿÿÿÿ
+i
+java:S3776"RRefactor this method to reduce its Cognitive Complexity from 16 to the 15 allowed.(ŒÕ± 
+U
+java:S4719­"9Replace charset name argument with StandardCharsets.UTF_8(¼ŠÜµüÿÿÿÿ
+W
+java:S3457¹"AFormat specifiers should be used instead of string concatenation.( ñğ
+o
+java:S2139»"XEither log this exception and handle it, or rethrow it with some contextual information.(”ı¾
+F
+java:S2093–"*Change this "try" to a try-with-resources.(¡»¢üùÿÿÿÿ
+T	java:S106€"9Replace this use of System.out or System.err by a logger.(‡ä½Åúÿÿÿÿ

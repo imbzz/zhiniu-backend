@@ -1,0 +1,14 @@
+
+u
+java:S1488 "_Immediately return this expression instead of assigning it to the temporary variable "builder".(«‰Ÿ~
+m	java:S116b"SRename this field "orderId_" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(¤òíèþÿÿÿÿ
+h	java:S116o"SRename this field "stockId_" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(Íñý¤
+
+java:S4144º"cUpdate this method so that its implementation is not identical to "getDefaultInstance" on line 545.(ËÁ®“ùÿÿÿÿ
+]
+java:S1126³"AReplace this if-then-else statement by a single return statement.(®Èäîÿÿÿÿÿ
+n	java:S116À"SRename this field "orderId_" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(¤òíèþÿÿÿÿ
+i	java:S116æ"SRename this field "stockId_" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(Íñý¤
+?	java:S108Ç")Either remove or fill this block of code.(º„ç½
+o
+java:S2975ò"SRemove this "clone" implementation; use a copy constructor or copy factory instead.(Îõ¾Òûÿÿÿÿ

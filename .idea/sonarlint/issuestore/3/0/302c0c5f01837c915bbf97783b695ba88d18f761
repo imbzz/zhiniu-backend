@@ -1,0 +1,6 @@
+
+[
+java:S1854<"@Remove this useless assignment to local variable "httpResponse".(Îœßùÿÿÿÿ
+Q	java:S125;"<This block of commented-out lines of code should be removed.(¡¯ŠÊ
+L
+java:S1481<"1Remove this unused "httpResponse" local variable.(Îœßùÿÿÿÿ

@@ -1,0 +1,33 @@
+
+t
+java:S2293;"YReplace the type specification in this constructor call with the diamond operator ("<>").(Ë×‚¥øÿÿÿÿ
+u
+java:S2293æ"YReplace the type specification in this constructor call with the diamond operator ("<>").(ôÈñ¨úÿÿÿÿ
+p
+java:S2293Ç"YReplace the type specification in this constructor call with the diamond operator ("<>").(Àµ˜Ö
+f	java:S117."QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ß”â¢
+g	java:S117ð"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ÆÓ¡€
+u
+java:S1488¢"_Immediately return this expression instead of assigning it to the temporary variable "builder".(«‰Ÿ~
+s	java:S116f"^Rename this field "getAllPositionData_" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(±™ÖÛ
+
+java:S4144€"cUpdate this method so that its implementation is not identical to "getDefaultInstance" on line 743.(ÀùŒäþÿÿÿÿ
+D
+java:S1940:")Use the opposite operator ("==") instead.(«‹¦œøÿÿÿÿ
+]
+java:S1126·"AReplace this if-then-else statement by a single return statement.(®Èäîÿÿÿÿÿ
+k	java:S116à"URename this field "bitField0_" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ö»³Ä
+t	java:S116â"^Rename this field "getAllPositionData_" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(õõÒ¼
+€	java:S116ì"eRename this field "getAllPositionDataBuilder_" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(æãáîùÿÿÿÿ
+Z
+java:S1854ð"CRemove this useless assignment to local variable "from_bitField0_".(ÆÓ¡€
+K
+java:S1481ð"4Remove this unused "from_bitField0_" local variable.(ÆÓ¡€
+o
+java:S2975ÿ"SRemove this "clone" implementation; use a copy constructor or copy factory instead.(Îõ¾Òûÿÿÿÿ
+i
+java:S3776¨"RRefactor this method to reduce its Cognitive Complexity from 19 to the 15 allowed.(Êõƒ¦
+@
+java:S1940å")Use the opposite operator ("==") instead.(¦ÁÕ“
+E
+java:S1874ï".Remove this use of "addAll"; it is deprecated.(ÀÒ‰Þ

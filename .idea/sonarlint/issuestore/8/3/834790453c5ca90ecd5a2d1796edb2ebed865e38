@@ -1,0 +1,16 @@
+
+`	java:S112:"FDefine and throw a dedicated exception instead of using a generic one.(¯ø¢ùÿÿÿÿ
+S
+java:S1854@"=Remove this useless assignment to local variable "stockResp".(ã·¤”
+U
+java:S1854>"?Remove this useless assignment to local variable "accountResp".(‹»¯
+:
+java:S3751:"Make this method non "private".(¯ø¢ùÿÿÿÿ
+F
+java:S1481>"0Remove this unused "accountResp" local variable.(‹»¯
+D
+java:S1481@".Remove this unused "stockResp" local variable.(ã·¤”
+:
+java:S3751K"Make this method non "private".(ÏÍòÚşÿÿÿÿ
+U
+java:S1117^"@Rename "restTemplate" which hides the field declared at line 35.(— ’

@@ -1,0 +1,32 @@
+
+u
+java:S1488à"_Immediately return this expression instead of assigning it to the temporary variable "builder".(«‰Ÿ~
+l	java:S116"RRename this field "status_" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(×ä…öûÿÿÿÿ
+n	java:S116¡"SRename this field "message_" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ÇŒÂŠúÿÿÿÿ
+m	java:S116Ã"WRename this field "totalAssets_" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(•·Øÿ
+s	java:S116Ð"]Rename this field "totalMarketAmount_" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(•—î¶
+p	java:S116Ý"ZRename this field "positionProfit_" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(¾Œââ
+p	java:S116ê"URename this field "dayProfit_" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ˆã³üÿÿÿÿÿ
+n	java:S116÷"SRename this field "balance_" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(¥æ½Áüÿÿÿÿ
+z
+java:S4144–"dUpdate this method so that its implementation is not identical to "getDefaultInstance" on line 1021.(ó‘´\
+D
+java:S1948")Make "status_" transient or serializable.(×ä…öûÿÿÿÿ
+F
+java:S1948¡"*Make "message_" transient or serializable.(ÇŒÂŠúÿÿÿÿ
+r
+java:S3077"WUse a thread-safe type; adding "volatile" is not enough to make this field thread-safe.(×ä…öûÿÿÿÿ
+s
+java:S3077¡"WUse a thread-safe type; adding "volatile" is not enough to make this field thread-safe.(ÇŒÂŠúÿÿÿÿ
+]
+java:S1126æ"AReplace this if-then-else statement by a single return statement.(®Èäîÿÿÿÿÿ
+g	java:S116 "RRename this field "status_" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(Ä±­R
+n	java:S116å"SRename this field "message_" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ˆ«Ï‚úÿÿÿÿ
+m	java:S116ª"WRename this field "totalAssets_" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(•·Øÿ
+s	java:S116Ð"]Rename this field "totalMarketAmount_" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(•—î¶
+p	java:S116ö"ZRename this field "positionProfit_" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(¾Œââ
+p	java:S116œ"URename this field "dayProfit_" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ˆã³üÿÿÿÿÿ
+n	java:S116Â"SRename this field "balance_" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(¥æ½Áüÿÿÿÿ
+?	java:S108‡")Either remove or fill this block of code.(º„ç½
+o
+java:S2975Á"SRemove this "clone" implementation; use a copy constructor or copy factory instead.(Îõ¾Òûÿÿÿÿ

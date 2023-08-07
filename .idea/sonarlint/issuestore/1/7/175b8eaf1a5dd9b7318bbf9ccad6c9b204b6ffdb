@@ -1,0 +1,14 @@
+
+u
+java:S1488 "_Immediately return this expression instead of assigning it to the temporary variable "builder".(«‰Ÿ~
+o	java:S116b"URename this field "timeStart_" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(¼ûñéûÿÿÿÿ
+g	java:S116o"SRename this field "timeEnd_" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(¡ê
+z
+java:S4144º"cUpdate this method so that its implementation is not identical to "getDefaultInstance" on line 545.(ˆß‰»
+]
+java:S1126³"AReplace this if-then-else statement by a single return statement.(®Èäîÿÿÿÿÿ
+p	java:S116À"URename this field "timeStart_" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(¼ûñéûÿÿÿÿ
+h	java:S116æ"SRename this field "timeEnd_" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(¡ê
+?	java:S108Ç")Either remove or fill this block of code.(º„ç½
+o
+java:S2975ò"SRemove this "clone" implementation; use a copy constructor or copy factory instead.(Îõ¾Òûÿÿÿÿ

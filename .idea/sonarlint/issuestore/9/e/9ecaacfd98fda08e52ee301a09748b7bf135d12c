@@ -1,0 +1,24 @@
+
+u
+java:S1488—"_Immediately return this expression instead of assigning it to the temporary variable "builder".(«‰Ÿ~
+j	java:S116s"URename this field "accountId_" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ÙÂÓ°
+i	java:S116€"SRename this field "stockId_" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(Íñı¤
+o	java:S116"TRename this field "warnType_" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(Ÿó–Äÿÿÿÿÿ
+o	java:S116š"TRename this field "stopRate_" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ï’óÚûÿÿÿÿ
+l	java:S116§"VRename this field "notifyType_" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(‘Ë°
+z
+java:S4144é"cUpdate this method so that its implementation is not identical to "getDefaultInstance" on line 848.(³Ü¸¬
+D
+java:S1948§"-Make "notifyType_" transient or serializable.(‘Ë°
+n
+java:S3077§"WUse a thread-safe type; adding "volatile" is not enough to make this field thread-safe.(‘Ë°
+]
+java:S1126£"AReplace this if-then-else statement by a single return statement.(®Èäîÿÿÿÿÿ
+k	java:S116Ê"URename this field "accountId_" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ÙÂÓ°
+i	java:S116ğ"SRename this field "stockId_" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(Íñı¤
+o	java:S116–"TRename this field "warnType_" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(Ÿó–Äÿÿÿÿÿ
+o	java:S116¼"TRename this field "stopRate_" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ï’óÚûÿÿÿÿ
+l	java:S116â"VRename this field "notifyType_" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ó·…¿
+?	java:S108¾")Either remove or fill this block of code.(º„ç½
+o
+java:S2975ò"SRemove this "clone" implementation; use a copy constructor or copy factory instead.(Îõ¾Òûÿÿÿÿ

@@ -1,0 +1,14 @@
+
+y
+java:S1488S"cImmediately return this expression instead of assigning it to the temporary variable "lastDaytime".(øŠÊ¿
+
+java:S1488˜"cImmediately return this expression instead of assigning it to the temporary variable "lastDaytime".(¥Íéçøÿÿÿÿ
+\
+java:S11267"AReplace this if-then-else statement by a single return statement.(×†žûüÿÿÿÿ
+ˆ
+java:S1130â"lRemove the declaration of thrown exception 'java.lang.Exception', as it cannot be thrown from method's body.(ÙØ¤Þýÿÿÿÿ
+W	java:S125ã"<This block of commented-out lines of code should be removed.(±˜°”ýÿÿÿÿ
+R	java:S125è"<This block of commented-out lines of code should be removed.(Çœ€ô
+O	java:S106ë"9Replace this use of System.out or System.err by a logger.(Ê¡¶·
+T	java:S106ï"9Replace this use of System.out or System.err by a logger.(¸Å¬Üüÿÿÿÿ
+O	java:S106ñ"9Replace this use of System.out or System.err by a logger.(Ö¢Úø

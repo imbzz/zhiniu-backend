@@ -41,8 +41,8 @@ public class StockUserController extends BaseController{
     @Autowired
     private IStockUserFileService stockUserFileService;
 
-    @Autowired
-    private  CephSwiftOperator cephSwiftOperator;
+//    @Autowired
+//    private  CephSwiftOperator cephSwiftOperator;
 
     /**
      * 用户登陆接口

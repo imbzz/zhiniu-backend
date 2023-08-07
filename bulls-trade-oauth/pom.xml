@@ -107,7 +107,7 @@
         </dependency>
 
     </dependencies>
-
+    <!-- 多环境版本配置管理 -->
 
     <build>
         <finalName>trade-auth</finalName>

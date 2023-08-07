@@ -8,6 +8,7 @@ import org.javaswift.joss.model.Container;
 import org.javaswift.joss.model.StoredObject;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
+import org.springframework.stereotype.Component;
 
 import java.io.File;
 import java.io.InputStream;
@@ -106,7 +107,7 @@ public class CephSwiftOperator {
     /**
      * 文件上传的处理接口(字节数组形式)
      * @param remoteName
-     * @param filePath
+     * @param inputStream
      */
     public void createObject(String remoteName, byte[] inputStream) {
         // 1. 从容器当中获取远程存储对象信息

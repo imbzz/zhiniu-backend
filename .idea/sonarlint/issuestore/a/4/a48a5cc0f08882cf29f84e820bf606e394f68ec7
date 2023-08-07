@@ -1,7 +1,0 @@
-
-m
-java:S3077"WUse a thread-safe type; adding "volatile" is not enough to make this field thread-safe.(‰ÇÀÚ
-[
-java:S1124"EReorder the modifiers to comply with the Java Language Specification.(‰ÇÀÚ
-V	java:S125"<This block of commented-out lines of code should be removed.(„ÙÛòüÿÿÿÿ
-T	java:S106´"9Replace this use of System.out or System.err by a logger.(í™™Éüÿÿÿÿ

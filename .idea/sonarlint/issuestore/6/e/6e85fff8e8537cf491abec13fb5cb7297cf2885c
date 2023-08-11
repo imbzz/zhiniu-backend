@@ -1,3 +1,5 @@
 
+^
+java:S2259<"CA "NullPointerException" could be thrown; "stock" is nullable here.(ŞáŒÉÿÿÿÿÿ
 f	java:S116#"QRename this field "APPKEY" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(°ïóÛ
 f	java:S116/"QRename this field "url_hs" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(”õ¾Ş

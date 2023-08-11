@@ -32,6 +32,7 @@ spring:
         uri: lb://stock-admin-user/admin
         predicates:
           - Path=/admin/**
+
 # 日志配置
 logging:
   level:

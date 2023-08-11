@@ -8,5 +8,14 @@
       <jdbc-url>jdbc:mysql://8.134.48.179:3306</jdbc-url>
       <working-dir>$ProjectFileDir$</working-dir>
     </data-source>
+    <data-source source="LOCAL" name="bulls-stock-proxy/Hibernate" uuid="6cc9d187-774d-40ce-a904-ef60d3153221">
+      <driver-ref>postgresql</driver-ref>
+      <synchronize>true</synchronize>
+      <imported>true</imported>
+      <remarks>Hibernate</remarks>
+      <jdbc-driver>org.postgresql.Driver</jdbc-driver>
+      <jdbc-url>jdbc:postgresql://8.134.48.179:5432/trade_stock</jdbc-url>
+      <working-dir>$ProjectFileDir$</working-dir>
+    </data-source>
   </component>
 </project>

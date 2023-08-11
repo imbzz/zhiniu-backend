@@ -10,8 +10,8 @@ import org.springframework.data.jpa.repository.config.EnableJpaRepositories;
 
 /**
  * <p>Description: </p>
- * @date 2020/1/2
- * @author 贺锟 
+ * @date 2023/8/10
+ * @author
  * @version 1.0
  * <p>Copyright:Copyright(c)2019</p>
  */

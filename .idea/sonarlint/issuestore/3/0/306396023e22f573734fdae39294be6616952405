@@ -1,3 +1,8 @@
 
 l
 java:S3305&"QInject this field value directly into "tokenStore", the only method that uses it.(ûÁý‘þÿÿÿÿ
+{
+java:S1128
+"^Remove this unused import 'org.springframework.security.oauth2.provider.OAuth2Authentication'.(òõÃà8Š©Ô÷œ1
+“
+java:S1128"qRemove this unused import 'org.springframework.security.oauth2.provider.token.DefaultAuthenticationKeyGenerator'.(¦ïšçýÿÿÿÿ8Š©Ô÷œ1

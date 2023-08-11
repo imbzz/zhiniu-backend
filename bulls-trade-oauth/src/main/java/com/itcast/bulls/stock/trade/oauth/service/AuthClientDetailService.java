@@ -17,6 +17,10 @@ import javax.sql.DataSource;
  */
 public class AuthClientDetailService extends JdbcClientDetailsService {
 
+    /**
+     * 构造方法
+     * @param dataSource
+     */
     public AuthClientDetailService(DataSource dataSource) {
         super(dataSource);
     }

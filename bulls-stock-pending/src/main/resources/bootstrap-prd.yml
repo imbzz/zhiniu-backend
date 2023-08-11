@@ -6,9 +6,9 @@ spring:
   cloud:
     nacos:
       discovery:
-        server-addr: 172.16.0.126:8848
+        server-addr: 8.134.48.179:8848
       config:
-        server-addr: 172.16.0.126:8848
+        server-addr: 8.134.48.179:8848
     # seata 分布式事务配置
     alibaba:
       seata:
@@ -25,7 +25,7 @@ spring:
           group: stock-pending-1
       rocketmq:
         binder:
-          name-server: 172.16.0.125:9876
+          name-server: 8.134.48.179:9876
         bindings:
           quote:
             consumer:
@@ -36,9 +36,9 @@ spring:
     tradesystem:
       type: com.alibaba.druid.pool.DruidDataSource
       driver-class-name: org.postgresql.Driver
-      username: office
-      password: Itcast@654321
-      url: jdbc:postgresql://172.16.0.124:5432/trade_stock
+      username: imbzz
+      password: 123456psql
+      url: jdbc:postgresql://8.134.48.179:5432/trade_stock
       druid:
         # 连接池的配置信息
         # 初始化大小，最小，最大
@@ -86,9 +86,9 @@ spring:
     bizsystem:
        type: com.alibaba.druid.pool.DruidDataSource
        driver-class-name: com.mysql.cj.jdbc.Driver
-       username: root
-       password: Itcast@654321
-       url: jdbc:mysql://172.16.0.124:3306/trade_stock?useUnicode=true&characterEncoding=UTF-8&useSSL=false
+       username: imbzz
+       password: 8.134.48.179
+       url: jdbc:mysql://8.134.48.179:3306/trade_stock?useUnicode=true&characterEncoding=UTF-8&useSSL=false
        druid:
          # 连接池的配置信息
          # 初始化大小，最小，最大
@@ -134,9 +134,10 @@ spring:
            enabled: true
   # Redis 缓存配置
   redis:
-    host: 172.16.0.126
-    password: Auth@Itcast
-    port: 6379
+    host: 127.0.0.1
+    # todo 此配置文件需要改
+#    password: Auth@Itcast
+#    port: 6379
   # Spring 分布式session
   session:
     store-type: redis

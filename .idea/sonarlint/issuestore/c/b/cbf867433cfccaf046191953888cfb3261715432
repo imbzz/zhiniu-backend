@@ -1,7 +1,0 @@
-
-m	java:S116J"XRename this field "CLIENT_FIELDS" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(„õŒñ
-s	java:S116Q"^Rename this field "BASE_FIND_STATEMENT" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(Þ“ãõ
-{	java:S116W"aRename this field "DEFAULT_FIND_STATEMENT" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(àóŸÄþÿÿÿÿ
-x	java:S116\"cRename this field "DEFAULT_SELECT_STATEMENT" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(çãà¶
-?
-java:S1185¨"(Remove this method to simply inherit it.(à–©ó

@@ -1,10 +1,12 @@
 
 o	java:S115"ZRename this constant name to match the regular expression '^[A-Z][A-Z0-9]*(_[A-Z0-9]+)*$'.(†ƒè 
-A
-java:S2160"+Override the "equals" method in this class.(Õƒ…ı
+H
+java:S2160"+Override the "equals" method in this class.(Õƒ…ı8ê‰™õ1
 >
 java:S1125"(Remove the unnecessary boolean literals.(ÑŠ½Ú
 C
 java:S1125"(Remove the unnecessary boolean literals.(ñÿµ½úÿÿÿÿ
-K
-java:S1068"5Remove this unused "serialVersionUUID" private field.(†ƒè 
+J
+java:S1128"(Remove this unused import 'lombok.Data'.(÷í«ÿÿÿÿÿ8ò‰™õ1
+R
+java:S1068"5Remove this unused "serialVersionUUID" private field.(†ƒè 8ò‰™õ1

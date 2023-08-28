@@ -88,7 +88,7 @@ public class StockUserServiceImpl implements IStockUserService {
     @SentinelResource(value = "userLogin", blockHandler = "userLoginHandler" )
     public TradeUser userLogin(String userNo, String userPwd) throws ComponentException {
 
-        // 模拟降级异常
+        // 模拟降级异常，通过SentinelResource定向到上面的userLoginHandler函数
         if("error".equals(userNo)) {
             throw new ComponentException(ApplicationErrorCodeEnum.FAILURE);
         }

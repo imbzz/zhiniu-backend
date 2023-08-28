@@ -38,7 +38,7 @@ import java.util.Set;
 import java.util.concurrent.ConcurrentHashMap;
 
 /**
- * <p>Description: </p>
+ * <p>Description: 请求行情数据服务 </p>
  * @date 
  * @author 
  * @version 1.0
@@ -115,6 +115,9 @@ public class StockQuoteServiceImpl implements IStockQuoteService {
     private Map<Long, TradeStockKline> klineMap = new ConcurrentHashMap<>();
 
 
+
+
+
     /**
      * 判断是否休市
      * @return
@@ -185,9 +188,12 @@ public class StockQuoteServiceImpl implements IStockQuoteService {
      * @param closeDiffMins
      */
     public void sendRealQuote(TradeStock stock, int closeDiffMins) {
-        log.info("Process in StockQuoteServiceImpl.sendRealQuote method. stock " + stock.getCode() + ", request realtime quote. ");
+        log.info("Process in StockQuoteServiceImpl.sendRealQ     " +
+                "  uote method. stock " + stock.getCode()
+                + ", request realtime quote. ");
         // 1. 调用第三方行情源的接口, 去获取最新的行情报价数据
         TradeStockQuoteLast quoteLast = juheThirdApi.getStockReal(stock);
+
         try {
             // 2. 判断实时行情报价是否获取成功
             if(null != quoteLast) {
@@ -309,13 +315,15 @@ public class StockQuoteServiceImpl implements IStockQuoteService {
 
 
     /**
-     * 获取股票产品的行情源数据
+     * 获取股票产品的行情源数据(选择获取模拟数据或者实时数据)
      * @param stock
      * @param closeDiffMins
      */
     @Override
     public void fetchStockQuote(TradeStock stock, int closeDiffMins) {
         log.info("Process in StockQuoteServiceImpl.fetchStockQuote method. ");
+
+        // todo 启动真实数据源
         if(1 == 1) {
             // 发送模拟行情
             sendSimulationQuote(stock, closeDiffMins);
@@ -348,6 +356,7 @@ public class StockQuoteServiceImpl implements IStockQuoteService {
     @PostConstruct
     @Override
     public void initOpenPriceCache() {
+        //模糊匹配获取所有key值
         Set<String> keys = redisTemplate.keys(GlobalConstants.STOCK_QUOTE_OPEN_PRICE_CUR_KEY + "*");
         if(null != keys && !keys.isEmpty()) {
             // 获取缓存对象, 根据key遍历处理
@@ -404,7 +413,7 @@ public class StockQuoteServiceImpl implements IStockQuoteService {
                         if(null != dbQuoteLast) {
                             quoteLast.setId(dbQuoteLast.getId());
                         }
-                        // 4. 如果数据存在,  根据ID进行更新, 如果不存在, save方法就会保存并生成新的数据
+                        // 4. 如果数据存在数据库,  根据ID进行更新, 如果不存在, save方法就会保存并生成新的数据
                         tradeStockQuoteLastRepository.save(quoteLast);
 
                         // 5. 处理并生成K线数据

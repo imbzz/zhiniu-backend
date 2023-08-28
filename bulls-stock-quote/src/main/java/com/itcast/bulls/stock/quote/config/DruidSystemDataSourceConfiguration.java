@@ -20,6 +20,7 @@ import java.util.Properties;
 
 /**
  * <p>Description: </p>
+ * 第一步: 配置不同数据库的数据源
  * @date 
  * @author 
  * @version 1.0
@@ -29,7 +30,7 @@ import java.util.Properties;
 public class DruidSystemDataSourceConfiguration {
 
     /***
-     * 业务数据源
+     * 创建业务数据源
      * @return
      */
     @Bean(name = "bizSystemDataSource")
@@ -39,7 +40,7 @@ public class DruidSystemDataSourceConfiguration {
     }
 
     /**
-     * 交易数据源
+     * 创建交易数据源
      * @return
      */
     @Bean(name = "tradeDruidDataSource")
@@ -49,7 +50,7 @@ public class DruidSystemDataSourceConfiguration {
     }
 
     /**
-     * 交易数据源Sharding JDBC配置
+     * 配置交易数据源Sharding JDBC配置
      * @param tradeDruidDataSource
      * @return
      * @throws Exception
@@ -58,6 +59,7 @@ public class DruidSystemDataSourceConfiguration {
     @Primary
     public DataSource tradeSystemDataSource(@Autowired DruidDataSource tradeDruidDataSource) throws Exception {
         // 定义sharding jdbc 配置处理规则
+
         ShardingRuleConfiguration shardJdbcConfig = new ShardingRuleConfiguration();
         shardJdbcConfig.getTableRuleConfigs().add(getKlineTableRule());
         shardJdbcConfig.setDefaultDataSourceName("ds_0");

@@ -18,7 +18,10 @@ import org.springframework.jdbc.datasource.DataSourceTransactionManager;
 
 
 @Configuration
-@MapperScan(basePackages = "com.itcast.bulls.stock.task.dao.trade", sqlSessionTemplateRef  = "tradeSystemSqlSessionTemplate")
+@MapperScan(
+        basePackages = "com.itcast.bulls.stock.task.dao.trade",
+        sqlSessionTemplateRef  = "tradeSystemSqlSessionTemplate"
+        )
 public class TradeSystemDataSourceConfiguration {
 
     @Autowired
@@ -36,7 +39,8 @@ public class TradeSystemDataSourceConfiguration {
     public SqlSessionFactory tradeSystemSqlSessionFactory(@Qualifier("tradeSystemDataSource") DataSource dataSource) throws Exception {
         SqlSessionFactoryBean bean = new SqlSessionFactoryBean();
         bean.setDataSource(dataSource);
-        bean.setMapperLocations(new PathMatchingResourcePatternResolver().getResources("classpath:com/itcast/bulls/stock/task/dao/trade/mapper/*Mapper.xml"));
+        bean.setMapperLocations(new PathMatchingResourcePatternResolver()
+                .getResources("classpath:com/itcast/bulls/stock/task/dao/trade/mapper/*Mapper.xml"));
         return bean.getObject();
     }
 

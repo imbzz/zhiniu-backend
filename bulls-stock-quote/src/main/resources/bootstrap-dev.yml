@@ -149,8 +149,8 @@ spring:
 
 # 第三方行情源的配置信息
 quote:
-  appkey: b3958bdd0e03bea7ad8da6810f27a3d4
-  url: http://web.juhe.cn:8080/finance/stock
+  appkey: 04abce202120b1180159bd6ba55b93ef
+  url: http://web.juhe.cn/finance/stock
 
 # 全局唯一ID分布式标识的配置
 snowflake:

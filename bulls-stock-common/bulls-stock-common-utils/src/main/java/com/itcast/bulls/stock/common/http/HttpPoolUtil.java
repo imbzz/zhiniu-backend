@@ -474,8 +474,7 @@ public class HttpPoolUtil {
 	 * @author gongchao
 	 * @version Revision: 0.01  Date: 2011-12-21 下午3:09:18
 	 */
-	public static class HttpResult
-	{
+	public static class HttpResult {
 		private String body;
 
 		private int responseCode;

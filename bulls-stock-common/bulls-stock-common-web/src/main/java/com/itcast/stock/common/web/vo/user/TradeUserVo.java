@@ -4,6 +4,7 @@ import com.itcast.stock.common.web.vo.BaseVo;
 import lombok.Data;
 
 import javax.validation.constraints.NotBlank;
+import javax.validation.constraints.Pattern;
 import javax.validation.constraints.Size;
 
 /**
@@ -37,6 +38,10 @@ public class TradeUserVo extends BaseVo {
     /**
      * 电话号码
      */
+    /**
+     * 手机号
+     */
+    @Pattern(regexp="^((13[0-9])|(15[^4,\\D])|(18[0,5-9]))\\d{8}$", message="手机号格式错误")
     private String phone;
 
     /**

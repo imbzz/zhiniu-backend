@@ -21,3 +21,4 @@ public class RocketMqProduceConfiguration {
         MessageChannel quoteQueue();
     }
 }
+

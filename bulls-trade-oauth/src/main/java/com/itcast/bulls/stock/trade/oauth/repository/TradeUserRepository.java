@@ -20,5 +20,6 @@ public interface TradeUserRepository extends PagingAndSortingRepository<TradeUse
      * @param userNo
      * @return
      */
+
     public TradeUser findByUserNo(String userNo);
 }

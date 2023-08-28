@@ -1,0 +1,11 @@
+
+u
+java:S1149|"_Replace the synchronized class "StringBuffer" by an unsynchronized one such as "StringBuilder".(ÿœ£
+S
+java:S1854<"=Remove this useless assignment to local variable "americano".(²ú˜Ÿ
+D
+java:S1481<".Remove this unused "americano" local variable.(²ú˜Ÿ
+J
+java:S1611}"/Remove the parentheses around the "s" parameter(·áó÷úÿÿÿÿ
+G
+java:S1602}",Remove useless curly braces around statement(·áó÷úÿÿÿÿ

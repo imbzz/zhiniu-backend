@@ -115,6 +115,7 @@ public class AuthorizationServerConfig extends AuthorizationServerConfigurerAdap
 
     /**
      * 自定义Client查询，可以修改表名， 字段等
+     * 服务相关配置-配上自定义的服务
      * @param clients
      */
     @Override
@@ -128,6 +129,7 @@ public class AuthorizationServerConfig extends AuthorizationServerConfigurerAdap
 
     /**
      * 防止申请token时出现401错误
+     * 安全相关配置-配上对token类型的限制
      * @param oauthServer
      */
     @Override
@@ -141,6 +143,7 @@ public class AuthorizationServerConfig extends AuthorizationServerConfigurerAdap
 
     /**
      * 认证服务配置
+     * 挺复杂-需要系统学习spring security
      * @param endpoints
      */
     @Override

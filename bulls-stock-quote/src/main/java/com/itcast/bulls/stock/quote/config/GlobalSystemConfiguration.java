@@ -79,7 +79,7 @@ public class GlobalSystemConfiguration implements ApplicationRunner {
                 try {
                     // 获取有效的股票产品行情数据
                     getStockQuotes();
-                    //间隔时间, 一般设置为1秒
+                    // todo 间隔时间, 一般设置为1秒
                     // 由于是教学测试, 这里时间, 可以适当放长一些, 这里设定为30s (因为受到免费账号的限制)
                     Thread.sleep(30000L);
                 }catch(Exception e) {

@@ -3,10 +3,7 @@ package com.itcast.bulls.stock.entity.quote;
 import io.swagger.annotations.ApiModelProperty;
 import lombok.Data;
 
-import javax.persistence.Column;
-import javax.persistence.Entity;
-import javax.persistence.Id;
-import javax.persistence.Table;
+import javax.persistence.*;
 import java.io.Serializable;
 
 /**
@@ -21,6 +18,7 @@ public class TradeStockKline implements Serializable {
 
     /**
      */
+    @Transient
     private static final long serialVersionUID = -1L;
 
 

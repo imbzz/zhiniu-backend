@@ -14,12 +14,14 @@ import java.util.concurrent.atomic.AtomicInteger;
  *
  */
 @Entity
-@Table(name="t_trade_stock_quote_last")
+@Table(name="office.t_trade_stock_quote_last")
 @Data
 public class TradeStockQuoteLast extends BaseEntity {
 
     /**
      */
+//    // todo 序列化id在数据库没有对应的字段，是否需要处理
+    @Transient
     private static final long serialVersionUID = -1L;
 
     /**

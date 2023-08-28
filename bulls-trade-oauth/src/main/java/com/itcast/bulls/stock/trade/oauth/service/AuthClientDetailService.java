@@ -9,11 +9,11 @@ import org.springframework.security.oauth2.provider.client.JdbcClientDetailsServ
 import javax.sql.DataSource;
 
 /**
- * <p>Description: </p>
- * @date 2020/1/2
+ *
+ * @date 2023/8/24
  * @author 贺锟 
  * @version 1.0
- * <p>Copyright:Copyright(c)2019</p>
+ *
  */
 public class AuthClientDetailService extends JdbcClientDetailsService {
 

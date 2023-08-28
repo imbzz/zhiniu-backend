@@ -4,6 +4,7 @@ import com.itcast.bulls.stock.entity.base.BaseEntity;
 import lombok.Data;
 
 import javax.persistence.Entity;
+import javax.persistence.Id;
 import javax.persistence.Table;
 import java.util.Date;
 
@@ -18,6 +19,9 @@ import java.util.Date;
 @Entity
 @Table(name = "t_trade_user")
 public class TradeUser extends BaseEntity {
+
+    @Id
+    private Long id;
 
     /**
      * 用户编号

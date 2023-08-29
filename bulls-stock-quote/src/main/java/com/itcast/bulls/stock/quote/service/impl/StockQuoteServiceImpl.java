@@ -138,8 +138,8 @@ public class StockQuoteServiceImpl implements IStockQuoteService {
 
     /**
      * 拼装时间转换为分钟计算
-     * @param date
-     * @param time
+     * @param
+     * @param
      * @return
      */
     private static Long cvtMinuteTime(long datetime) {
@@ -160,7 +160,7 @@ public class StockQuoteServiceImpl implements IStockQuoteService {
 
     /**
      * 计算涨跌幅比例
-     * @param quoteLast
+     * @param
      */
     private double calcPriceRate(Long lastPrice, Long lastClosePrice) {
         double priceRate = 0;
@@ -413,6 +413,8 @@ public class StockQuoteServiceImpl implements IStockQuoteService {
                         if(null != dbQuoteLast) {
                             quoteLast.setId(dbQuoteLast.getId());
                         }
+                        System.out.println("-------------------------------postgreSQL--------------");
+
                         // 4. 如果数据存在数据库,  根据ID进行更新, 如果不存在, save方法就会保存并生成新的数据
                         tradeStockQuoteLastRepository.save(quoteLast);
 

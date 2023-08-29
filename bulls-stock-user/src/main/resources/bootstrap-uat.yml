@@ -35,8 +35,8 @@ spring:
     # todo 需要修改mysql的连接配置
     type: com.alibaba.druid.pool.DruidDataSource
     driver-class-name: com.mysql.cj.jdbc.Driver
-    username: root
-    password: 654321
+    username: imbzz
+    password: 123456mysql
     url: jdbc:mysql://8.134.48.179:3306/trade_stock?useUnicode=true&characterEncoding=UTF-8&useSSL=false
     druid:
       # 连接池的配置信息

@@ -18,7 +18,6 @@ public class TradeStockKline implements Serializable {
 
     /**
      */
-    @Transient
     private static final long serialVersionUID = -1L;
 
 

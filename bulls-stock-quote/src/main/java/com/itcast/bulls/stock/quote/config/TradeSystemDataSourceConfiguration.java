@@ -65,7 +65,7 @@ public class TradeSystemDataSourceConfiguration {
 
     private Map<String, Object> getVendorProperies(DataSource dataSource) {
         Map<String, Object> props = hibernateProperties.determineHibernateProperties(jpaProperties.getProperties(), new HibernateSettings());
-        props.put("hibernate.dialect", "org.hibernate.dialect.PostgreSQLDialect");
+        props.put("hibernate.dialect", "org.hibernate.dialect.MySQL5InnoDBDialect");
         return props;
     }
 

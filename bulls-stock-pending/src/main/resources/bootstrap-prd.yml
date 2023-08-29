@@ -35,10 +35,10 @@ spring:
   datasource:
     tradesystem:
       type: com.alibaba.druid.pool.DruidDataSource
-      driver-class-name: org.postgresql.Driver
+      driver-class-name: com.mysql.cj.jdbc.Driver
       username: imbzz
-      password: 123456psql
-      url: jdbc:postgresql://8.134.48.179:5432/trade_stock
+      password: 123456mysql
+      url: jdbc:mysql://8.134.48.179:3306/office?useUnicode=true&characterEncoding=UTF-8&useSSL=false
       druid:
         # 连接池的配置信息
         # 初始化大小，最小，最大
@@ -87,7 +87,7 @@ spring:
        type: com.alibaba.druid.pool.DruidDataSource
        driver-class-name: com.mysql.cj.jdbc.Driver
        username: imbzz
-       password: 8.134.48.179
+       password: 123456mysql
        url: jdbc:mysql://8.134.48.179:3306/trade_stock?useUnicode=true&characterEncoding=UTF-8&useSSL=false
        druid:
          # 连接池的配置信息

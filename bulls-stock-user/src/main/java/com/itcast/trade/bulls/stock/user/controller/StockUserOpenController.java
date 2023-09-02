@@ -6,6 +6,8 @@ import com.itcast.bulls.stock.entity.user.TradeUser;
 import com.itcast.stock.common.web.vo.ApiRespResult;
 import com.itcast.stock.common.web.vo.user.TradeUserVo;
 import com.itcast.trade.bulls.stock.user.service.IStockUserService;
+import io.swagger.annotations.Api;
+import io.swagger.annotations.ApiOperation;
 import lombok.extern.log4j.Log4j2;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -22,6 +24,7 @@ import javax.validation.Valid;
  * <p>Copyright:Copyright(c)2020</p>
  */
 @RestController
+@Api(value = "用户开放接口",tags = "BOOT接口-用户开放接口")
 @RequestMapping("/open")
 @Log4j2
 public class StockUserOpenController {
@@ -38,6 +41,7 @@ public class StockUserOpenController {
      * @param tradeUser
      * @return
      */
+    @ApiOperation(value = "用户注册接口")
     @RequestMapping(value = "/register", method = RequestMethod.POST)
     public ApiRespResult register(@Valid TradeUserVo tradeUser) {
 

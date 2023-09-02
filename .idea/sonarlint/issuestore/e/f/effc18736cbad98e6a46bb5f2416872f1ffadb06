@@ -1,3 +1,5 @@
 
 ‚
 java:S1488#"gImmediately return this expression instead of assigning it to the temporary variable "stockHeadResult".(Ï€éçıÿÿÿÿ
+_
+java:S22594"BA "NullPointerException" could be thrown; "get()" can return null.(áÖå«8¡É¼¤1

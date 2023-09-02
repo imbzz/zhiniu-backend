@@ -413,7 +413,8 @@ public class StockQuoteServiceImpl implements IStockQuoteService {
                         if(null != dbQuoteLast) {
                             quoteLast.setId(dbQuoteLast.getId());
                         }
-                        System.out.println("-------------------------------postgreSQL--------------");
+                        System.out.println("==========="+ quoteLast.getStockName()+"=============");
+
 
                         // 4. 如果数据存在数据库,  根据ID进行更新, 如果不存在, save方法就会保存并生成新的数据
                         tradeStockQuoteLastRepository.save(quoteLast);

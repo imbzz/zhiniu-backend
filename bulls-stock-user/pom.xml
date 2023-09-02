@@ -97,6 +97,13 @@
             <version>${spring-cloud-starter.version}</version>
         </dependency>
 
+        <!-- swagger 自定义启动器的依赖 -->
+        <dependency>
+            <groupId>com.itcast.trade</groupId>
+            <artifactId>bulls-stock-starter-swagger</artifactId>
+            <version>${project.stock.version}</version>
+        </dependency>
+
         <!-- Sentinel 限流组件 -->
         <dependency>
             <groupId>com.alibaba.cloud</groupId>

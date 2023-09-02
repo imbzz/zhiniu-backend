@@ -16,22 +16,24 @@ spring:
           enabled: true
       # 路由配置
       routes:
-      # 用户服务路由转发配置
-      - id: stock-user
-        uri: lb://stock-user
-        predicates:
-          - Path=/user/**
-      # 认证服务路由转发配置
-      - id: trade-auth
-        uri: lb://trade-auth
-        predicates:
+        # 后台管理服务的转发配置
+        - id: stock-admin-user
+#          uri: lb://stock-admin-user/admin 这个映射由问题
+          uri: lb://stock-admin-user
+          predicates:
+            - Path=/admin/**
+        # 用户服务路由转发配置
+        - id: stock-user
+          uri: lb://stock-user
+          predicates:
+            - Path=/user/**
+        # 认证服务路由转发配置
+        - id: trade-auth
+          uri: lb://trade-auth
+          predicates:
           # - Method=GET,POST  不要开启此项
           - Path=/oauth/**
-      # 后台管理服务的转发配置
-      - id: stock-admin-user
-        uri: lb://stock-admin-user/admin
-        predicates:
-          - Path=/admin/**
+
 
 # 日志配置
 logging:

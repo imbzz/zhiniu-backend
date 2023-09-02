@@ -31,19 +31,19 @@ public class TradeStock extends BaseEntity {
     /**
      * 股票编号
      */
-    @ApiModelProperty(value="股票编号")
+    @ApiModelProperty(value="股票编号",example = "123")
     private String code;
 
     /**
      * 股票分类ID
      */
-    @ApiModelProperty(value="股票分类ID")
+    @ApiModelProperty(value="股票分类ID",example = "1")
     private Long categoryId;
 
     /**
      * 股票市场(0: 上交所， 1：深交所，2：港股， 3：美股）
      */
-    @ApiModelProperty(value="股票市场(0: 上交所， 1：深交所，2：港股， 3：美股）")
+    @ApiModelProperty(value="股票市场(0: 上交所， 1：深交所，2：港股， 3：美股）",example = "1")
     private Integer marketNo;
 
     /**
@@ -55,19 +55,19 @@ public class TradeStock extends BaseEntity {
     /**
      * 股票单位（默认为：100）
      */
-    @ApiModelProperty(value="股票单位（默认为：100）")
+    @ApiModelProperty(value="股票单位（默认为：100）",example = "100")
     private Integer unit;
 
     /**
      * 标签(0:普通， 1：热门)
      */
-    @ApiModelProperty(value="标签(0:普通， 1：热门)")
+    @ApiModelProperty(value="标签(0:普通， 1：热门)",example = "1")
     private Integer tag;
 
     /**
      * 状态(0:启用， 1：禁用）
      */
-    @ApiModelProperty(value="状态(0:启用， 1：禁用）")
+    @ApiModelProperty(value="状态(0:启用， 1：禁用）",example = "1")
     private Integer status;
 
     /**
@@ -77,17 +77,17 @@ public class TradeStock extends BaseEntity {
     private String marketSource;
 
 
-    @ApiModelProperty(value="涨幅")
+    @ApiModelProperty(value="涨幅",example = "123")
     private Integer highRate;
 
 
-    @ApiModelProperty(value="跌幅")
+    @ApiModelProperty(value="跌幅",example = "123")
     private Integer lowRate;
 
     /**
      * 显示顺序, 升序排列
      */
-    @ApiModelProperty(value="显示顺序, 升序排列")
+    @ApiModelProperty(value="显示顺序, 升序排列",example = "123")
     private Integer display_order;
 
     /**

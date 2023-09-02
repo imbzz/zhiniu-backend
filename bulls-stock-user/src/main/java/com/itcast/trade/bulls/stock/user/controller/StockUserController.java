@@ -1,5 +1,6 @@
 package com.itcast.trade.bulls.stock.user.controller;
 
+import com.github.xiaoymin.knife4j.spring.annotations.EnableKnife4j;
 import com.itcast.bulls.stock.common.exception.ComponentException;
 import com.itcast.bulls.stock.entity.user.TradeUser;
 import com.itcast.bulls.stock.entity.user.TradeUserFile;
@@ -7,6 +8,8 @@ import com.itcast.bulls.stock.starter.ceph.CephSwiftOperator;
 import com.itcast.stock.common.web.vo.ApiRespResult;
 import com.itcast.trade.bulls.stock.user.service.IStockUserFileService;
 import com.itcast.trade.bulls.stock.user.service.IStockUserService;
+import io.swagger.annotations.Api;
+import io.swagger.annotations.ApiOperation;
 import lombok.extern.log4j.Log4j2;
 import org.hibernate.validator.constraints.NotBlank;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -29,7 +32,8 @@ import java.io.OutputStream;
  * @version 1.0
  * <p>Copyright:Copyright(c)2020</p>
  */
-@RestController()
+@Api(value = "用户接口",tags = "BOOT接口-用户接口")
+@RestController
 @RequestMapping("/user")
 @Log4j2
 @Validated
@@ -50,7 +54,8 @@ public class StockUserController extends BaseController{
      * @param userPwd
      * @return
      */
-    @RequestMapping("/userLogin")
+    @ApiOperation(value = "用户登陆接口")
+    @PostMapping("/userLogin")
     public ApiRespResult userLogin(@RequestParam("userNo")String userNo, @RequestParam("userPwd") String userPwd) {
 
         ApiRespResult  result = null;
@@ -75,6 +80,7 @@ public class StockUserController extends BaseController{
      * @param file
      * @return
      */
+    @ApiOperation(value = "用户身份证上传的接口")
     @PostMapping("/uploadIdCard")
     public ApiRespResult uploadIdCard(@RequestParam("file")MultipartFile file) {
 //        ApiRespResult result = null;
@@ -101,6 +107,7 @@ public class StockUserController extends BaseController{
      * @param fileId
      * @return
      */
+    @ApiOperation(value = "根据文件ID下载用户文件信息")
     @RequestMapping(value = "/downloadFile", method = {RequestMethod.GET, RequestMethod.POST} )
     public  ApiRespResult downloadFile(@NotBlank(message = "文件ID不能为空！") String fileId) {
 //        // 文件输出流

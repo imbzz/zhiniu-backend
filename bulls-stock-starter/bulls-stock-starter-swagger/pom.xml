@@ -14,6 +14,7 @@
 
     <dependencies>
         <!-- Swagger API文档 -->
+<!--        ui-->
         <dependency>
             <groupId>io.springfox</groupId>
             <artifactId>springfox-swagger-ui</artifactId>
@@ -24,6 +25,7 @@
             <artifactId>guava</artifactId>
             <version>20.0</version>
         </dependency>
+<!--        fox-->
         <dependency>
             <groupId>io.springfox</groupId>
             <artifactId>springfox-swagger2</artifactId>
@@ -34,7 +36,14 @@
             <artifactId>spring-boot-starter-data-rest</artifactId>
         </dependency>
 
-        <!-- Swagger ui 风格 组件-->
+        <dependency>
+            <groupId>com.github.xiaoymin</groupId>
+            <artifactId>knife4j-spring-boot-starter</artifactId>
+            <!--在引用时请在maven中央仓库搜索2.X最新版本号-->
+            <version>2.0.9</version>
+        </dependency>
+
+<!--         Swagger ui 风格 组件-->
         <dependency>
             <groupId>com.github.xiaoymin</groupId>
             <artifactId>swagger-bootstrap-ui</artifactId>

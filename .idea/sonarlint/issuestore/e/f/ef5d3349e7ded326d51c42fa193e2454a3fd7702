@@ -1,3 +1,7 @@
 
+n
+java:S2259V"LA "NullPointerException" could be thrown; "lastPriceCache" is nullable here.(¶èš„şÿÿÿÿ8¤à¸¤1
 B
 java:S16021",Remove useless curly braces around statement(ÔŠÛÚ
+Z
+java:S16121"=Replace this lambda with method reference 'this::calcProfit'.(ÔŠÛÚ8©à¸¤1

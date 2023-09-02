@@ -13,7 +13,7 @@ import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiOperation;
 import lombok.extern.log4j.Log4j2;
 
-@Api(value = "BOOT接口-账户预警通知模板管理接口",tags = "BOOT接口-账户预警通知模板管理接口")
+@Api(value = "账户预警通知模板管理接口",tags = "账户预警通知模板管理接口")
 @RestController
 @RequestMapping("/accountWarnTemplate")
 @Log4j2

@@ -1,5 +1,6 @@
 package com.itcast.bulls.stock.starter.swagger;
 
+import com.github.xiaoymin.knife4j.spring.annotations.EnableKnife4j;
 import com.google.common.base.Predicate;
 import com.google.common.base.Predicates;
 import io.swagger.annotations.ApiOperation;
@@ -31,6 +32,7 @@ import java.util.List;
  */
 @Configuration
 @EnableSwagger2
+@EnableKnife4j
 @EnableAutoConfiguration
 @ConditionalOnProperty(name = "swagger.enabled", havingValue  = "true")
 public class AutoSwaggerConfiguration {

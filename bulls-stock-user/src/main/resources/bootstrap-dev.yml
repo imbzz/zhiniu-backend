@@ -98,7 +98,11 @@ security:
       scope: server
       access-token-uri: http://trade-auth/oauth/token
       user-authorization-uri: http://trade-auth/oauth/authorize
-
+      ignore-urls:
+        - /webjars/**
+        - /login/**
+        - /swagger-resources/**
+        - /csrf/**
 #mybatis 配置
 mybatis:
   mapper-locations:
@@ -106,7 +110,7 @@ mybatis:
     - classpath:com/itcast/bulls/stock/common/system/dao/mapper/*Mapper.xml
 
 # ceph swift 认证信息配置
-# todo ceph没必要 先去掉
+# todo ceph没必要用 先去掉
 #ceph:
 #  username: cephtester:subtester
 #  password: 654321
@@ -140,3 +144,14 @@ aliyun:
     # 短信签名名称
     smsSignName: 传智汇提醒
 
+# Swagger界面内容配置
+swagger:
+  enabled: true
+  title: 交易平台API接口文档
+  description: 交易平台API接口文档
+  version: 1.0.2
+  termsOfServiceUrl: http://trade-stock
+  contact:
+    name: mirson
+    email: mirson.ho@163.com
+    url: http://trade-stock

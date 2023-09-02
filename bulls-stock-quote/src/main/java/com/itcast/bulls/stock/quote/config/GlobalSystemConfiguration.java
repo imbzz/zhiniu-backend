@@ -81,7 +81,10 @@ public class GlobalSystemConfiguration implements ApplicationRunner {
                     getStockQuotes();
                     // todo 间隔时间, 一般设置为1秒
                     // 由于是教学测试, 这里时间, 可以适当放长一些, 这里设定为30s (因为受到免费账号的限制)
+                    long l = System.currentTimeMillis();
                     Thread.sleep(30000L);
+                    // todo 请求api的间隔时间
+                    System.out.println("======获取有效数据的间隔时间"+ (System.currentTimeMillis()-l)/1000 + "秒 ");
                 }catch(Exception e) {
                     log.error(e.getMessage(), e);
                 }

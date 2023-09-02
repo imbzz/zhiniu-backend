@@ -1,7 +1,8 @@
 server:
   port: 10691
-  servlet:
-    context-path: /admin
+# 加上这个前缀swagger映射不到，所以不加了
+#  servlet:
+#    context-path: /admin
 spring:
   application:
     name: stock-admin-user
@@ -136,12 +137,13 @@ spring:
   session:
     store-type: redis
 
+
 ## spring security 配置
 security:
   oauth2:
     resource:
       loadBalanced: true
-#      token-info-uri: http://trade-auth/oauth/check_token
+      token-info-uri: http://trade-auth/oauth/check_token
     client:
       client-id: app
       client-secret: app
